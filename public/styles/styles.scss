@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+* {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @media (max-width: 991.8px) {
+    flex-direction: column;
+  }
+}
+.col-1 {
+  flex: 0 0 calc(100% * 1 / 12);
+}
+.col-2 {
+  flex: 0 0 calc(100% * 2 / 12);
+}
+.col-3 {
+  flex: 0 0 calc(100% * 3 / 12);
+}
+.col-4 {
+  flex: 0 0 calc(100% * 4 / 12);
+}
+.col-5 {
+  flex: 0 0 calc(100% * 5 / 12);
+}
+.col-6 {
+  flex: 0 0 calc(100% * 6 / 12);
+}
+.col-7 {
+  flex: 0 0 calc(100% * 7 / 12);
+}
+.col-8 {
+  flex: 0 0 calc(100% * 8 / 12);
+}
+.col-9 {
+  flex: 0 0 calc(100% * 9 / 12);
+}
+.col-10 {
+  flex: 0 0 calc(100% * 10 / 12);
+}
+.col-11 {
+  flex: 0 0 calc(100% * 11 / 12);
+}
+.col-12 {
+  flex: 0 0 calc(100% * 12 / 12);
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // background: blueviolet;
+  min-height: 60px;
+  flex-direction: row;
+  @media (max-width: 991.8px) {
+    flex-direction: column;
+  }
+}
+.nav-items {
+  display: flex;
+}
+.nav-item {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+.dropdown {
+  position: relative;
+  // background: red;
+  min-width: 50;
+  // text-align: center;
+  // justify-self: center;
+  justify-content: center;
+}
+.dropdown-content {
+  min-width: 300px;
+  display: none;
+  // background: blue;
+  // padding: 10px;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  left: 50%;
+  top: 100%;
+  opacity: 0;
+  transition-duration: 1s;
+  transition-delay: 0s;
+
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-property: all;
+  transform: translateX(-50%);
+  a {
+    padding: 3px;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover {
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+.show-dropdown {
+  opacity: 1;
+  display: flex;
+  a {
+    opacity: 1;
+  }
+}
