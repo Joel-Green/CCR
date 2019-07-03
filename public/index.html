@@ -13,81 +13,259 @@
     <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
     <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
     <!-- initialize the SDK after all desired features are loaded -->
+    <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+
   </head>
 
   <body>
 
     <div class="row">
-      <div class="header col-12">
-        <div class="nav-items dropdown" onclick="toggleHome()">
-          <a href="#" class="nav-item">Home</a>
+      <div class="header header-scrolled col-12">
+        <div class="nav-items dropdown " onclick="toggleHome()">
+          <a href="#" class="nav-item active" id='link-home'>Home </a>
           <div class="dropdown-content" id="nav-Home">
-            <a href="#">nav 1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">askjdfhkajsdhf kj hs5</a>
+            <a href="#intro">Intro</a>
+            <a href="#bibleVerse">Bible Verse</a>
+            <a href="#serviceTimings">Service Timings</a>
           </div>
         </div>
         <div class="nav-items dropdown" onclick="toggleAbout()">
-          <a href="#" class="nav-item">About</a>
+          <a href="#" class=" nav-item ">About</a>
           <div class="dropdown-content" id="nav-About" id="nav-About">
-            <a href="#">nav 1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">askjdfhkajsdhf kj hs5</a>
+            <a href="about.html#churchServices">Church Services</a>
+            <a href="about.html#theChoirs">The Choirs</a>
+            <a href="about.html#wfcs">WFCS</a>
+            <a href="about.html#cyf">CYF</a>
+            <a href="about.html#sundaySchool">Sunday School</a>
           </div>
         </div>
         <div class="nav-items dropdown" onclick="toggleOutreach()">
-          <a href="#" class="nav-item">Outreach</a>
-          <div class="dropdown-content" id="nav-Outreach">
+          <a href="outreach.html" class="nav-item">Outreach</a>
+          <!-- <div class="dropdown-content" id="nav-Outreach">
             <a href="#">nav 1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">askjdfhkajsdhf kj hs5</a>
-          </div>
+          </div> -->
         </div>
         <div class="nav-items dropdown" onclick="toggleEvents()">
           <a href="#" class="nav-item">Events</a>
           <div class="dropdown-content" id="nav-Events">
-            <a href="#">nav 1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">askjdfhkajsdhf kj hs5</a>
+            <a href="events.html#annualGardenFete">Annual Garden Fete</a>
+            <a href="events.html#ashWednesday">Ash Wednesday</a>
+            <a href="events.html#maundyThursday">Maundy Thursday</a>
+            <a href="events.html#goodFriday">Good Friday</a>
+            <a href="events.html#easterVigil">Easter Vigil</a>
+            <a href="events.html#easterServices">Easter Services</a>
+            <a href="events.html#confirmationSunday">Confirmation Sunday</a>
+            <a href="events.html#wfcsSales">WFCS Sales</a>
+            <a href="events.html#cfyBakeSale">CYF Bake Sale</a>
+            <a href="events.html#wfcsSunday">WFCS Sunday</a>
+            <a href="events.html#cyfSunday">CYF Sunday</a>
+            <a href="events.html#agm">AGM</a>
+            <a href="events.html#cyfRetreat">CYF Retreat</a>
+            <a href="events.html#fastingPrayer">Fasting Prayer</a>
+            <a href="events.html#allNightFastingPrayer">All Night Fasting Prayer</a>
+            <a href="events.html#unity">Unity</a>
+            <a href="events.html#wfcsFamilyMeets">WFCS Family meets</a>
+            <a href="events.html#carolServices">Carol Services</a>
+            <a href="events.html#tamilSundaySchoolChristmasProgram">Tamil Sunday School Christmas Program</a>
+            <a href="events.html#cyfMusical">CYF Musical</a>
+            <a href="events.html#christmasServices">Christmas Services</a>
+            <a href="events.html#newYearServices">New Year Services</a>
+            <a href="events.html#lpcefPicnic">LPCEF Picnic</a>
           </div>
         </div>
         <div class="nav-items dropdown" onclick="togglePeople()">
           <a href="#" class="nav-item">People</a>
           <div class="dropdown-content" id="nav-People">
-            <a href="#">nav 1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">askjdfhkajsdhf kj hs5</a>
+            <a href="people.html#presbyterInCharge">Presbyter-in-charge</a>
+            <a href="people.html#otherPresbyters">Other Presbyters</a>
+            <a href="people.html#pastorateCommittee">Pastorate Committee</a>
+            <a href="people.html#choirMasters">Choir Masters</a>
+            <a href="people.html#choirMasters">Sound Engineer</a>
+            <a href="people.html#wfcsLeaders">WFCS Leaders</a>
+            <a href="people.html#cyfLeaders">CYF Leaders</a>
+            <a href="people.html#layLeaders">Lay Leaders</a>
+            <a href="people.html#officeStaff">Office Staff</a>
+            <a href="people.html#sewadars">Sewadars</a>
           </div>
         </div>
         <div class="nav-items dropdown" onclick="toggleMore()">
           <a href="#" class="nav-item">More</a>
           <div class="dropdown-content" id="nav-More">
-            <a href="#">nav 1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">askjdfhkajsdhf kj hs5</a>
+            <a href="more.html#churchHistory">Church History</a>
+            <a href="more.html#architecture">Architecture</a>
+            <a href="more.html#paintings">Paintings</a>
+            <a href="more.html#presbyterInChargeOverTheYears">Presbyter-in-charge Over The Years</a>
+            <a href="more.html#photoGallery">Photo Gallery</a>
           </div>
         </div>
       </div>
     </div>
+    <!-- <div class="row"> -->
+
+
+    <div class="swiper-container row">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">Slide 10</div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <!-- </div> -->
+    <div class="row" id="intro">
+      <div class="col-12 content-block">
+        <h4 class="content-heading">The Cathedral Church Of Redemption</h4>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-6 content-text">
+            <p>
+
+
+              The story of the Cathedral Church of the Redemption India revolves around its journey from an Englishman's
+              congregation to a multicultural one. In its diversity and its community work, the present Church has come
+              to fulfil the founders' vision of a common home, a meeting place for all sects and creeds.
+            </p>
+            <p>
+
+              Tucked away from the bustle of New Delhi, in the quiet Church lane north of Jaipur Column and to the west
+              of Parliament House at North Avenue, stands the Cathedral Church of the Redemption India. The Church's
+              centralized plan blends neatly with Sir Edwin Lutyens city plan. With Viceroy Lord Irwin's keen support,
+              the Church, built on Henry Alexander Medd's (1892-1977) design, was opened for public worship on Sunday,
+              18 January 1931. H.A.N. Medd's design was inspired by the Palladio Church of Il Redentore in Venice as
+              well as Lutyens Hampstead church.
+            </p>
+            <p>
+
+              The Church, a witness to nearly eight decades of history, is a sanctuary of quiet meditation, prayer and
+              generous giving. It is home to a vibrant parish and a wonderful tribute to Indian Christian life.
+            </p>
+
+          </div>
+          <div class="col-2 image">
+            Image
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="bibleVerse">
+      <div class="col-12 content-block">
+        <h4 class="content-heading">Bible Verse</h4>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-8 content-text daily-verse">
+            <SCRIPT language="javascript"
+              SRC=http://links.christiansunite.com/blessing.cgi?type=Verse&table=1&width=210&zone=0> </SCRIPT>
+              <noscript>You need Javascript enabled to view these blessings. <a href="http://bible.christiansunite.com/">Bible Study Aids</a></noscript>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+    </div>
+    <div class="row" id="serviceTimings">
+      <div class="col-12 content-block service-timings">
+        <h4 class="content-heading">Service Timings</h4>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-4 content-text">
+            <h4 class="content-sub-heading">Summer Timings</h4>
+            <p>
+              English Service Timing: 8:00 am
+            </p>
+            <p>
+              Tamil Service Timing: 9:35 am
+            </p>
+            <p>
+              Hindi Service Timing: 11:15 am 
+            </p>
+            <p>
+              Evening Service Timing: 6:00 pm 
+            </p>
+          </div>
+          <div class="col-4 content-text">
+            <h4 class="content-sub-heading">Winter Timings</h4>
+            <p>
+              English Service Timing: 8:30 am
+            </p>
+            <p>
+              Tamil Service Timing: 10:05 am 
+            </p>
+            <p>
+              Hindi Service Timing: 11:45 am
+            </p>
+            <p>
+              Evening Service Timing: 5:30 pm
+            </p>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer row">
+      <div class="col-4">
+        <span>
+          Church Office : 011 230 94229 / 011 230 93325
+        </span>
+      </div>
+      <div class="col-4">
+        <span>
+          Address <br>
+           The Cathedral Church of the Redemption <br>
+1, Church Road, North Avenue <br>
+New Delhi- 110001 <br>
+India <br>
+
+
+        </span>
+      </div>
+      <div class="col-4">
+        <span>
+          <a href="https://www.facebook.com/RedemptionChurchNewDelhi/"> <i class="fab fa-facebook-square"></i> Facebook</a>
+        </span>
+      </div>
+
+    </div>
+
+
 
     <script src="./scripts/scripts.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>!window.jQuery && document.write("<script src='./scripts/jquery-3.4.1.min.js'><\/script>")</script>
-    <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-    <script defer src="/__/firebase/init.js"></script>
-    </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+            <script>
+              var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                },
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+              });
+            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script>!window.jQuery && document.write("<script src='./scripts/jquery-3.4.1.min.js'><\/script>")</script>
+            <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+            <script defer src="/__/firebase/init.js"></script>
+            </script>
   </body>
 
 </html>
