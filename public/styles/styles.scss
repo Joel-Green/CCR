@@ -269,65 +269,65 @@ html {
     border-radius: 2px;
   }
 }
-.daily-verse {
-  table {
-    width: 100% !important;
-    border: none !important;
-    border-collapse: collapse !important;
-    tbody {
-      border: none !important;
-      border-collapse: collapse !important;
-      tr {
-        border: none !important;
-        border-collapse: collapse !important;
-        td {
-          border: none !important;
-          border-collapse: collapse !important;
-          font {
-            div[align="CENTER"] {
-              display: none;
-            }
-            div {
-              font {
-                font-size: 18px;
-                font-family: "Roboto", sans-serif;
-                b {
-                  font-size: 16px;
-                  font-family: "Lato", sans-serif;
-                }
-              }
-            }
-            span {
-              div {
-                font {
-                  text-decoration: none !important;
-                  color: grey !important;
-                  font-size: 15px;
-                  font-family: "Lato", sans-serif;
-                  a {
-                    text-decoration: none !important;
-                    color: grey !important;
-                    font-size: 15px;
-                    cursor: pointer !important;
-                    font-family: "Lato", sans-serif;
-                    &:nth-child(3) {
-                      font-family: "Lato", sans-serif;
-                      font-size: 8px !important;
-                    }
-                  }
-                  a[href="http://links.christiansunite.com/go.cgi?vs"] {
-                    font-size: 8px !important;
-                    font-family: "Lato", sans-serif;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+// .daily-verse {
+//   table {
+//     width: 100% !important;
+//     border: none !important;
+//     border-collapse: collapse !important;
+//     tbody {
+//       border: none !important;
+//       border-collapse: collapse !important;
+//       tr {
+//         border: none !important;
+//         border-collapse: collapse !important;
+//         td {
+//           border: none !important;
+//           border-collapse: collapse !important;
+//           font {
+//             div[align="CENTER"] {
+//               display: none;
+//             }
+//             div {
+//               font {
+//                 font-size: 18px;
+//                 font-family: "Roboto", sans-serif;
+//                 b {
+//                   font-size: 16px;
+//                   font-family: "Lato", sans-serif;
+//                 }
+//               }
+//             }
+//             span {
+//               div {
+//                 font {
+//                   text-decoration: none !important;
+//                   color: grey !important;
+//                   font-size: 15px;
+//                   font-family: "Lato", sans-serif;
+//                   a {
+//                     text-decoration: none !important;
+//                     color: grey !important;
+//                     font-size: 15px;
+//                     cursor: pointer !important;
+//                     font-family: "Lato", sans-serif;
+//                     &:nth-child(3) {
+//                       font-family: "Lato", sans-serif;
+//                       font-size: 8px !important;
+//                     }
+//                   }
+//                   a[href="http://links.christiansunite.com/go.cgi?vs"] {
+//                     font-size: 8px !important;
+//                     font-family: "Lato", sans-serif;
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 .content-sub-heading {
   text-align: center;
   font-size: 22px;
@@ -362,5 +362,31 @@ html {
         color: rgba(255, 255, 255, 0.7);
       }
     }
+  }
+}
+
+.dailyVersesWrapper a {
+  color: #000;
+  // font-weight: bold;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+}
+.dailyVerses:nth-child(1) {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.dailyVerses:nth-child(2) {
+  text-align: center;
+  opacity: 0.6;
+}
+.dailyVerses.linkToWebsite {
+  text-align: center;
+  a {
+    opacity: 0.6;
+    font-size: 10px;
+    text-decoration: none;
+    text-align: right;
   }
 }
