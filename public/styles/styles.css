@@ -4,10 +4,14 @@
   --paddingVerticalHeader: 20px; }
 
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden; }
 
 body {
-  background: #eebb88; }
+  background: #eebb88;
+  max-width: 100%;
+  overflow-x: hidden; }
 
 * {
   color: rgba(0, 0, 0, 0.9);

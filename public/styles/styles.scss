@@ -6,9 +6,13 @@
 }
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 body {
   background: #eebb88;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 * {
   color: rgba(0, 0, 0, 0.9);
@@ -18,6 +22,7 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
