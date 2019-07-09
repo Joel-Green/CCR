@@ -8,14 +8,132 @@
 //         console.log('onheader', onHeader)
 //     }
 // )
-// $('#link-home').hover(function () {
-//     $('#nav-Home').toggleClass('show-dropdown')
-//     $('#nav-About').removeClass('show-dropdown')
-//     $('#nav-Outreach').removeClass('show-dropdown')
-//     $('#nav-Events').removeClass('show-dropdown')
-//     $('#nav-People').removeClass('show-dropdown')
-//     $('#nav-More').removeClass('show-dropdown')
-// })
+$('#link-home').hover(function () {
+    $('#nav-Home').addClass('show-dropdown')
+    $('#nav-About').removeClass('show-dropdown')
+    $('#nav-Outreach').removeClass('show-dropdown')
+    $('#nav-Events').removeClass('show-dropdown')
+    $('#nav-People').removeClass('show-dropdown')
+    $('#nav-More').removeClass('show-dropdown')
+}, function () {
+    $('.header').hover(function () { }, function () {
+        $('#nav-Home').removeClass('show-dropdown')
+        $('#nav-About').removeClass('show-dropdown')
+        $('#nav-Outreach').removeClass('show-dropdown')
+        $('#nav-Events').removeClass('show-dropdown')
+        $('#nav-People').removeClass('show-dropdown')
+        $('#nav-More').removeClass('show-dropdown')
+
+    })
+})
+$('#link-about').hover(function () {
+    $('#nav-Home').removeClass('show-dropdown')
+    $('#nav-About').addClass('show-dropdown')
+    $('#nav-Outreach').removeClass('show-dropdown')
+    $('#nav-Events').removeClass('show-dropdown')
+    $('#nav-People').removeClass('show-dropdown')
+    $('#nav-More').removeClass('show-dropdown')
+}, function () {
+    $('.header').hover(function () { }, function () {
+        $('#nav-Home').removeClass('show-dropdown')
+        $('#nav-About').removeClass('show-dropdown')
+        $('#nav-Outreach').removeClass('show-dropdown')
+        $('#nav-Events').removeClass('show-dropdown')
+        $('#nav-People').removeClass('show-dropdown')
+        $('#nav-More').removeClass('show-dropdown')
+
+    })
+})
+$('#link-outreach').hover(function () {
+    $('#nav-Home').removeClass('show-dropdown')
+    $('#nav-About').removeClass('show-dropdown')
+    $('#nav-Outreach').addClass('show-dropdown')
+    $('#nav-Events').removeClass('show-dropdown')
+    $('#nav-People').removeClass('show-dropdown')
+    $('#nav-More').removeClass('show-dropdown')
+}, function () {
+    $('.header').hover(function () { }, function () {
+        $('#nav-Home').removeClass('show-dropdown')
+        $('#nav-About').removeClass('show-dropdown')
+        $('#nav-Outreach').removeClass('show-dropdown')
+        $('#nav-Events').removeClass('show-dropdown')
+        $('#nav-People').removeClass('show-dropdown')
+        $('#nav-More').removeClass('show-dropdown')
+
+    })
+})
+$('#link-events').hover(function () {
+    $('#nav-Home').removeClass('show-dropdown')
+    $('#nav-About').removeClass('show-dropdown')
+    $('#nav-Outreach').removeClass('show-dropdown')
+    $('#nav-Events').addClass('show-dropdown')
+    $('#nav-People').removeClass('show-dropdown')
+    $('#nav-More').removeClass('show-dropdown')
+}, function () {
+    $('.header').hover(function () { }, function () {
+        $('#nav-Home').removeClass('show-dropdown')
+        $('#nav-About').removeClass('show-dropdown')
+        $('#nav-Outreach').removeClass('show-dropdown')
+        $('#nav-Events').removeClass('show-dropdown')
+        $('#nav-People').removeClass('show-dropdown')
+        $('#nav-More').removeClass('show-dropdown')
+
+    })
+})
+$('#link-people').hover(function () {
+    $('#nav-Home').removeClass('show-dropdown')
+    $('#nav-About').removeClass('show-dropdown')
+    $('#nav-Outreach').removeClass('show-dropdown')
+    $('#nav-Events').removeClass('show-dropdown')
+    $('#nav-People').addClass('show-dropdown')
+    $('#nav-More').removeClass('show-dropdown')
+}, function () {
+    $('.header').hover(function () { }, function () {
+        $('#nav-Home').removeClass('show-dropdown')
+        $('#nav-About').removeClass('show-dropdown')
+        $('#nav-Outreach').removeClass('show-dropdown')
+        $('#nav-Events').removeClass('show-dropdown')
+        $('#nav-People').removeClass('show-dropdown')
+        $('#nav-More').removeClass('show-dropdown')
+
+    })
+})
+$('#link-more').hover(function () {
+    $('#nav-Home').removeClass('show-dropdown')
+    $('#nav-About').removeClass('show-dropdown')
+    $('#nav-Outreach').removeClass('show-dropdown')
+    $('#nav-Events').removeClass('show-dropdown')
+    $('#nav-People').removeClass('show-dropdown')
+    $('#nav-More').addClass('show-dropdown')
+}, function () {
+    $('.header').hover(function () { }, function () {
+        $('#nav-Home').removeClass('show-dropdown')
+        $('#nav-About').removeClass('show-dropdown')
+        $('#nav-Outreach').removeClass('show-dropdown')
+        $('#nav-Events').removeClass('show-dropdown')
+        $('#nav-People').removeClass('show-dropdown')
+        $('#nav-More').removeClass('show-dropdown')
+
+    })
+})
+$('#link-reachus').hover(function () {
+    $('#nav-Home').removeClass('show-dropdown')
+    $('#nav-About').removeClass('show-dropdown')
+    $('#nav-Outreach').removeClass('show-dropdown')
+    $('#nav-Events').removeClass('show-dropdown')
+    $('#nav-People').removeClass('show-dropdown')
+    $('#nav-More').removeClass('show-dropdown')
+}, function () {
+    $('.header').hover(function () { }, function () {
+        $('#nav-Home').removeClass('show-dropdown')
+        $('#nav-About').removeClass('show-dropdown')
+        $('#nav-Outreach').removeClass('show-dropdown')
+        $('#nav-Events').removeClass('show-dropdown')
+        $('#nav-People').removeClass('show-dropdown')
+        $('#nav-More').removeClass('show-dropdown')
+
+    })
+})
 // $('#link-about').hover(function () {
 //     toggleAbout()
 // })
