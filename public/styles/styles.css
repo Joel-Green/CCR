@@ -475,7 +475,7 @@ body {
   transition: all 0.3s ease-out; }
   .hold-heading.scroll-trigger {
     top: 35%;
-    opacity: 0.1; }
+    opacity: 0; }
 
 .hold-content {
   -webkit-transform: translateY(100%);
