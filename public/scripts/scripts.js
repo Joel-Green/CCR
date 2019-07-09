@@ -100,3 +100,34 @@ window.onclick = function (event) {
         }
     }
 }
+// const content = $('.content-main');
+// console.log(content);
+const content = document.querySelectorAll(".content-main")
+const contentone = document.querySelector('#intro')
+console.log(content);
+const options = {
+    root: null,
+    threshold: 0,
+    rootMargin: "-300px 0px -300px 0px",
+}
+
+const observer = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+        // console.log(entry.target, " ", entry.isIntersecting);
+        if (!entry.isIntersecting) {
+
+            console.log("np")
+            entry.target.classList.add('off-screen')
+        }
+        else {
+            console.log("yeas")
+            entry.target.classList.remove('off-screen')
+
+        }
+    });
+}, options)
+
+content.forEach(section => {
+    observer.observe(section);
+
+})

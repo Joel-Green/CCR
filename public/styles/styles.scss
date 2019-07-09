@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel|Lato|Montserrat|Oswald|Raleway|Roboto&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
+
 :root {
   --paddingVerticalHeader: 20px;
 }
@@ -90,7 +92,7 @@ body {
   font-family: "Cinzel", serif;
   font-size: 20px;
   line-height: 18px;
-  transition-duration: 0.3s;
+  transition-duration: 0.6s;
   transition-delay: 0s;
   transition-timing-function: ease-in-out;
   &::before {
@@ -165,7 +167,7 @@ body {
   transform: translateX(-50%);
   a {
     padding: 5px 3px;
-    transition-duration: 0.3s;
+    transition-duration: 0.6s;
     transition-delay: 0s;
     opacity: 0;
 
@@ -249,13 +251,20 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
+.content-main {
+  min-height: 95vh;
+  position: relative;
+  left: 0%;
+  align-items: center;
+  justify-content: center;
+  transition: all 1.2s ease-out;
+  opacity: 1;
+  // border: solid 1px black;
+}
 .content-block {
   display: flex;
   padding: 30px;
   flex-direction: column;
-  min-height: 95vh;
-  align-items: center;
-  justify-content: center;
   .content-heading {
     font-size: 28px;
     margin-bottom: 10px;
@@ -414,4 +423,8 @@ body {
 }
 .left-text {
   text-align: left;
+}
+.off-screen {
+  opacity: 0;
+  left: 5%;
 }
