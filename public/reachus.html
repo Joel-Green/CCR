@@ -31,12 +31,11 @@
     </head>
 
     <body>
-
         <div class="row">
             <div class="header header-scrolled col-12">
                 <div class="nav-items dropdown " onclick="toggleHome()">
-                    <a href="#" class="nav-item  home" id='link-home'>Home </a>
-                    <div class="dropdown-content" id="nav-Home">
+                    <a href="#" class="nav-item active home" id='link-home'>Home </a>
+                    <div class="dropdown-content " id="nav-Home">
                         <a href="index.html#intro">Intro</a>
                         <a href="index.html#bibleVerse">Bible Verse</a>
                         <a href="index.html#serviceTimings">Service Timings</a>
@@ -118,7 +117,7 @@
                     </div>
                 </div>
                 <div class="nav-items dropdown" onclick="toggleMore()">
-                    <a href="reachus.html" class="nav-item active" id='link-reachus'>Reach Us</a>
+                    <a href="reachus.html" class="nav-item" id='link-reachus'>Reach Us</a>
                     <div class="dropdown-content" id="nav-ReachUs">
 
                     </div>
@@ -228,7 +227,6 @@
 
 
 
-        <script src="./scripts/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
         <script>
             var swiper = new Swiper('.swiper-container', {
@@ -245,6 +243,7 @@
                 },
             });
         </script>
+        <script src="./scripts/scripts.js"></script>
         <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
         <script defer src="/__/firebase/init.js"></script>
         </script>
