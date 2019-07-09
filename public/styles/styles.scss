@@ -5,8 +5,11 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  background: #eebb88;
+}
 * {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.9);
   text-decoration: none;
   font-family: "Raleway", sans-serif;
   margin: 0px;
@@ -19,6 +22,11 @@ html {
   flex-direction: row;
   @media (max-width: 991.8px) {
     flex-direction: column;
+  }
+  &.force-layout {
+    @media (max-width: 991.8px) {
+      flex-direction: row !important;
+    }
   }
 }
 .col-1 {
@@ -75,7 +83,7 @@ html {
 }
 .nav-item {
   text-decoration: none;
-  background-color: black;
+  background-color: #3c272b;
   border: none;
   outline: none;
   color: rgba(0, 0, 0, 0.5);
@@ -182,11 +190,11 @@ html {
   }
 }
 .header-scrolled {
-  background-color: black;
+  background-color: #3c272b;
   .nav-items {
     .dropdown-content {
       z-index: -2;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(60, 29, 43, 0.9);
       a {
         color: rgba(255, 255, 255, 0.7);
         &:hover {
@@ -245,6 +253,9 @@ html {
   display: flex;
   padding: 30px;
   flex-direction: column;
+  min-height: 95vh;
+  align-items: center;
+  justify-content: center;
   .content-heading {
     font-size: 28px;
     margin-bottom: 10px;
@@ -344,7 +355,7 @@ html {
   }
 }
 .footer {
-  background-color: #000000;
+  background-color: #3c272b;
   padding: 12px 0px;
   font-size: 16px;
   color: #fff;
