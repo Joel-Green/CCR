@@ -323,9 +323,9 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-transition: all 1.2s ease-out;
-  -o-transition: all 1.2s ease-out;
-  transition: all 1.2s ease-out;
+  -webkit-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
   opacity: 1; }
 
 .content-block {
