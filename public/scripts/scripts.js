@@ -223,7 +223,7 @@ window.onclick = function (event) {
 const content = document.querySelectorAll(".content-main")
 const contentone = document.querySelector('#intro')
 console.log(content);
-const options = {
+const optionsBasic = {
     root: null,
     threshold: 0,
     rootMargin: "-300px 0px -300px 0px",
@@ -243,9 +243,39 @@ const observer = new IntersectionObserver(function (entries, observer) {
 
         }
     });
-}, options)
+}, optionsBasic)
 
 content.forEach(section => {
     observer.observe(section);
+
+})
+const holdheading = document.querySelectorAll(".hold-heading")
+const holdcontent = document.querySelectorAll(".hold-content")
+console.log(holdheading);
+const options = {
+    root: null,
+    threshold: 0,
+    rootMargin: "-40% 0px",
+}
+
+const observerHold = new IntersectionObserver(function (entries, observerHold) {
+    entries.forEach(entry => {
+        // console.log(entry.target, " ", entry.isIntersecting);
+        if (!entry.isIntersecting) {
+
+            console.log("Off- screen")
+            // entry.target.classList.remove('off-screen')
+        }
+        else {
+            console.log("ON SCREEN CHANGE NOW")
+            entry.target.classList.toggle('scroll-trigger')
+            holdcontent[0].classList.toggle('scroll-trigger');
+
+        }
+    });
+}, options)
+
+holdheading.forEach(section => {
+    observerHold.observe(section);
 
 })
