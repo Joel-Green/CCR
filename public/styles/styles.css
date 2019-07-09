@@ -271,7 +271,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 200;
+  z-index: 200 !important;
 }
 
 .show-dropdown a {
@@ -285,6 +285,7 @@ html {
 }
 
 .header-scrolled .nav-items .dropdown-content {
+  z-index: -2;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -453,5 +454,26 @@ html {
   font-size: 10px;
   text-decoration: none;
   text-align: right;
+}
+
+.map {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.left-text {
+  text-align: left;
 }
 /*# sourceMappingURL=styles.css.map */
