@@ -34,14 +34,9 @@
 
 
     <div class="row">
-      <div class="header header-scrolled col-12">
+      <div class="header col-12">
         <div class="nav-items dropdown " onclick="toggleHome()">
           <a href="index.html" class="nav-item active home" id='link-home'>Home </a>
-          <div class="dropdown-content " id="nav-Home">
-            <a href="index.html#intro">Intro</a>
-            <a href="index.html#bibleVerse">Bible Verse</a>
-            <a href="index.html#serviceTimings">Service Timings</a>
-          </div>
         </div>
         <div class="nav-items dropdown" onclick="toggleAbout()">
           <a href="about.html" class=" nav-item " id='link-about'>About</a>
@@ -128,7 +123,7 @@
     <!-- <div class="row"> -->
 
 
-    <div class="swiper-container row">
+    <!-- <div class="swiper-container row">
       <div class="swiper-wrapper">
         <div class="swiper-slide">Slide 1</div>
         <div class="swiper-slide">Slide 2</div>
@@ -141,19 +136,18 @@
         <div class="swiper-slide">Slide 9</div>
         <div class="swiper-slide">Slide 10</div>
       </div>
-      <!-- Add Pagination -->
       <div class="swiper-pagination"></div>
-      <!-- Add Arrows -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
-    </div>
+    </div> -->
     <!-- </div> -->
-    <div class="row content-main off-screen" id="intro">
+    <div class="row content-main hold-main" id="intro">
       <div class="col-12 content-block">
-        <h4 class="content-heading">The Cathedral Church Of Redemption</h4>
+        <h4 class="content-heading hold-heading">The Cathedral Church Of Redemption <span id="header-trigger"></span>
+        </h4>
         <div class="row">
           <div class="col-2"></div>
-          <div class="col-6 content-text">
+          <div class="col-8 content-text hold-content">
             <p>
               welcome to our church ...
             </p>
@@ -170,14 +164,11 @@
             </p>
 
           </div>
-          <div class="col-2 image">
-            Image
-          </div>
           <div class="col-2"></div>
         </div>
       </div>
     </div>
-    <div class="row content-main" id="bibleVerse">
+    <div class="row content-main reduce-min-height" id="bibleVerse" style="padding: 25px 0px">
       <div class="col-12 content-block">
         <h4 class="content-heading">Bible Verse</h4>
         <div class="row">
@@ -193,7 +184,7 @@
         </div>
       </div>
     </div>
-    <div class="row content-main" id="serviceTimings">
+    <div class="row content-main reduce-min-height" id="serviceTimings">
       <div class="col-12 content-block service-timings">
         <h4 class="content-heading">Service Timings</h4>
         <div class="row">
