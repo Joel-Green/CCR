@@ -1,10 +1,34 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel|Lato|Montserrat|Oswald|Raleway|Roboto&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
 @import url("https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap");
+@font-face {
+  font-family: "Bodoni";
+  src: url("../fonts/BodoniFLF-Roman.ttf"); }
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("../fonts/BodoniFLF-Bold.ttf");
+  font-weight: bold; }
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("../fonts/BodoniFLF-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Bodoni";
+  src: url("../fonts/BodoniFLF-Italic.ttf");
+  font-style: italic; }
+
 :root {
   --paddingVerticalHeader: 20px;
   --darkestcolor: #3c272b;
-  --mainbackgroundcolor:#eebb88; }
+  --mainbackgroundcolor:#eebb88;
+  --newHeaderColor:#c36f55;
+  --newLighterBackground:#dd947c;
+  --bodyFont:'Nunito Sans', sans-serif; }
 
 html {
   scroll-behavior: smooth;
@@ -12,7 +36,6 @@ html {
   overflow-x: hidden; }
 
 body {
-  background-image: url("../images/ccr.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -23,7 +46,7 @@ body {
 * {
   color: rgba(0, 0, 0, 0.9);
   text-decoration: none;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--bodyFont);
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
@@ -33,25 +56,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #eebb88;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row; }
-  @media (max-width: 991.8px) {
-    .row {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; } }
-  @media (max-width: 991.8px) {
-    .row.force-layout {
-      -webkit-box-orient: horizontal !important;
-      -webkit-box-direction: normal !important;
-      -ms-flex-direction: row !important;
-      flex-direction: row !important; } }
 
 .col-1 {
   -webkit-box-flex: 0;
@@ -116,6 +126,8 @@ body {
 .header {
   position: fixed;
   width: 100vw;
+  opacity: 1;
+  visibility: visible;
   z-index: 3000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,14 +148,13 @@ body {
   background: rgba(0, 0, 0, 0); }
   .header .nav-items {
     position: relative; }
+    .header .nav-items .nav-item {
+      font-family: var(--bodyFont);
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white; }
   .header .dropdown-content {
     z-index: -3000; }
-  @media (max-width: 991.8px) {
-    .header {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; } }
 
 .nav-items {
   display: -webkit-box;
@@ -255,9 +266,9 @@ body {
     transition-delay: 0s;
     opacity: 0;
     text-align: center;
-    -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    -o-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); }
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out; }
     .dropdown-content a:hover {
       color: black; }
 
@@ -275,7 +286,7 @@ body {
     text-align: center; }
 
 .header-scrolled {
-  background-color: #3c272b; }
+  background-color: var(--newHeaderColor); }
   .header-scrolled .nav-items .nav-item:hover {
     color: white; }
     .header-scrolled .nav-items .nav-item:hover::before {
@@ -291,7 +302,7 @@ body {
       background: white; }
   .header-scrolled .nav-items .dropdown-content {
     z-index: -2;
-    background-color: rgba(60, 29, 43, 0.9); }
+    background-color: rgba(195, 111, 85, 0.9); }
     .header-scrolled .nav-items .dropdown-content a {
       color: rgba(255, 255, 255, 0.7); }
       .header-scrolled .nav-items .dropdown-content a:hover {
@@ -317,8 +328,8 @@ body {
       color: white; }
 
 .swiper-container {
-  width: 95vw;
-  height: calc(100vh - 60px);
+  width: 100vw;
+  height: 60vh;
   margin-left: auto;
   margin-right: auto; }
 
@@ -397,52 +408,6 @@ body {
 
 .service-timings .row .content-text p {
   text-align: center; }
-
-.footer {
-  background-color: #3c272b;
-  padding: 12px 0px;
-  font-size: 16px;
-  color: #fff; }
-  .footer div {
-    text-align: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    .footer div span {
-      color: rgba(255, 255, 255, 0.7); }
-      .footer div span a {
-        color: rgba(255, 255, 255, 0.7); }
-      .footer div span i {
-        color: rgba(255, 255, 255, 0.7); }
-
-.dailyVersesWrapper a {
-  color: white;
-  font-size: 15px;
-  font-family: "Lato", sans-serif; }
-
-.dailyVerses:nth-child(1) {
-  font-family: "Roboto", sans-serif;
-  font-size: 22px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.9); }
-
-.dailyVerses:nth-child(2) {
-  text-align: center;
-  opacity: 0.6; }
-
-.dailyVerses.linkToWebsite {
-  text-align: center; }
-  .dailyVerses.linkToWebsite a {
-    opacity: 0.6;
-    font-size: 10px;
-    text-decoration: none;
-    text-align: right; }
 
 .map {
   -webkit-box-align: center;
@@ -542,36 +507,6 @@ body {
     color: #fff;
     font-size: 45px; }
 
-#intro {
-  background-image: url("../images/ccr.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center; }
-  #intro .content-heading {
-    font-family: "Cinzel", serif;
-    color: white;
-    font-size: 65px;
-    text-align: left;
-    -webkit-transform: translateY(-20%);
-    -ms-transform: translateY(-20%);
-    transform: translateY(-20%); }
-  #intro .content-block {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
-  #intro + .content-slab {
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center; }
-    #intro + .content-slab .content-text {
-      font-family: "Roboto", sans-serif;
-      font-size: 18px; }
-
 #serviceTimings {
   background-image: url("../images/timejpg.jpg");
   background-size: cover;
@@ -628,6 +563,132 @@ body {
 .transp {
   background: rgba(var(--mainbackgroundcolor), 1) !important; }
 
-.header.opacity-0 {
-  opacity: 0 !important;
-  visibility: hidden !important; }
+#intro {
+  padding: 120px 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed; }
+  #intro .heading {
+    color: #a36f4b;
+    font-size: 89px;
+    line-height: 77px;
+    font-family: "Bodoni"; }
+  #intro .text {
+    color: #a36f4b;
+    font-size: 21px;
+    padding-right: 50%;
+    padding-top: 30px; }
+  #intro + div {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/newfrontpage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    #intro + div .timings {
+      position: absolute;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      bottom: 7%;
+      min-width: 40vw;
+      min-height: 50px;
+      line-height: 37px;
+      background: black;
+      color: white;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      line-height: 37px;
+      border-radius: 2px; }
+      #intro + div .timings .content {
+        padding: 1px 20px; }
+        #intro + div .timings .content .lang {
+          text-transform: uppercase;
+          color: white;
+          font-weight: bold; }
+        #intro + div .timings .content .time {
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.8); }
+
+.dailyVersesWrapper {
+  min-height: 20vh;
+  padding: 25px 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #dd947c; }
+  .dailyVersesWrapper .dailyVerses {
+    margin: 10px 0px; }
+  .dailyVersesWrapper .dailyVerses:nth-child(1) {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold; }
+  .dailyVersesWrapper .dailyVerses:nth-child(2) {
+    font-size: 21px;
+    text-align: center;
+    font-weight: bold; }
+    .dailyVersesWrapper .dailyVerses:nth-child(2) a {
+      background: white;
+      padding: 0.25em 0.5em;
+      border-radius: 2px;
+      color: #cc836b;
+      -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
+  .dailyVersesWrapper .dailyVerses:nth-child(3) a {
+    font-size: 12px;
+    color: white; }
+
+.footer {
+  background: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 10px; }
+  .footer .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .footer i {
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-right: 10px; }
+  .footer .text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    text-transform: uppercase; }
+    .footer .text:nth-child(2) {
+      line-height: 25px; }

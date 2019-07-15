@@ -34,7 +34,7 @@
 
 
     <div class="row">
-      <div class="header header-scrolled col-12 opacity-0" id="header">
+      <div class="header header-scrolled col-12 home-header" id="header">
         <div class="nav-items dropdown " onclick="toggleHome()">
           <a href="index.html" class="nav-item active home" id='link-home'>Home </a>
         </div>
@@ -96,44 +96,78 @@
           </div>
         </div>
         <div class="nav-items dropdown" onclick="toggleMore()">
-          <a href="reachus.html" class="nav-item" id='link-reachus'>Reach Us</a>
+          <a href="reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
           <div class="dropdown-content" id="nav-ReachUs">
 
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="row"> -->
+    <div class="row" id="intro">
+      <span class="heading">
+        THE CATHEDRAL <br>
+        CHURCH OF <br>
+        THE REDEMPTION <br>
+      </span>
+      <p class="text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea reprehenderit provident asperiores neque non
+        facilis accusamus culpa quibusdam iusto. Nihil explicabo sit voluptatem rem rerum deserunt magni dolor
+        laboriosam provident? Itaque, ut incidunt maxime voluptas hic autem suscipit unde assumenda aperiam aliquid
+        architecto corrupti pariatur labore? Minus, eius veritatis, accusantium autem est ex magnam obcaecati eum
 
-
-    <!-- <div class="swiper-container row">
+      </p>
+    </div>
+    <div class="row homeHeaderTrigger">
+      <div class="timings">
+        <span class="content"><span class="lang">English </span><span class="time">8:00 AM</span></span>|
+        <span class="content"><span class="lang">Tamil </span><span class="time">9:35 AM</span></span>|
+        <span class="content"><span class="lang">Hindi </span><span class="time">11:35 AM</span></span>|
+        <span class="content"><span class="lang">Evening </span><span class="time">6:00 Pm</span></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="dailyVersesWrapper">
+          <div class="dailyVerses linkToWebsite">
+            <a href="https://dailyverses.net" target="_blank">DailyVerses.net</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-container" data-swiper-autoplay="2000">
+      <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
+        <!-- Slides -->
         <div class="swiper-slide">Slide 1</div>
         <div class="swiper-slide">Slide 2</div>
         <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-        <div class="swiper-slide">Slide 10</div>
+        ...
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div> -->
-    <!-- </div> -->
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="footer">
+          <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br> New Delhi - 110001</span></div>
+          <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325 </span></div>
+          <div class="content"> <span class="text">*Insert Logo Here*</span></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+      <!--   
     <div class="row content-main " id="intro">
       <div class="col-12 content-block">
         <h4 class="content-heading ">Cathedral Church Of <br>The Redemption
-          <!-- <span id="header-trigger"></span> -->
         </h4>
       </div>
     </div>
     <div class="row content-main content-slab-alternate header-trigger" id="bibleVerse" style="padding: 25px 0px">
       <div class="col-12 content-block">
-        <!-- <h4 class="content-heading">Bible Verse</h4> -->
         <div class="row content-slab-alternate" style="background: rgba(0, 0, 0, 0);">
           <div class="col-2"></div>
           <div class="col-8 content-text ">
@@ -153,7 +187,6 @@
         <div class="row" style="background: rgba(0, 0, 0, 0)">
           <div class="col-2"></div>
           <div class="col-8 content-text">
-            <!-- <h4 class="content-sub-heading">Summer Timings</h4> -->
             <p>
               English Service Timing: 8:00 am
             </p>
@@ -167,21 +200,7 @@
               Evening Service Timing: 6:00 pm
             </p>
           </div>
-          <!-- <div class="col-4 content-text">
-            <h4 class="content-sub-heading">Winter Timings</h4>
-            <p>
-              English Service Timing: 8:30 am
-            </p>
-            <p>
-              Tamil Service Timing: 10:05 am
-            </p>
-            <p>
-              Hindi Service Timing: 11:45 am
-            </p>
-            <p>
-              Evening Service Timing: 5:30 pm
-            </p>
-          </div> -->
+  
           <div class="col-2"></div>
         </div>
       </div>
@@ -211,29 +230,47 @@
       </div>
 
     </div>
+ -->
 
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
-    <script src="./scripts/scripts.js"></script>
-    <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-    <script defer src="/__/firebase/init.js"></script>
-    </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+      <script>
+        var swiper = new Swiper('.swiper-container', {
+          // autoplay:5000,
+          // speed: 400,
+          // autoplay: 5000,
+          // speed: 800,
+          // slidesPerView: 1,
+          // spaceBetween: 30,
+          loop: true,
+          spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+          // pagination: {
+          //   el: '.swiper-pagination',
+          //   clickable: true,
+          // },
+          // navigation: {
+          //   nextEl: '.swiper-button-next',
+          //   prevEl: '.swiper-button-prev',
+          // },
+        });
+      </script>
+      <script src="./scripts/scripts.js"></script>
+      <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+      <script defer src="/__/firebase/init.js"></script>
+      </script>
   </body>
 
 </html>
