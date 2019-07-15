@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Catherdral Church Of Redemption</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- update the version number as needed -->
+    <!-- include only the Firebase features as you need -->
+    <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
+          dataType: 'JSONP',
+          success: function (json) {
+            $(".dailyVersesWrapper").prepend(json.html);
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+
+
+    <div class="row">
+      <div class="header header-scrolled col-12">
+        <div class="nav-items dropdown " onclick="toggleHome()">
+          <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
+        </div>
+        <div class="nav-items dropdown" onclick="toggleAbout()">
+          <a href="../about.html" class=" nav-item " id='link-about'>About</a>
+          <div class="dropdown-content" id="nav-About">
+            <a href="../about.html#churchServices">Church Services</a>
+            <a href="../about.html#theChoirs">The Choirs</a>
+            <a href="../about.html#wfcs">WFCS</a>
+            <a href="../about.html#cyf">CYF</a>
+            <a href="../about.html#sundaySchool">Sunday School</a>
+          </div>
+        </div>
+        <div class="nav-items dropdown" onclick="toggleOutreach()">
+          <a href="../outreach.html" class="nav-item" id='link-outreach'>Outreach</a>
+          <div class="dropdown-content" id="nav-Outreach">
+            <a href="../outreach.html#evangelicalOutreach">Evangelical Outreach</a>
+            <a href="../outreach.html#communityOutreach">Community Outreach</a>
+          </div>
+        </div>
+        <div class="nav-items dropdown" onclick="toggleEvents()">
+          <a href="#" class="nav-item active" id='link-events'>Events</a>
+          <div class="dropdown-content" id="nav-Events">
+            <a href="./annualGardenFete.html">Annual Garden Fete</a>
+            <a href="./easterServices.html">Easter Services</a>
+            <a href="./sundaySchool.html">Sunday School</a>
+            <a href="./youth.html">Youth</a>
+            <a href="./wfcs.html">WFCS </a>
+            <a href="./church.html">Church</a>
+            <a href="./christmas.html">Christmas </a>
+            <a href="./outreach.html">Outreach</a>
+          </div>
+        </div>
+        <div class="nav-items dropdown" onclick="togglePeople()">
+          <a href="../people.html" class="nav-item" id='link-people'>People</a>
+          <div class="dropdown-content" id="nav-People">
+            <a href="../people.html#presbyterInCharge">Presbyter-in-charge</a>
+            <a href="../people.html#otherPresbyters">Other Presbyters</a>
+            <a href="../people.html#pastorateCommittee">Pastorate Committee</a>
+            <a href="../people.html#choirMasters">Choir Masters</a>
+            <a href="../people.html#churchMusicians">Church Musicians</a>
+            <a href="../people.html#choirMasters">Sound Engineer</a>
+            <a href="../people.html#wfcsLeaders">WFCS Leaders</a>
+            <a href="../people.html#cyfLeaders">CYF Leaders</a>
+            <a href="../people.html#layLeaders">Lay Leaders</a>
+            <a href="../people.html#officeStaff">Office Staff</a>
+            <a href="../people.html#sewadars">Sewadars</a>
+          </div>
+        </div>
+        <div class="nav-items dropdown" onclick="toggleMore()">
+          <a href="../more.html" class="nav-item" id='link-more'>More</a>
+          <div class="dropdown-content" id="nav-More">
+            <a href="../more.html#churchHistory">Church History</a>
+            <a href="../more.html#architecture">Architecture</a>
+            <a href="../more.html#paintings">Paintings</a>
+            <a href="../more.html#parishHall">Parish Hall</a>
+            <a href="../more.html#churchOrgan">Church Organ</a>
+            <a href="../more.html#lawns">Lawns</a>
+            <a href="../more.html#chronicle">Chronicle</a>
+            <a href="../more.html#presbyterInChargeOverTheYears">Presbyter-in-charge Over The Years</a>
+            <a href="../more.html#photoGallery">Media</a>
+          </div>
+        </div>
+        <div class="nav-items dropdown" onclick="toggleMore()">
+          <a href="reachus.html" class="nav-item" id='link-reachus'>Reach Us</a>
+          <div class="dropdown-content" id="nav-ReachUs">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row content-main img-blk" id="lpcef">
+      <div class="col-12 content-block">
+        <h4 class="content-heading ">LPCEF Picnic</h4>
+      </div>
+    </div>
+    <div class="row content-slab">
+      <div class="col-2"></div>
+      <div class="col-8 content-text ">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid illum, quia doloremque reprehenderit
+          commodi saepe voluptatum iusto dicta eius optio minima tempore nam, itaque possimus! Dolor sunt officia
+          sed, facere fugit, vitae animi amet minima, necessitatibus ducimus alias corporis beatae iusto
+          consequuntur in maxime soluta voluptatibus cupiditate voluptatem qui mollitia!
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quidem, incidunt, quisquam ex
+          repudiandae error alias magni, ut cum delectus voluptatum quis maiores possimus laboriosam.
+        </p>
+
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <div class="footer row">
+      <div class="col-4">
+        <span>
+          Church Office : 011 230 94229 / 011 230 93325
+        </span>
+      </div>
+      <div class="col-4">
+        <span>
+          Address <br>
+          The Cathedral Church of the Redemption <br>
+          1, Church Road, North Avenue <br>
+          New Delhi- 110001 <br>
+          India <br>
+
+
+        </span>
+      </div>
+      <div class="col-4">
+        <span>
+          <a href="https://www.facebook.com/RedemptionChurchNewDelhi/"> <i class="fab fa-facebook-square"></i>
+            Facebook</a>
+        </span>
+      </div>
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>
+    <script src="../scripts/scripts.js"></script>
+    <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+    </script>
+  </body>
+
+</html>

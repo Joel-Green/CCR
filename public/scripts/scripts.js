@@ -8,6 +8,7 @@
 //         console.log('onheader', onHeader)
 //     }
 // )
+console.log("Scripts are runnings");
 $('#link-home').hover(function () {
     $('#nav-Home').addClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
@@ -150,7 +151,7 @@ $('#link-reachus').hover(function () {
 //     toggleMore()
 // })
 function toggleHome() {
-    console.log('testings')
+    // console.log('testings')
     $('#nav-Home').toggleClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
     $('#nav-Outreach').removeClass('show-dropdown')
@@ -204,7 +205,7 @@ function toggleMore() {
     $('#nav-People').removeClass('show-dropdown')
 }
 window.onclick = function (event) {
-    console.log(event.target);
+    // console.log(event.target);
     if (!event.target.matches('.nav-item')) {
         // console.log(event.target)
         var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -222,7 +223,7 @@ window.onclick = function (event) {
 // console.log(content);
 const content = document.querySelectorAll(".content-main")
 const contentone = document.querySelector('#intro')
-console.log(content);
+// console.log(content);
 const optionsBasic = {
     root: null,
     threshold: 0,
@@ -234,11 +235,11 @@ const observer = new IntersectionObserver(function (entries, observer) {
         // console.log(entry.target, " ", entry.isIntersecting);
         if (!entry.isIntersecting) {
 
-            console.log("np")
+            // console.log("np")
             entry.target.classList.add('off-screen')
         }
         else {
-            console.log("yeas")
+            // console.log("yeas")
             entry.target.classList.remove('off-screen')
 
         }
@@ -257,11 +258,11 @@ const thresholdArray = steps => Array(steps + 1)
 
 let previousY = 0
 let previousRatio = 0
-console.log(holdheading);
+// console.log(holdheading);
 const options = {
     root: null,
     threshold: thresholdArray(20),
-    rootMargin: "-30% 0px",
+    rootMargin: "-45% 0px",
 }
 
 const observerHold = new IntersectionObserver(function (entries, observerHold) {
@@ -271,7 +272,7 @@ const observerHold = new IntersectionObserver(function (entries, observerHold) {
         const currentY = entry.boundingClientRect.y
         // const currentRatio = entry.intersectionRatio
         const isIntersecting = entry.isIntersecting
-        console.log(currentRatio);
+        // console.log(currentRatio);
         // if (!entry.isIntersecting) {
 
         //     console.log("Off- screen")
@@ -359,3 +360,66 @@ holdheading.forEach(section => {
     observerHold.observe(section);
 
 })
+
+const  trigger = document.querySelectorAll('.trigger');
+const handleIntersect = entries => {
+    entries.forEach(entry => {
+        const currentY = entry.boundingClientRect.y
+        const currentRatio = entry.intersectionRatio
+        const isIntersecting = entry.isIntersecting
+
+        // Scrolling down/up
+        console.log(currentRatio);
+        if (currentY < previousY) {
+            if (currentRatio > previousRatio && isIntersecting) {
+                console.log( "Scrolling down enter")
+            } else {
+                console.log( "Scrolling down leave")
+            }
+        } else if (currentY > previousY && isIntersecting) {
+            if (currentRatio < previousRatio) {
+                console.log( "Scrolling up leave")
+            } else {
+                console.log( "Scrolling up enter");
+            }
+        }
+
+        previousY = currentY
+        previousRatio = currentRatio
+    })
+}
+
+const triggerObserve = new IntersectionObserver(handleIntersect, {
+    threshold: thresholdArray(20),
+    rootMargin: "-45% 0px",
+})
+
+
+console.log($('#intro'));
+
+const intro = document.querySelector('#intro');
+console.log(intro);
+
+optionIntro = {
+    root:null,
+    threshold: thresholdArray(20), 
+    rootMargin : "0px"
+}
+const observeIntro = new IntersectionObserver ( function(entry, observeIntro){
+    // console.log(entry.isIntersecting);
+    console.log("Please Work");
+    // console.log(entry[0].intersectionRatio);
+    if(entry[0].intersectionRatio<0.998){
+        // console.log(entry[0].isIntersecting);
+        console.log("Please Work remove it");
+        document.getElementById("header").classList.remove('opacity-0');
+    }
+    else{
+        // console.log(entry[0].isIntersecting);
+        console.log("Please Work add it");
+        document.getElementById("header").classList.add('opacity-0');
+    }
+
+}, optionIntro)
+
+observeIntro.observe(intro);

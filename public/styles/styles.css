@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Cinzel|Lato|Montserrat|Oswald|Raleway|Roboto&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC&display=swap");
 :root {
   --paddingVerticalHeader: 20px;
-  --darkestcolor: #3c272b; }
+  --darkestcolor: #3c272b;
+  --mainbackgroundcolor:#eebb88; }
 
 html {
   scroll-behavior: smooth;
@@ -10,7 +12,11 @@ html {
   overflow-x: hidden; }
 
 body {
-  background: #eebb88;
+  background-image: url("../images/ccr.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
   max-width: 100%;
   overflow-x: hidden; }
 
@@ -27,6 +33,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #eebb88;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-orient: horizontal;
@@ -415,14 +422,15 @@ body {
         color: rgba(255, 255, 255, 0.7); }
 
 .dailyVersesWrapper a {
-  color: #000;
+  color: white;
   font-size: 15px;
   font-family: "Lato", sans-serif; }
 
 .dailyVerses:nth-child(1) {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  text-align: center; }
+  font-size: 22px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9); }
 
 .dailyVerses:nth-child(2) {
   text-align: center;
@@ -494,6 +502,7 @@ body {
 
 .hold-main {
   min-height: 130vh;
+  background: rgba(0, 0, 0, 0) !important;
   position: relative;
   left: 0%;
   -webkit-box-align: center;
@@ -506,26 +515,69 @@ body {
   -o-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
   opacity: 1;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important; }
+  .hold-main div .row {
+    background: rgba(0, 0, 0, 0) !important; }
+
+.img-blk {
+  background-image: url("../images/ccr.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: center; }
+  .img-blk .content-heading {
+    color: #fff;
+    font-size: 45px; }
 
-#annualGardenFete {
-  min-height: 135vh;
-  background-image: url("../images/ccr.jpg"); }
-
-#ashWednesday,
-.ashWednesday-body {
-  background-image: url("../images/ashwednesday.jpg"); }
+.img-blk-alt {
+  background-image: url("../images/ashwednesday.jpg") !important;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center; }
+  .img-blk-alt .content-heading {
+    color: #fff;
+    font-size: 45px; }
 
 #intro {
-  background-image: url("../images/ccr.jpg"); }
+  background-image: url("../images/ccr.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center; }
+  #intro .content-heading {
+    font-family: "Cinzel", serif;
+    color: white;
+    font-size: 65px;
+    text-align: left;
+    -webkit-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%); }
+  #intro .content-block {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
+  #intro + .content-slab {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center; }
+    #intro + .content-slab .content-text {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px; }
 
 #serviceTimings {
   background-image: url("../images/timejpg.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: center; }
   #serviceTimings .content-heading {
     color: white; }
   #serviceTimings .content-text .content-sub-heading {
@@ -535,3 +587,47 @@ body {
 
 #churchServices {
   background-image: url("../images/timejpg.jpg"); }
+
+.content-slab {
+  padding: 40px 0px;
+  background-color: #eebb88 !important;
+  min-height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.content-slab-alternate {
+  min-height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 40px 0px; }
+
+#bibleVerse {
+  background-image: url("../images/ashwednesday.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center; }
+  #bibleVerse .content-heading {
+    color: white;
+    font-size: 45px; }
+
+.transp {
+  background: rgba(var(--mainbackgroundcolor), 1) !important; }
+
+.header.opacity-0 {
+  opacity: 0 !important;
+  visibility: hidden !important; }
