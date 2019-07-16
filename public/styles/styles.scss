@@ -304,7 +304,7 @@ body {
 
 .swiper-container {
   width: 100vw;
-  height: 60vh;
+  height: 50vh;
   margin-left: auto;
   margin-right: auto;
   // background: red;
@@ -694,12 +694,15 @@ body {
     background-position: center;
     display: flex;
     justify-content: center;
+    position: relative;
     .timings{
-      position: absolute;
+      position: relative;
       display: flex;
-      bottom: 7%;
+      // bottom: 7%;
+      top:90vh;
+      height: 50px; 
       min-width: 40vw;
-      min-height: 50px;
+      // min-height: 50px;
       line-height: 37px;
       background: black;
       color: white;
@@ -726,7 +729,7 @@ body {
   }
 }
 .dailyVersesWrapper{
-  min-height: 20vh;
+  in-height: 20vh;
   padding: 25px 10%;
   display: flex;
   align-items: center;
@@ -775,14 +778,30 @@ body {
     align-items: center;
   }
   i{
-    font-size: 50px;
+    font-size: 39px;
     color: rgba($color: #fff, $alpha: 0.9);
     margin-right: 10px;
   }
   .text{
     color: rgba($color: #fff, $alpha: 0.9);
-    font-size: 16px;
+    font-size: 12px;
+    line-height: 14px !important;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    i{
+      font-size: 13.5px;
+      // display:  flex;
+    }
+    a{
+      // display: flex;
+    color: rgba($color: #fff, $alpha: 0.9);
+    font-size: 12px;
+    // text-transform: uppercase;
+
+    }
     &:nth-child(2){
       line-height: 25px;
       // margin :5px 0px;
