@@ -729,8 +729,8 @@ body {
   }
 }
 .dailyVersesWrapper{
-  in-height: 20vh;
-  padding: 25px 10%;
+  min-height: 20vh;
+  padding: 25px 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -738,16 +738,17 @@ body {
   background: #dd947c;
   .dailyVerses{
     margin: 10px 0px;
+    width: 100%;
   }
   .dailyVerses:nth-child(1){
     color: white;
-    font-size: 28px;
+    font-size: 21px;
     text-align: center;
     font-weight: bold;
   }
   .dailyVerses:nth-child(2){
     // color: rgb(136, 121, 121) !important;
-    font-size: 21px;
+    font-size: 16px;
     text-align: center;
     font-weight: bold;
     a{
@@ -760,8 +761,12 @@ body {
   }
   .dailyVerses:nth-child(3){
     a{
+      text-align: center;
       font-size: 12px;
       color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -807,4 +812,32 @@ body {
       // margin :5px 0px;
     }
   }
+}
+// #dailyVerse{
+//   // height: 100vh;
+//   width:100%;
+// }
+// #verseSize{
+//   height: 45vh;
+//   width: 100%;
+// }
+#churchHistory{
+  background-image: url("../images/Architecture.JPG") !important;
+}
+#architecture{
+  background-image: url("../images/Architecture1.JPG") !important;
+  // .content-heading{
+    // color: #fce7e7;
+  // }
+}
+#paintings{
+
+  background-image: url("../images/Painting.JPG") !important;
+}
+#goodFriday{
+
+  background-image: url("../images/GoodFriday.JPG") !important;
+}
+#communityOutreach{
+  background-image: url('../images/LPCEFCommunityOutreach.JPG') !important;
 }

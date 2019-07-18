@@ -1,3 +1,25 @@
+(function($) {
+    $.fn.textfill = function(maxFontSize) {
+        maxFontSize = parseInt(maxFontSize, 10);
+        return this.each(function(){
+            var ourText = $("#verseSize .dailyVerses:nth-child(1)", this),
+                parent = ourText.parent(),
+                maxHeight = parent.height(),
+                maxWidth = parent.width(),
+                fontSize = parseInt(ourText.css("fontSize"), 10),
+                multiplier = maxWidth/ourText.width(),
+                newSize = (fontSize*(multiplier-0.1));
+                console.log(ourText);
+            ourText.css(
+                "fontSize", 
+                (maxFontSize > 0 && newSize > maxFontSize) ? 
+                    maxFontSize : 
+                    newSize
+            );
+            // ourText.css("color","red");
+        });
+    };
+})(jQuery);
 // let onHeader = false;
 // $('.header').hover(function () {
 //     onHeader = true
@@ -8,6 +30,13 @@
 //         console.log('onheader', onHeader)
 //     }
 // )
+$( document ).ready(function() {
+    console.log( "ready!" );
+    setTimeout(function(){
+        $('#verseSize').textfill({maxFontSize:28});
+
+    },5000)
+});
 console.log("Scripts are runnings");
 $('#link-home').hover(function () {
     $('#nav-Home').addClass('show-dropdown')
