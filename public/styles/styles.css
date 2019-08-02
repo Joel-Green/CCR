@@ -146,6 +146,12 @@ body {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background: rgba(0, 0, 0, 0); }
+  @media (max-width: 991.98px) {
+    .header {
+      -webkit-box-orient: vertical !important;
+      -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+      flex-direction: column !important; } }
   .header .nav-items {
     position: relative; }
     .header .nav-items .nav-item {
@@ -780,9 +786,9 @@ body {
   position: absolute;
   right: 8px;
   top: 65px;
-  height: 150px;
-  width: 150px;
-  opacity: 0.95; }
+  height: 120px;
+  width: 120px;
+  opacity: 0.80; }
 
 .content-text {
   text-align: center !important; }

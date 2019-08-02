@@ -1,19 +1,19 @@
-(function($) {
-    $.fn.textfill = function(maxFontSize) {
+(function ($) {
+    $.fn.textfill = function (maxFontSize) {
         maxFontSize = parseInt(maxFontSize, 10);
-        return this.each(function(){
+        return this.each(function () {
             var ourText = $("#verseSize .dailyVerses:nth-child(1)", this),
                 parent = ourText.parent(),
                 maxHeight = parent.height(),
                 maxWidth = parent.width(),
                 fontSize = parseInt(ourText.css("fontSize"), 10),
-                multiplier = maxWidth/ourText.width(),
-                newSize = (fontSize*(multiplier-0.1));
-                console.log(ourText);
+                multiplier = maxWidth / ourText.width(),
+                newSize = (fontSize * (multiplier - 0.1));
+            console.log(ourText);
             ourText.css(
-                "fontSize", 
-                (maxFontSize > 0 && newSize > maxFontSize) ? 
-                    maxFontSize : 
+                "fontSize",
+                (maxFontSize > 0 && newSize > maxFontSize) ?
+                    maxFontSize :
                     newSize
             );
             // ourText.css("color","red");
@@ -30,22 +30,27 @@
 //         console.log('onheader', onHeader)
 //     }
 // )
-$( document ).ready(function() {
-    console.log( "ready!" );
-    setTimeout(function(){
-        $('#verseSize').textfill({maxFontSize:28});
+$(document).ready(function () {
+    console.log("ready!");
+    setTimeout(function () {
+        $('#verseSize').textfill({ maxFontSize: 28 });
 
-    },5000)
+    }, 5000)
 });
 console.log("Scripts are runnings");
+let w = window.innerWidth;
+console.log(w, "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww");
 $('#link-home').hover(function () {
-    $('#nav-Home').addClass('show-dropdown')
-    $('#nav-About').removeClass('show-dropdown')
-    $('#nav-Outreach').removeClass('show-dropdown')
-    $('#nav-Events').removeClass('show-dropdown')
-    $('#nav-People').removeClass('show-dropdown')
-    $('#nav-More').removeClass('show-dropdown')
+    if (w > 992) {
+        $('#nav-Home').addClass('show-dropdown')
+        $('#nav-About').removeClass('show-dropdown')
+        $('#nav-Outreach').removeClass('show-dropdown')
+        $('#nav-Events').removeClass('show-dropdown')
+        $('#nav-People').removeClass('show-dropdown')
+        $('#nav-More').removeClass('show-dropdown')
+    }
 }, function () {
+
     $('.header').hover(function () { }, function () {
         $('#nav-Home').removeClass('show-dropdown')
         $('#nav-About').removeClass('show-dropdown')
@@ -57,12 +62,14 @@ $('#link-home').hover(function () {
     })
 })
 $('#link-about').hover(function () {
+    if (w > 992) {
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-About').addClass('show-dropdown')
     $('#nav-Outreach').removeClass('show-dropdown')
     $('#nav-Events').removeClass('show-dropdown')
     $('#nav-People').removeClass('show-dropdown')
     $('#nav-More').removeClass('show-dropdown')
+    }
 }, function () {
     $('.header').hover(function () { }, function () {
         $('#nav-Home').removeClass('show-dropdown')
@@ -75,12 +82,14 @@ $('#link-about').hover(function () {
     })
 })
 $('#link-outreach').hover(function () {
+    if (w > 992) {
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
     $('#nav-Outreach').addClass('show-dropdown')
     $('#nav-Events').removeClass('show-dropdown')
     $('#nav-People').removeClass('show-dropdown')
     $('#nav-More').removeClass('show-dropdown')
+    }
 }, function () {
     $('.header').hover(function () { }, function () {
         $('#nav-Home').removeClass('show-dropdown')
@@ -93,12 +102,15 @@ $('#link-outreach').hover(function () {
     })
 })
 $('#link-events').hover(function () {
+    if (w > 992) {
+
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
     $('#nav-Outreach').removeClass('show-dropdown')
     $('#nav-Events').addClass('show-dropdown')
     $('#nav-People').removeClass('show-dropdown')
     $('#nav-More').removeClass('show-dropdown')
+    }
 }, function () {
     $('.header').hover(function () { }, function () {
         $('#nav-Home').removeClass('show-dropdown')
@@ -111,12 +123,14 @@ $('#link-events').hover(function () {
     })
 })
 $('#link-people').hover(function () {
+    if (w > 992) {
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
     $('#nav-Outreach').removeClass('show-dropdown')
     $('#nav-Events').removeClass('show-dropdown')
     $('#nav-People').addClass('show-dropdown')
     $('#nav-More').removeClass('show-dropdown')
+    }
 }, function () {
     $('.header').hover(function () { }, function () {
         $('#nav-Home').removeClass('show-dropdown')
@@ -129,12 +143,14 @@ $('#link-people').hover(function () {
     })
 })
 $('#link-more').hover(function () {
+    if (w > 992) {
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
     $('#nav-Outreach').removeClass('show-dropdown')
     $('#nav-Events').removeClass('show-dropdown')
     $('#nav-People').removeClass('show-dropdown')
     $('#nav-More').addClass('show-dropdown')
+    }
 }, function () {
     $('.header').hover(function () { }, function () {
         $('#nav-Home').removeClass('show-dropdown')
@@ -147,12 +163,14 @@ $('#link-more').hover(function () {
     })
 })
 $('#link-reachus').hover(function () {
+    if (w > 992) {
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
     $('#nav-Outreach').removeClass('show-dropdown')
     $('#nav-Events').removeClass('show-dropdown')
     $('#nav-People').removeClass('show-dropdown')
     $('#nav-More').removeClass('show-dropdown')
+    }
 }, function () {
     $('.header').hover(function () { }, function () {
         $('#nav-Home').removeClass('show-dropdown')
@@ -238,8 +256,7 @@ const thresholdArray = steps => Array(steps + 1)
     .map((_, index) => index / steps || 0);
 
 
-for(size=9; size<100 && size >= 9; size=size*4/3)
-{
+for (size = 9; size < 100 && size >= 9; size = size * 4 / 3) {
     console.log(size);
 }
 
@@ -462,21 +479,21 @@ window.onclick = function (event) {
 
 // // observeIntro.observe(intro);
 
-let homeHeader =  document.querySelectorAll(".homeHeaderTrigger");
+let homeHeader = document.querySelectorAll(".homeHeaderTrigger");
 let introHeader = document.querySelectorAll('.home-header');
 let introContent = document.getElementById('intro');
 console.log(homeHeader);
 
 optionsHomeHeader = {
-    root:null,
-    threshold :thresholdArray(30),
-    rootMargin : "0px 0px 0px 0px"
+    root: null,
+    threshold: thresholdArray(30),
+    rootMargin: "0px 0px 0px 0px"
 }
-const observeHomeHeader = new IntersectionObserver (function(entry,observeHomeHeader){
+const observeHomeHeader = new IntersectionObserver(function (entry, observeHomeHeader) {
     // console.log(entry[0].intersectionRatio);
-    introHeader[0].style.opacity=3*entry[0].intersectionRatio-1.64;
-    introContent.style.opacity=3*entry[0].intersectionRatio-1.64;
-    console.log(3*entry[0].intersectionRatio-1.94);
-},optionsHomeHeader);
+    introHeader[0].style.opacity = 3 * entry[0].intersectionRatio - 1.64;
+    introContent.style.opacity = 3 * entry[0].intersectionRatio - 1.64;
+    console.log(3 * entry[0].intersectionRatio - 1.94);
+}, optionsHomeHeader);
 
 observeHomeHeader.observe(homeHeader[0]);
