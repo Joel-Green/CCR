@@ -821,3 +821,15 @@ p {
 
 #parishHall {
   background-image: url("../images/Parish-Hall.jpg"); }
+
+#carolService {
+  background-image: url("../images/Carol-Service.jpg"); }
+
+#fastingPrayer {
+  background-image: url("../images/Fasting-prayer.jpg") !important; }
+
+#sundaySchoolEvents {
+  background-image: url("../images/Events-Sunday-School.jpg") !important; }
+
+#choirMasters {
+  background-image: url("../images/Choirs.jpg"); }
