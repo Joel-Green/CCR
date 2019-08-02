@@ -123,6 +123,16 @@ body {
   -ms-flex: 0 0 calc(100% * 12 / 12);
   flex: 0 0 calc(100% * 12 / 12); }
 
+.col-4-5 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 calc(100% * (4.5 / 12));
+  flex: 0 0 calc(100% * (4.5 / 12)); }
+
+.col-8-5 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 calc(100% * (8.5 / 12));
+  flex: 0 0 calc(100% * (8.5 / 12)); }
+
 .header {
   position: fixed;
   width: 100vw;
