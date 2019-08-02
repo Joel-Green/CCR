@@ -737,3 +737,21 @@ body {
 
 .z-intro {
   z-index: 30000; }
+
+#youthSunday {
+  background-image: url("../images/Youth-Sunday.jpg"); }
+
+#unity {
+  background-image: url("../images/CYF-Unity.jpg") !important; }
+
+#youthRetreat {
+  background-image: url("../images/Youth-Retreat.jpg") !important; }
+
+#annualGardenFete {
+  background-image: url("../images/annual-garden-fete.JPG") !important; }
+
+#cyfmain {
+  background-image: url("../images/CYF-main-page-picture.jpg") !important; }
+
+#tamilChoir {
+  background-image: url("../images/Tamil-Choir.jpg") !important; }
