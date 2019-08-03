@@ -359,9 +359,7 @@ body {
 
 .swiper-container {
   width: 100vw;
-  height: 58vh;
-  margin-left: auto;
-  margin-right: auto; }
+  height: 58vh; }
 
 .swiper-slide {
   text-align: center;
