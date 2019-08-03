@@ -138,7 +138,7 @@ body {
   width: 100vw;
   opacity: 1;
   visibility: visible;
-  z-index: 3000;
+  z-index: 9000 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
