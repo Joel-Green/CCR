@@ -326,13 +326,15 @@ body {
 
 .swiper-container {
   width: 100vw;
-  height: 58vh;
+  // height: 555px;
+  height: 60vh;
   // margin-left: auto;
   // margin-right: auto;
   // background: red;
 }
 .swiper-slide {
   text-align: center;
+  
   font-size: 18px;
   background: #fff;
   /* Center slide text vertically */
