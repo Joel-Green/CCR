@@ -1,4 +1,12 @@
 // background-color: #3c272b;
+  $paddingVerticalHeader: 20px;
+  $darkestcolor: #3c272b;
+  $mainbackgroundcolor:rgba( white ,  1);
+  $newHeaderColor:black;
+  $newLighterBackground:#dd947c;
+  $bodyFont:'Nunito Sans', sans-serif;
+  $introheading : #a36f4b;
+  $dropdowncolor : rgba(black, 0.75);
 @import url("https://fonts.googleapis.com/css?family=Cinzel|Lato|Montserrat|Oswald|Raleway|Roboto&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
 @import url("https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC&display=swap");
@@ -27,12 +35,14 @@
 :root {
   --paddingVerticalHeader: 20px;
   --darkestcolor: #3c272b;
-  --mainbackgroundcolor:#eebb88;
+  --mainbackgroundcolor:rgba($color: white , $alpha: 1);
   --newHeaderColor:#c36f55;
   --newLighterBackground:#dd947c;
   --bodyFont:'Nunito Sans', sans-serif;
-
+  --introheading : #a36f4b;
 }
+
+
 html {
   scroll-behavior: smooth;
   max-width: 100%;
@@ -266,7 +276,7 @@ body {
   }
 }
 .header-scrolled {
-  background-color: var(--newHeaderColor);
+  background-color: $newHeaderColor;
   .nav-items {
     .nav-item {
       &:hover {
@@ -285,9 +295,9 @@ body {
     }
     .dropdown-content {
       z-index: -2;
-      background-color: rgba(195, 111, 85, 0.9) ;
+      background-color: $dropdowncolor  ;
       a {
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.5);
         &:hover {
           color: rgba(255, 255, 255, 1);
         }
@@ -395,65 +405,6 @@ body {
     border-radius: 2px;
   }
 }
-// .daily-verse {
-//   table {
-//     width: 100% !important;
-//     border: none !important;
-//     border-collapse: collapse !important;
-//     tbody {
-//       border: none !important;
-//       border-collapse: collapse !important;
-//       tr {
-//         border: none !important;
-//         border-collapse: collapse !important;
-//         td {
-//           border: none !important;
-//           border-collapse: collapse !important;
-//           font {
-//             div[align="CENTER"] {
-//               display: none;
-//             }
-//             div {
-//               font {
-//                 font-size: 18px;
-//                 font-family: "Roboto", sans-serif;
-//                 b {
-//                   font-size: 16px;
-//                   font-family: "Lato", sans-serif;
-//                 }
-//               }
-//             }
-//             span {
-//               div {
-//                 font {
-//                   text-decoration: none !important;
-//                   color: grey !important;
-//                   font-size: 15px;
-//                   font-family: "Lato", sans-serif;
-//                   a {
-//                     text-decoration: none !important;
-//                     color: grey !important;
-//                     font-size: 15px;
-//                     cursor: pointer !important;
-//                     font-family: "Lato", sans-serif;
-//                     &:nth-child(3) {
-//                       font-family: "Lato", sans-serif;
-//                       font-size: 8px !important;
-//                     }
-//                   }
-//                   a[href="http://links.christiansunite.com/go.cgi?vs"] {
-//                     font-size: 8px !important;
-//                     font-family: "Lato", sans-serif;
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 .content-sub-heading {
   text-align: center;
   font-size: 22px;
@@ -468,56 +419,6 @@ body {
     }
   }
 }
-// .footer {
-//   background-color: #3c272b;
-//   padding: 12px 0px;
-//   font-size: 16px;
-//   color: #fff;
-//   div {
-//     text-align: center;
-//     align-items: center;
-//     justify-content: center;
-//     display: flex;
-//     span {
-//       color: rgba(255, 255, 255, 0.7);
-//       // display: flex;
-//       a {
-//         color: rgba(255, 255, 255, 0.7);
-//       }
-//       i {
-//         color: rgba(255, 255, 255, 0.7);
-//       }
-//     }
-//   }
-// }
-
-// .dailyVersesWrapper a {
-//   color: white;
-//   // font-weight: bold;
-//   font-size: 15px;
-//   font-family: "Lato", sans-serif;
-// }
-// .dailyVerses:nth-child(1) {
-//   font-family: "Roboto", sans-serif;
-//   font-size: 22px;
-//   text-align: center;
-//   // color: white;
-//   color: rgba($color: #fff, $alpha: 0.9)
-// }
-
-// .dailyVerses:nth-child(2) {
-//   text-align: center;
-//   opacity: 0.6;
-// }
-// .dailyVerses.linkToWebsite {
-//   text-align: center;
-//   a {
-//     opacity: 0.6;
-//     font-size: 10px;
-//     text-decoration: none;
-//     text-align: right;
-//   }
-// }
 .map {
   align-items: center;
   justify-content: center;
@@ -531,20 +432,7 @@ body {
 .left-text {
   text-align: left;
 }
-// .off-screen {
-// opacity: 0;
-// left: 5%;
-// }
-
-// .max-width-100 {
-// max-height: 100vh !important;
-// }
-
 .content-body {
-  // padding-top: 35px;
-  // padding-bottom: 35px !important;
-  // padding-left: 0px;
-  // padding-right: 0px;
   p {
     margin: 35px 0px;
   }
@@ -661,7 +549,7 @@ body {
 
 .content-slab {
   padding: 40px 0px;
-  background-color: rgba($color: #eebb88, $alpha: 1) !important;
+  background-color: $mainbackgroundcolor !important;
   min-height: 40vh;
   display: flex;
   justify-content: center;
@@ -690,19 +578,19 @@ body {
   }
 }
 .transp{
-  background: rgba($color: var(--mainbackgroundcolor), $alpha: 1) !important;
+  background: $mainbackgroundcolor !important;
 }
 #intro{
   // font-size: 67;
   .heading {
-    color: #a36f4b;
+    color: var(--introheading);
     font-size: 89px;
     line-height: 77px;
     font-family: "Bodoni";
     // font-weight: bold;
   }
   .text{
-    color: #a36f4b;
+    color: var(--introheading);
     font-size:21px;
     padding-right: 50%;
     padding-top: 30px;
@@ -763,7 +651,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: #dd947c;
+  background: var(--newLighterBackground);
   .dailyVerses{
     margin: 10px 0px;
     width: 100%;
@@ -783,7 +671,8 @@ body {
       background: white;
       padding: 0.25em 0.5em;
       border-radius: 2px;
-      color: #cc836b;
+      // color: #cc836b;
+      color: var(--newLighterBackground);
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5) ;
     }
   }

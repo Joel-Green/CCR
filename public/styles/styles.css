@@ -25,10 +25,11 @@
 :root {
   --paddingVerticalHeader: 20px;
   --darkestcolor: #3c272b;
-  --mainbackgroundcolor:#eebb88;
+  --mainbackgroundcolor:rgba($color: white , $alpha: 1);
   --newHeaderColor:#c36f55;
   --newLighterBackground:#dd947c;
-  --bodyFont:'Nunito Sans', sans-serif; }
+  --bodyFont:'Nunito Sans', sans-serif;
+  --introheading: #a36f4b; }
 
 html {
   scroll-behavior: smooth;
@@ -311,7 +312,7 @@ body {
     text-align: center; }
 
 .header-scrolled {
-  background-color: var(--newHeaderColor); }
+  background-color: black; }
   .header-scrolled .nav-items .nav-item:hover {
     color: white; }
     .header-scrolled .nav-items .nav-item:hover::before {
@@ -327,9 +328,9 @@ body {
       background: white; }
   .header-scrolled .nav-items .dropdown-content {
     z-index: -2;
-    background-color: rgba(195, 111, 85, 0.9); }
+    background-color: rgba(0, 0, 0, 0.75); }
     .header-scrolled .nav-items .dropdown-content a {
-      color: rgba(255, 255, 255, 0.7); }
+      color: rgba(255, 255, 255, 0.5); }
       .header-scrolled .nav-items .dropdown-content a:hover {
         color: white; }
   .header-scrolled .nav-item {
@@ -555,7 +556,7 @@ body {
 
 .content-slab {
   padding: 40px 0px;
-  background-color: #eebb88 !important;
+  background-color: white !important;
   min-height: 40vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -591,7 +592,7 @@ body {
     font-size: 45px; }
 
 .transp {
-  background: rgba(var(--mainbackgroundcolor), 1) !important; }
+  background: white !important; }
 
 #intro {
   padding: 120px 30px;
@@ -600,12 +601,12 @@ body {
   position: fixed;
   z-index: 7000 !important; }
   #intro .heading {
-    color: #a36f4b;
+    color: var(--introheading);
     font-size: 89px;
     line-height: 77px;
     font-family: "Bodoni"; }
   #intro .text {
-    color: #a36f4b;
+    color: var(--introheading);
     font-size: 21px;
     padding-right: 50%;
     padding-top: 30px; }
@@ -669,7 +670,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #dd947c; }
+  background: var(--newLighterBackground); }
   .dailyVersesWrapper .dailyVerses {
     margin: 10px 0px;
     width: 100%; }
@@ -686,7 +687,7 @@ body {
       background: white;
       padding: 0.25em 0.5em;
       border-radius: 2px;
-      color: #cc836b;
+      color: var(--newLighterBackground);
       -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); }
   .dailyVersesWrapper .dailyVerses:nth-child(3) a {
