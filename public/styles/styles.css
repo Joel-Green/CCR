@@ -830,7 +830,7 @@ p {
   background-image: url("../images/Bake-Sale.jpg") !important; }
 
 #churchOrgan {
-  background-image: url("../images/Organ.jpg"); }
+  background-image: url("../images/Church-Organ.JPG"); }
 
 #aboutSundaySchool {
   background-image: url("../images/Sunday-School.jpg") !important; }
@@ -861,3 +861,21 @@ p {
 
 #lpcefPicnic {
   background-image: url("../images/LPCEF-PICNIC.jpg") !important; }
+
+#tamilService {
+  background-image: url("../images/Tamil-Service.JPG") !important; }
+
+#hindiService {
+  background-image: url("../images/Hindi-Service.JPG") !important; }
+
+#confirmation {
+  background-image: url("../images/confirmation-sunday.png") !important; }
+
+#cathedralNurseryOutreach {
+  background-image: url("../images/Cathedral-Nursery.JPG") !important; }
+
+#englishService {
+  background-image: url("../images/English-Service.JPG") !important; }
+
+#layleaders {
+  background-image: url("../images/Lay-Leaders.JPG") !important; }
