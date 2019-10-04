@@ -694,6 +694,11 @@ body {
     font-size: 89px;
     line-height: 77px;
     font-family: "Bodoni"; }
+    @media (max-width: 991.98px) {
+      #intro .heading {
+        font-size: 48px;
+        line-height: 48px;
+        margin-top: -48px; } }
   #intro .text {
     color: var(--introheading);
     font-size: 21px;
@@ -733,15 +738,30 @@ body {
       align-items: center;
       line-height: 37px;
       border-radius: 2px; }
-      #intro + div .timings .content {
-        padding: 1px 20px; }
-        #intro + div .timings .content .lang {
-          text-transform: uppercase;
-          color: white;
-          font-weight: bold; }
-        #intro + div .timings .content .time {
-          text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.8); }
+      @media (max-width: 991.98px) {
+        #intro + div .timings {
+          height: 10%; } }
+    #intro + div .content {
+      padding: 1px 20px; }
+      @media (max-width: 991.98px) {
+        #intro + div .content {
+          padding: 2px;
+          line-height: 12px;
+          text-align: center; } }
+      #intro + div .content .lang {
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold; }
+        @media (max-width: 991.98px) {
+          #intro + div .content .lang {
+            margin: auto;
+            font-size: 13px; } }
+      #intro + div .content .time {
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.8); }
+        @media (max-width: 991.98px) {
+          #intro + div .content .time {
+            font-size: 13px; } }
 
 .dailyVersesWrapper {
   min-height: 20vh;
@@ -903,6 +923,11 @@ body {
   height: 100px;
   width: 100px;
   opacity: 0.80; }
+  @media (max-width: 991.98px) {
+    .cni-logo {
+      margin-top: -48px;
+      height: 50px;
+      width: 50px; } }
 
 .content-text {
   text-align: center !important; }

@@ -662,6 +662,11 @@ body {
     line-height: 77px;
     font-family: "Bodoni";
     // font-weight: bold;
+  @media(max-width: 991.98px){
+    font-size: 48px;
+    line-height: 48px;
+    margin-top:-48px;
+  }
   }
   .text{
     color: var(--introheading);
@@ -700,24 +705,44 @@ body {
       align-items: center;
       line-height: 37px;
       border-radius: 2px;
+
+  @media(max-width: 991.98px){
+    height: 10%;
+    }
+  }
       .content{
         padding: 1px 20px;
+
+  @media(max-width: 991.98px){
+    padding: 2px;
+    line-height: 12px;
+    text-align: center;
+    
+    }
         .lang{
           text-transform: uppercase;
           color: white;
           font-weight: bold;
           // font-size: 16px;
+  @media(max-width: 991.98px){
+    margin: auto;
+    font-size: 13px;
+    }
         }
         .time{
           text-transform: uppercase;
           color:rgba(255, 255, 255, 0.8);
+  @media(max-width: 991.98px){
+
+    font-size: 13px;
+    }
         }
       }
 
     }
 
   }
-}
+
 .dailyVersesWrapper{
   min-height: 20vh;
   padding: 25px 5%;
@@ -881,6 +906,12 @@ body {
   height: 100px;
   width: 100px;
   opacity: 0.80;
+
+  @media(max-width: 991.98px){
+    margin-top: -48px;
+    height: 50px;
+    width: 50px; 
+  }
 }
 .content-text{
   
