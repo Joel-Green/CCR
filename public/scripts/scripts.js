@@ -30,6 +30,13 @@
 //         console.log('onheader', onHeader)
 //     }
 // )
+
+function toggleHeader ()
+{
+    $(".nav-items").toggleClass('show-header');
+    console.log("asdf");
+}
+
 $(document).ready(function () {
     console.log("ready!");
     setTimeout(function () {
