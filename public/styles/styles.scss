@@ -249,10 +249,15 @@ body {
     height: 3px;
     background: white;
     transition: all 0.3s ease-in-out;
+  @media(max-width:991.9px)
+  {
+    opacity: 0;
+  }
   }
   &:hover {
     // color: rgba(0, 0, 0, 1);
     color: rgba(255, 255, 255, 1);
+
   }
   // + .dropdown-content {
   //   display: flex;
