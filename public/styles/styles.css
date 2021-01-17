@@ -31,7 +31,7 @@
   --darkestcolor: #3c272b;
   --mainbackgroundcolor:rgba($color: white , $alpha: 1);
   --newHeaderColor:#c36f55;
-  --newLighterBackground:#dd947c;
+  --newLighterBackground:white;
   --bodyFont:"Nunito Sans", sans-serif;
   --introheading: #a36f4b;
 }
@@ -157,10 +157,45 @@ body {
           flex: 0 0 calc(100% * (8.5 / 12));
 }
 
+.justify-align-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .show-header {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+.box {
+  margin: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.box .serviceName {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+.box .serviceIframe {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100vw;
+}
+.box .serviceIframe iframe {
+  width: 560px;
+  height: 315px;
+  max-width: 100vw;
+}
+
+.iframeServicesHeading {
+  text-align: center;
+  margin-top: 15px;
 }
 
 .hamburger {
@@ -525,7 +560,8 @@ body {
 
 .swiper-container {
   width: 100vw;
-  height: 60vh;
+  height: 650px;
+  max-height: min(100vh, 663px);
 }
 
 .swiper-slide {
@@ -835,43 +871,12 @@ body {
   position: relative;
   z-index: 1 !important;
 }
-#intro + div .livestreams {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  top: 90vh;
-  height: 50px;
-  min-width: 40vw;
-  line-height: 37px;
-  background: black;
-  color: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  line-height: 37px;
-  border-radius: 2px;
-}
-#intro + div .livestreams a {
-  text-decoration: underline;
-  font-weight: bold;
-  font-style: italic;
-  color: white;
-}
-@media (max-width: 991.98px) {
-  #intro + div .livestreams {
-    height: 10%;
-  }
-}
 #intro + div .timings {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: calc(90vh - 75px);
+  top: 90vh;
   height: 50px;
   min-width: 40vw;
   line-height: 37px;
@@ -946,7 +951,7 @@ body {
   width: 100%;
 }
 .dailyVersesWrapper .dailyVerses:nth-child(1) {
-  color: white;
+  color: black;
   font-size: 21px;
   text-align: center;
   font-weight: bold;
@@ -957,7 +962,7 @@ body {
   font-weight: bold;
 }
 .dailyVersesWrapper .dailyVerses:nth-child(2) a {
-  background: white;
+  background: #a36f4b;
   padding: 0.25em 0.5em;
   border-radius: 2px;
   color: var(--newLighterBackground);
@@ -967,7 +972,7 @@ body {
 .dailyVersesWrapper .dailyVerses:nth-child(3) a {
   text-align: center;
   font-size: 12px;
-  color: white;
+  color: #a36f4b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
