@@ -177,7 +177,7 @@ body {
 }
 
 .box {
-  margin: 25px;
+  margin: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -187,14 +187,12 @@ body {
   font-size: 18px;
 }
 .box .serviceIframe {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  max-width: 100vw;
+  max-width: calc(100vw - 20px);
 }
 .box .serviceIframe iframe {
   width: 560px;
   height: 315px;
-  max-width: 100vw;
+  max-width: calc(100vw - 20px);
 }
 
 .iframeServicesHeading {
@@ -1242,4 +1240,13 @@ p {
   .hide-sm {
     display: none !important;
   }
+}
+
+.slider-inner {
+  width: 100vw;
+  padding: 10px;
+}
+
+.slider-img {
+  max-width: calc(100vw - 20px);
 }
