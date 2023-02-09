@@ -1,227 +1,303 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Catherdral Church Of Redemption</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!-- update the version number as needed -->
-    <!-- include only the Firebase features as you need -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <script>
-      $(document).ready(function () {
-        $.ajax({
-          url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
-          dataType: 'JSONP',
-          success: function (json) {
-            $(".dailyVersesWrapper").prepend(json.html);
-          }
-        });
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Catherdral Church Of Redemption</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <!-- update the version number as needed -->
+  <!-- include only the Firebase features as you need -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
+        dataType: 'JSONP',
+        success: function (json) {
+          $(".dailyVersesWrapper").prepend(json.html);
+        }
       });
-    </script>
-  </head>
+    });
+  </script>
+</head>
 
-  <body>
+<body>
 
 
-    <div class="row">
-      <div class="header header-scrolled col-12">
+  <div class="row">
+    <div class="header header-scrolled col-12">
       <div class="hamburger" id="hamburger" onclick="toggleHeader()">
         <span class="hamline"></span>
         <span class="hamline"></span>
         <span class="hamline"></span>
       </div>
-        <div class="nav-items dropdown " onclick="toggleHome()">
-          <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
+      <div class="nav-items dropdown " onclick="toggleHome()">
+        <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleAbout()">
+        <a href="#" class=" nav-item active" id='link-about'>About</a>
+        <div class="dropdown-content" id="nav-About">
+          <a href="../about/churchServices.html">Church Services</a>
+          <a href="../about/choirs.html">The Choirs</a>
+          <a href="../about/wfcs.html">WFCS</a>
+          <a href="../about/cyf.html">CYF</a>
+          <a href="../about/sundaySchool.html">Sunday School</a>
         </div>
-        <div class="nav-items dropdown" onclick="toggleAbout()">
-          <a href="#" class=" nav-item active" id='link-about'>About</a>
-          <div class="dropdown-content" id="nav-About">
-            <a href="../about/churchServices.html">Church Services</a>
-            <a href="../about/choirs.html">The Choirs</a>
-            <a href="../about/wfcs.html">WFCS</a>
-            <a href="../about/cyf.html">CYF</a>
-            <a href="../about/sundaySchool.html">Sunday School</a>
-          </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleOutreach()">
+        <a href="#" class="nav-item" id='link-outreach'>Outreach</a>
+        <div class="dropdown-content" id="nav-Outreach">
+          <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
+          <a href="../outreach/communityOutreach.html">Community Outreach</a>
+          <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
         </div>
-        <div class="nav-items dropdown" onclick="toggleOutreach()">
-          <a href="#" class="nav-item" id='link-outreach'>Outreach</a>
-          <div class="dropdown-content" id="nav-Outreach">
-            <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
-            <a href="../outreach/communityOutreach.html">Community Outreach</a>
-            <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
-          </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleEvents()">
+        <a href="#" class="nav-item " id='link-events'>Events</a>
+        <div class="dropdown-content" id="nav-Events">
+          <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
+          <a href="../events/sundaySchool.html">Sunday School</a>
+          <a href="../events/youth.html">Youth</a>
+          <a href="../events/wfcs.html">WFCS </a>
+          <a href="../events/church.html">Church</a>
+          <a href="../events/christmas.html">Carol Services</a>
+          <a href="../events/outreach.html">Outreach</a>
         </div>
-        <div class="nav-items dropdown" onclick="toggleEvents()">
-          <a href="#" class="nav-item " id='link-events'>Events</a>
-          <div class="dropdown-content" id="nav-Events">
-            <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
-            <a href="../events/sundaySchool.html">Sunday School</a>
-            <a href="../events/youth.html">Youth</a>
-            <a href="../events/wfcs.html">WFCS </a>
-            <a href="../events/church.html">Church</a>
-            <a href="../events/christmas.html">Carol Services</a>
-            <a href="../events/outreach.html">Outreach</a>
-          </div>
+      </div>
+      <div class="nav-items dropdown" onclick="togglePeople()">
+        <a href="#" class="nav-item " id='link-people'>People</a>
+        <div class="dropdown-content" id="nav-People">
+          <a href="../people/presbyters.html">Presbyters</a>
+          <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
+          <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
+          <a href="../people/wfcsleaders.html">WFCS Leaders</a>
+          <a href="../people/cyfleaders.html">CYF Leaders</a>
+          <a href="../people/layleaders.html">Lay Leaders</a>
+          <a href="../people/officestaff.html">Office Staff</a>
+          <a href="../people/sewadars.html">Sewadars</a>
         </div>
-        <div class="nav-items dropdown" onclick="togglePeople()">
-          <a href="#" class="nav-item " id='link-people'>People</a>
-          <div class="dropdown-content" id="nav-People">
-            <a href="../people/presbyters.html">Presbyters</a>
-            <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
-            <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
-            <a href="../people/wfcsleaders.html">WFCS Leaders</a>
-            <a href="../people/cyfleaders.html">CYF Leaders</a>
-            <a href="../people/layleaders.html">Lay Leaders</a>
-            <a href="../people/officestaff.html">Office Staff</a>
-            <a href="../people/sewadars.html">Sewadars</a>
-          </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleMore()">
+        <a href="#" class="nav-item" id='link-more'>More</a>
+        <div class="dropdown-content" id="nav-More">
+          <a href="../more/churchHistory.html">Church History</a>
+          <a href="../more/architecture.html">Architecture</a>
+          <a href="../more/paintings.html">Paintings</a>
+          <a href="../more/parishHall.html">Parish Hall</a>
+          <a href="../more/churchOrgan.html">Church Organ</a>
+          <a href="../more/notices.html">Notices</a>
+          <a href="../more/media.html">Forms and Media</a>
         </div>
-<div class="nav-items dropdown" onclick="toggleMore()">
-          <a href="#" class="nav-item" id='link-more'>More</a>
-          <div class="dropdown-content" id="nav-More">
-            <a href="../more/churchHistory.html">Church History</a>
-            <a href="../more/architecture.html">Architecture</a>
-            <a href="../more/paintings.html">Paintings</a>
-            <a href="../more/parishHall.html">Parish Hall</a>
-            <a href="../more/churchOrgan.html">Church Organ</a>
-            <a href="../more/notices.html">Notices</a>
-            <a href="../more/media.html">Forms and Media</a>
-          </div>
-        </div>
+      </div>
 
-        <div class="nav-items dropdown" >
-          <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
-          <div class="dropdown-content" id="nav-ReachUs">
+      <div class="nav-items dropdown">
+        <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
+        <div class="dropdown-content" id="nav-ReachUs">
 
-          </div>
         </div>
       </div>
     </div>
-    <div class="row content-main img-blk" id="aboutChurchServices">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">English Choir</h4>
-      </div>
+  </div>
+  <div class="row content-main img-blk" id="englishChoir">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">English Choir</h4>
     </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text center-text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid illum, quia doloremque reprehenderit
-          commodi saepe voluptatum iusto dicta eius optio minima tempore nam, itaque possimus! Dolor sunt officia
-          sed, facere fugit, vitae animi amet minima, necessitatibus ducimus alias corporis beatae iusto
-          consequuntur in maxime soluta voluptatibus cupiditate voluptatem qui mollitia!
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quidem, incidunt, quisquam ex
-          repudiandae error alias magni, ut cum delectus voluptatum quis maiores possimus laboriosam.
-        </p>
-        <br>
-              <p class="center-text">Choir Master :  
-Mr. Biju Varghese (+91 98913 51658)</p>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text center-text">
 
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="tamilChoir">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Tamil Choir</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid illum, quia doloremque reprehenderit
-          commodi saepe voluptatum iusto dicta eius optio minima tempore nam, itaque possimus! Dolor sunt officia
-          sed, facere fugit, vitae animi amet minima, necessitatibus ducimus alias corporis beatae iusto
-          consequuntur in maxime soluta voluptatibus cupiditate voluptatem qui mollitia!
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quidem, incidunt, quisquam ex
-          repudiandae error alias magni, ut cum delectus voluptatum quis maiores possimus laboriosam.
-        </p>
+      <p>
 
-        <br> 
-      
-              <p class="center-text">Choir Master : Mr. P. Raja (+91 98913 19071)</p>
-          
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="aboutChurchServices">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Hindi Choir</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>“Come, let us sing for joy to the Lord; let us shout aloud to the Rock of our salvation”. [Psalm 95:1]</p>
-        <p>Started in the year 2014, Hindi Choir is the most recent addition to the Cathedral Choir family. It all began with the initiative of Rev. Dr. Paul Swarup and able leadership & guidance from Fr. Jai Kumar and our Choir Master, Mr. Thomas Dawson Singh. Discipline and dedication have been the pillars of the choir right from inception. With baby steps it started, and has now grown from a handful of people to a dedicated team. The choir is credited for introducing “Sung Eucharist” in the Hindi Service with the help of Rev. Monodeep Daniel. The journey has just begun and there is a long way to go.</p>
-        
-        <br>
+        <b> ‘’Speak to one another with psalms, hymns and spiritual songs. Sing and make music in your heart to the Lord ‘’
+          <br/>
+          (Ephesians 5:19)
+        </b>
+      </p>
 
-       
-              <p class="center-text">Choir Master :  Mr. Thomas Dawson (+91  98736 60231)</p>
-         
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="youthWorshipTeam">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Youth Worship team</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>The Worship Team of the Cathedral Youth Fellowship came about sometime in 2014, when the Youth service began to take place regularly on Sundays. Back then it was called ‘Twice Over’, as a testament to God’s faithfulness in giving us a new life and to his love that won us twice-over. Eventually, the Youth Worship Team began to lead worship for the Evening Worship Service having been mentored in worship music by Deacon Lanu Yaden, the Youth Director and Music Head of the Delhi Ao Baptist Church. The team generally covers contemporary Christian Music and has been invited by various churches across Delhi to lead worship in their respective services. The team eventually adopted the name ‘TheCircle’, acknowledging the sense of fulness achieved in the presence of God. </p>
-        
-        <br>
-        <p class="center-text">Worship Leaders : Andrews Clapton(+91 81302 87108), Jonathan Jefferson(+91 96434 64894)</p>
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="footer">
-          <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br> New Delhi - 110001</span></div>
-          <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325 </span></div>
-          <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi"><i class="fab fa-facebook-square"></i>Facebook</a></span></div>
-        </div>
-      </div>
-    </div>
+<br/>
+      <p>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
-    <script src="../scripts/scripts.js"></script>
-    <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-    <script defer src="/__/firebase/init.js"></script>
-    </script>
-  </body>
+        The Cathedral Church of Redemption English Choir has been singing formally since 1938 for its worship services
+        on Sundays and other occasions. It is city’s oldest church choir.
+        The English Choir had its first service in 1938 with a British officer Major Blunt, as its first organist and
+        choir master, who played till a year after independence. Having started with a handful of British officers,
+        today the choir has grown to become a 37-member group consisting of people from all walks of life as part of
+        Junior & Senior Choir. Including
+        students, professionals and school children as well.
+
+
+      </p>
+
+<br/>
+      <p>
+
+        The choir leads not only in the singing of hymns but also in the Liturgy as we continue to follow Sung Liturgy.
+        The choir continues to be fairly traditional in comparison to other congregations for Sunday worships
+        accompanied by the Pipe organ, (oldest Pipe Organ in Southeast Asia, which was assembled here and has been
+        operational since then)
+        The choir stick to the traditional notes of four-part harmony music written for four voices — has two female and
+        two male voices singing Bass, Tenor, Soprano and Alto. While soprano and alto are sung in female voices, tenor
+        and bass are traditionally male voices. Till the late 60s every line of the hymns sung would have a lot of
+        punctuations to allow necessary pauses, which has mostly changed to rote singing now. But, with the involvement
+        of youth, some of the tunes have been made livelier than before
+        The choir has two-hour practices twice a week around Christmas & Easter during the evenings.
+      </p>
+<br/>
+      <p>
+        Anyone who is willing to sing for the glory of God and member of the Church can join the Choir. We ensure that
+        members have some basic knowledge of music. The choir has shaped the lives of many of its youth members as the
+        Choir brings people together and helps cleanse oneself.
+
+      </p>
+
+<br/>
+<br/>
+      <p>
+
+        Rev. Mohit Hitter, Presbyter in Charge
+
+      </p>
+
+      <p>
+
+        Ms. Lydia Joan Organist
+      </p>
+      <p>
+
+        Mr. Varghese John, Choir Director (9911351658)
+      </p>
+      <!-- <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid illum, quia doloremque reprehenderit
+        commodi saepe voluptatum iusto dicta eius optio minima tempore nam, itaque possimus! Dolor sunt officia
+        sed, facere fugit, vitae animi amet minima, necessitatibus ducimus alias corporis beatae iusto
+        consequuntur in maxime soluta voluptatibus cupiditate voluptatem qui mollitia!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quidem, incidunt, quisquam ex
+        repudiandae error alias magni, ut cum delectus voluptatum quis maiores possimus laboriosam.
+      </p>
+      <br>
+      <p class="center-text">Choir Master :
+        Mr. Biju Varghese (+91 98913 51658)</p> -->
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="tamilChoir">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Tamil Choir</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid illum, quia doloremque reprehenderit
+        commodi saepe voluptatum iusto dicta eius optio minima tempore nam, itaque possimus! Dolor sunt officia
+        sed, facere fugit, vitae animi amet minima, necessitatibus ducimus alias corporis beatae iusto
+        consequuntur in maxime soluta voluptatibus cupiditate voluptatem qui mollitia!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quidem, incidunt, quisquam ex
+        repudiandae error alias magni, ut cum delectus voluptatum quis maiores possimus laboriosam.
+      </p>
+
+      <br>
+
+      <p class="center-text">Choir Master : Mr. P. Raja (+91 98913 19071)</p>
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="hindiChoir">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Hindi Choir</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>“Come, let us sing for joy to the Lord; let us shout aloud to the Rock of our salvation”. [Psalm 95:1]</p>
+      <p>Started in the year 2014, Hindi Choir is the most recent addition to the Cathedral Choir family. It all began
+        with the initiative of Rev. Dr. Paul Swarup and able leadership & guidance from Fr. Jai Kumar and our Choir
+        Master, Mr. Thomas Dawson Singh. Discipline and dedication have been the pillars of the choir right from
+        inception. With baby steps it started, and has now grown from a handful of people to a dedicated team. The choir
+        is credited for introducing “Sung Eucharist” in the Hindi Service with the help of Rev. Monodeep Daniel. The
+        journey has just begun and there is a long way to go.</p>
+
+      <br>
+
+
+      <p class="center-text">Choir Master : Mr. Thomas Dawson (+91 98736 60231)</p>
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="youthWorshipTeam">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Youth Worship team</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>The Worship Team of the Cathedral Youth Fellowship came about sometime in 2014, when the Youth service began to
+        take place regularly on Sundays. Back then it was called ‘Twice Over’, as a testament to God’s faithfulness in
+        giving us a new life and to his love that won us twice-over. Eventually, the Youth Worship Team began to lead
+        worship for the Evening Worship Service having been mentored in worship music by Deacon Lanu Yaden, the Youth
+        Director and Music Head of the Delhi Ao Baptist Church. The team generally covers contemporary Christian Music
+        and has been invited by various churches across Delhi to lead worship in their respective services. The team
+        eventually adopted the name ‘TheCircle’, acknowledging the sense of fulness achieved in the presence of God.
+      </p>
+
+      <br>
+      <p class="center-text">Worship Leaders : Andrews Clapton(+91 81302 87108), Jonathan Jefferson(+91 96434 64894)</p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="footer">
+        <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br>
+            New Delhi - 110001</span></div>
+        <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325
+          </span></div>
+        <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi"><i
+                class="fab fa-facebook-square"></i>Facebook</a></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <script src="../scripts/scripts.js"></script>
+  <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+  </script>
+</body>
 
 </html>
