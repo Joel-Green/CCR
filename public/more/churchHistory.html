@@ -1,171 +1,194 @@
-
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Catherdral Church Of Redemption</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!-- update the version number as needed -->
-    <!-- include only the Firebase features as you need -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <script>
-      $(document).ready(function () {
-        $.ajax({
-          url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
-          dataType: 'JSONP',
-          success: function (json) {
-            $(".dailyVersesWrapper").prepend(json.html);
-          }
-        });
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Catherdral Church Of Redemption</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="icon" type="image/png" href="/public/images/icon.png" />
+  <!-- update the version number as needed -->
+  <!-- include only the Firebase features as you need -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
+        dataType: 'JSONP',
+        success: function (json) {
+          $(".dailyVersesWrapper").prepend(json.html);
+        }
       });
-    </script>
-  </head>
+    });
+  </script>
+</head>
 
-  <body>
+<body>
 
 
 
-    <div class="row">
-      <div class="header header-scrolled col-12">
+  <div class="row">
+    <div class="header header-scrolled col-12">
       <div class="hamburger" id="hamburger" onclick="toggleHeader()">
         <span class="hamline"></span>
         <span class="hamline"></span>
         <span class="hamline"></span>
       </div>
-        <div class="nav-items dropdown " onclick="toggleHome()">
-          <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
+      <div class="nav-items dropdown " onclick="toggleHome()">
+        <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleAbout()">
+        <a href="#" class=" nav-item " id='link-about'>About</a>
+        <div class="dropdown-content" id="nav-About">
+          <a href="../about/churchServices.html">Church Services</a>
+          <a href="../about/choirs.html">The Choirs</a>
+          <a href="../about/wfcs.html">WFCS</a>
+          <a href="../about/cyf.html">CYF</a>
+          <a href="../about/sundaySchool.html">Sunday School</a>
         </div>
-        <div class="nav-items dropdown" onclick="toggleAbout()">
-          <a href="#" class=" nav-item " id='link-about'>About</a>
-          <div class="dropdown-content" id="nav-About">
-            <a href="../about/churchServices.html">Church Services</a>
-            <a href="../about/choirs.html">The Choirs</a>
-            <a href="../about/wfcs.html">WFCS</a>
-            <a href="../about/cyf.html">CYF</a>
-            <a href="../about/sundaySchool.html">Sunday School</a>
-          </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleOutreach()">
+        <a href="#" class="nav-item " id='link-outreach'>Outreach</a>
+        <div class="dropdown-content" id="nav-Outreach">
+          <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
+          <a href="../outreach/communityOutreach.html">Community Outreach</a>
+          <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
         </div>
-        <div class="nav-items dropdown" onclick="toggleOutreach()">
-          <a href="#" class="nav-item " id='link-outreach'>Outreach</a>
-          <div class="dropdown-content" id="nav-Outreach">
-            <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
-            <a href="../outreach/communityOutreach.html">Community Outreach</a>
-            <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
-          </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleEvents()">
+        <a href="#" class="nav-item " id='link-events'>Events</a>
+        <div class="dropdown-content" id="nav-Events">
+          <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
+          <a href="../events/sundaySchool.html">Sunday School</a>
+          <a href="../events/youth.html">Youth</a>
+          <a href="../events/wfcs.html">WFCS </a>
+          <a href="../events/church.html">Church</a>
+          <a href="../events/christmas.html">Carol Services</a>
+          <a href="../events/outreach.html">Outreach</a>
         </div>
-        <div class="nav-items dropdown" onclick="toggleEvents()">
-          <a href="#" class="nav-item " id='link-events'>Events</a>
-          <div class="dropdown-content" id="nav-Events">
-            <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
-            <a href="../events/sundaySchool.html">Sunday School</a>
-            <a href="../events/youth.html">Youth</a>
-            <a href="../events/wfcs.html">WFCS </a>
-            <a href="../events/church.html">Church</a>
-            <a href="../events/christmas.html">Carol Services</a>
-            <a href="../events/outreach.html">Outreach</a>
-          </div>
+      </div>
+      <div class="nav-items dropdown" onclick="togglePeople()">
+        <a href="#" class="nav-item " id='link-people'>People</a>
+        <div class="dropdown-content" id="nav-People">
+          <a href="../people/presbyters.html">Presbyters</a>
+          <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
+          <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
+          <a href="../people/wfcsleaders.html">WFCS Leaders</a>
+          <a href="../people/cyfleaders.html">CYF Leaders</a>
+          <a href="../people/layleaders.html">Lay Leaders</a>
+          <a href="../people/officestaff.html">Office Staff</a>
+          <a href="../people/sewadars.html">Sewadars</a>
         </div>
-        <div class="nav-items dropdown" onclick="togglePeople()">
-          <a href="#" class="nav-item " id='link-people'>People</a>
-          <div class="dropdown-content" id="nav-People">
-            <a href="../people/presbyters.html">Presbyters</a>
-            <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
-            <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
-            <a href="../people/wfcsleaders.html">WFCS Leaders</a>
-            <a href="../people/cyfleaders.html">CYF Leaders</a>
-            <a href="../people/layleaders.html">Lay Leaders</a>
-            <a href="../people/officestaff.html">Office Staff</a>
-            <a href="../people/sewadars.html">Sewadars</a>
-          </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleMore()">
+        <a href="#" class="nav-item active" id='link-more'>More</a>
+        <div class="dropdown-content" id="nav-More">
+          <a href="../more/churchHistory.html">Church History</a>
+          <a href="../more/architecture.html">Architecture</a>
+          <a href="../more/paintings.html">Paintings</a>
+          <a href="../more/parishHall.html">Parish Hall</a>
+          <a href="../more/churchOrgan.html">Church Organ</a>
+          <a href="../more/notices.html">Notices</a>
+          <a href="../more/media.html">Forms and Media</a>
         </div>
-        <div class="nav-items dropdown" onclick="toggleMore()">
-          <a href="#" class="nav-item active" id='link-more'>More</a>
-          <div class="dropdown-content" id="nav-More">
-            <a href="../more/churchHistory.html">Church History</a>
-            <a href="../more/architecture.html">Architecture</a>
-            <a href="../more/paintings.html">Paintings</a>
-            <a href="../more/parishHall.html">Parish Hall</a>
-            <a href="../more/churchOrgan.html">Church Organ</a>
-            <a href="../more/notices.html">Notices</a>
-            <a href="../more/media.html">Forms and Media</a>
-          </div>
-        </div>
-        <div class="nav-items dropdown">
-          <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
-          <div class="dropdown-content" id="nav-ReachUs">
+      </div>
+      <div class="nav-items dropdown">
+        <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
+        <div class="dropdown-content" id="nav-ReachUs">
 
-          </div>
         </div>
       </div>
     </div>
-    <div class="row content-main img-blk" id="churchHistory">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Church History</h4>
-      </div>
+  </div>
+  <div class="row content-main img-blk" id="churchHistory">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Church History</h4>
     </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>
-The Cathedral Church of the Redemption traces its origins to the early decades of the 1900s when Rev. T.R. Dixon was appointed as the Chaplain to meet the spiritual needs of the British officers in the capital. The services were held at the present Toga Ashram, which housed a Church room at No.1 the Chummeries, Alexandra Place (Gole Post Office), and accommodated about sixty people.
-Appeals for donations were met with a handsome response from the royalty, viceroys, Christians and people of other faiths. The first few donors were King George and Queen Mary and the Indian Church Aid Association. Post First World War, a high-powered committee comprising of Rev. Dixon, Sir Hugh Keeling, Chief Engineer of Delhi, Kunwar Maharaj Singh, the Chaplains of Delhi and Raisina, the Chief Commissioner, Mr. C.A. Croft the agent of the Imperial Bank (were the funds were lodged), Rai Bahadur Shoan Lal and Rev. J.C. Chatterjee was set up to build the Church.
-        </p>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>
+        The Cathedral Church of the Redemption traces its origins to the early decades of the 1900s when Rev. T.R. Dixon
+        was appointed as the Chaplain to meet the spiritual needs of the British officers in the capital. The services
+        were held at the present Toga Ashram, which housed a Church room at No.1 the Chummeries, Alexandra Place (Gole
+        Post Office), and accommodated about sixty people.
+        Appeals for donations were met with a handsome response from the royalty, viceroys, Christians and people of
+        other faiths. The first few donors were King George and Queen Mary and the Indian Church Aid Association. Post
+        First World War, a high-powered committee comprising of Rev. Dixon, Sir Hugh Keeling, Chief Engineer of Delhi,
+        Kunwar Maharaj Singh, the Chaplains of Delhi and Raisina, the Chief Commissioner, Mr. C.A. Croft the agent of
+        the Imperial Bank (were the funds were lodged), Rai Bahadur Shoan Lal and Rev. J.C. Chatterjee was set up to
+        build the Church.
+      </p>
+      <br>
+      <p>
+        In 1925, the Chief Engineer was asked to prepare the plans for a 300-seater church with provisions for extension
+        at a cost of rupees one and a half lakh. Soon after, in the presence of Sir Edwin Lutyens, the committee was
+        decided to call for a 'closed competition of designs'. Both Lutyens and the Chief Engineer were asked to lay
+        down the terms for the competition. Sir Lutyens' choice of site No.110 was approved for construction of the
+        Church.</p>
+      <p>
         <br>
-        <p>
-In 1925, the Chief Engineer was asked to prepare the plans for a 300-seater church with provisions for extension at a cost of rupees one and a half lakh.  Soon after, in the presence of Sir Edwin Lutyens, the committee was decided to call for a 'closed competition of designs'. Both Lutyens and the Chief Engineer were asked to lay down the terms for the competition. Sir Lutyens' choice of site No.110 was approved for construction of the Church.</p>
-<p>
-  <br>
-   Among the many designs presented for competition, H.A.N. Medd's design was chosen and on 11 November 1925, he was asked to prepare the plans for the new Church within a budget of Rs 50,000. On 23 February 1927, the foundation stone was laid by Viceroy Irwin under the spot that would be the central dome, the exact centre of the church. Lord Irwin personally initiated an appeal for funds in England.
-</p>
-<br>
-<p>The Cathedral Church of the Redemption was finally opened to public worship on Sunday, 18 January 1931. On 15 February of that year, the Bishop of Lahore, assisted by the Chaplain of Delhi Rev. Storrs Fox and Rev. P. Dass, consecrated the church. For the 100 communicants present that day, it was an emotion-charged and impressive service despite the absence of the organ, choir gallery, font, pulpit, lectern, priest's stalls and the Sanctuary without the figures of Christ, St Mary and St John..
-The Church, which was part of the of the Church of India, Pakistan, Burma, Ceylon formally came of its own on 21 April 1947, with Arabindo Nath Mukherjee as the first Bishop of the newly formed Bishop of Delhi diocese.</p>
+        Among the many designs presented for competition, H.A.N. Medd's design was chosen and on 11 November 1925, he
+        was asked to prepare the plans for the new Church within a budget of Rs 50,000. On 23 February 1927, the
+        foundation stone was laid by Viceroy Irwin under the spot that would be the central dome, the exact centre of
+        the church. Lord Irwin personally initiated an appeal for funds in England.
+      </p>
+      <br>
+      <p>The Cathedral Church of the Redemption was finally opened to public worship on Sunday, 18 January 1931. On 15
+        February of that year, the Bishop of Lahore, assisted by the Chaplain of Delhi Rev. Storrs Fox and Rev. P. Dass,
+        consecrated the church. For the 100 communicants present that day, it was an emotion-charged and impressive
+        service despite the absence of the organ, choir gallery, font, pulpit, lectern, priest's stalls and the
+        Sanctuary without the figures of Christ, St Mary and St John..
+        The Church, which was part of the of the Church of India, Pakistan, Burma, Ceylon formally came of its own on 21
+        April 1947, with Arabindo Nath Mukherjee as the first Bishop of the newly formed Bishop of Delhi diocese.</p>
 
-      </div>
-      <div class="col-2"></div>
     </div>
+    <div class="col-2"></div>
+  </div>
 
 
-    <div class="row">
-      <div class="col-12">
-        <div class="footer">
-          <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br> New Delhi - 110001</span></div>
-          <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325 </span></div>
-          <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi" target="_blank"><i class="fab fa-facebook-square"></i>Facebook</a></span></div>
-        </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="footer">
+        <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br>
+            New Delhi - 110001</span></div>
+        <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325
+          </span></div>
+        <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi"
+              target="_blank"><i class="fab fa-facebook-square"></i>Facebook</a></span></div>
       </div>
     </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
-    <script src="../scripts/scripts.js"></script>
-    <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-    <script defer src="/__/firebase/init.js"></script>
-    </script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <script src="../scripts/scripts.js"></script>
+  <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+  </script>
+</body>
 
 </html>

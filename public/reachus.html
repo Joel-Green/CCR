@@ -1,317 +1,314 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>The Catherdral Church Of Redemption</title>
-        <link rel="stylesheet" href="./styles/styles.css">
-        <!-- update the version number as needed -->
-        <!-- include only the Firebase features as you need -->
-        <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
-        <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
-        <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
-        <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
-        <!-- initialize the SDK after all desired features are loaded -->
-        <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>!window.jQuery && document.write("<script src='./scripts/jquery-3.4.1.min.js'><\/script>")</script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-        <script>
-            $(document).ready(function () {
-                $.ajax({
-                    url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
-                    dataType: 'JSONP',
-                    success: function (json) {
-                        $(".dailyVersesWrapper").prepend(json.html);
-                    }
-                });
-            });
-        </script>
-    </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Catherdral Church Of Redemption</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="icon" type="image/png" href="/public/images/icon.png" />
+  <!-- update the version number as needed -->
+  <!-- include only the Firebase features as you need -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write("<script src='./scripts/jquery-3.4.1.min.js'><\/script>")</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
+        dataType: 'JSONP',
+        success: function (json) {
+          $(".dailyVersesWrapper").prepend(json.html);
+        }
+      });
+    });
+  </script>
+</head>
 
-    <body>
-        <div class="row ">
-            <div class="header header-scrolled col-12 " id="header">
+<body>
+  <div class="row ">
+    <div class="header header-scrolled col-12 " id="header">
       <div class="hamburger" id="hamburger" onclick="toggleHeader()">
         <span class="hamline"></span>
         <span class="hamline"></span>
         <span class="hamline"></span>
       </div>
-                <div class="nav-items dropdown " onclick="toggleHome()">
-                    <a href="index.html" class="nav-item home" id='link-home'>Home </a>
-                </div>
-                <div class="nav-items dropdown" onclick="toggleAbout()">
-                    <a href="#" class=" nav-item " id='link-about'>About</a>
-                    <div class="dropdown-content" id="nav-About">
-                        <a href="about/churchServices.html">Church Services</a>
-                        <a href="about/choirs.html">The Choirs</a>
-                        <a href="about/wfcs.html">WFCS</a>
-                        <a href="about/cyf.html">CYF</a>
-                        <a href="about/sundaySchool.html">Sunday School</a>
-                    </div>
-                </div>
-                <div class="nav-items dropdown" onclick="toggleOutreach()">
-                    <a href="#" class="nav-item" id='link-outreach'>Outreach</a>
-                    <div class="dropdown-content" id="nav-Outreach">
-                        <a href="outreach/evangelicalOutreach.html">Evangelical Outreach</a>
-                        <a href="outreach/communityOutreach.html">Community Outreach</a>
-                        <a href="outreach/cathedralNursery.html">Cathedral Nursery</a>
-                    </div>
-                </div>
-                <div class="nav-items dropdown" onclick="toggleEvents()">
-                    <a href="#" class="nav-item" id='link-events'>Events</a>
-                    <div class="dropdown-content" id="nav-Events">
-                        <a href="events/annualGardenFete.html">Annual Garden Fete</a>
-                        <a href="events/sundaySchool.html">Sunday School</a>
-                        <a href="events/youth.html">Youth</a>
-                        <a href="events/wfcs.html">WFCS </a>
-                        <a href="events/church.html">Church</a>
-                        <a href="events/christmas.html">Carol Services</a>
-                        <a href="events/outreach.html">Outreach</a>
-                    </div>
-                </div>
-                <div class="nav-items dropdown" onclick="togglePeople()">
-                    <a href="#" class="nav-item" id='link-people'>People</a>
-                    <div class="dropdown-content" id="nav-People">
-                        <a href="people/presbyters.html">Presbyters</a>
-                        <a href="people/pastorateCommittee.html">Pastorate Committee</a>
-                        <a href="people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
-                        <a href="people/wfcsleaders.html">WFCS Leaders</a>
-                        <a href="people/cyfleaders.html">CYF Leaders</a>
-                        <a href="people/layleaders.html">Lay Leaders</a>
-                        <a href="people/officestaff.html">Office Staff</a>
-                        <a href="people/sewadars.html">Sewadars</a>
-                    </div>
-                </div>
-                <div class="nav-items dropdown" onclick="toggleMore()">
-                    <a href="#" class="nav-item " id='link-more'>More</a>
-                    <div class="dropdown-content" id="nav-More">
-                        <a href="more/churchHistory.html">Church History</a>
-                        <a href="more/architecture.html">Architecture</a>
-                        <a href="more/paintings.html">Paintings</a>
-                        <a href="more/parishHall.html">Parish Hall</a>
-                        <a href="more/churchOrgan.html">Church Organ</a>
-                        <a href="more/notices.html">Notices</a>
-                        <a href="more/media.html">Forms and Media</a>
-                    </div>
-                </div>
-                <div class="nav-items dropdown">
-                    <a href="reachus.html" class="nav-item active" id='link-reachus'>Contact Us</a>
-                    <div class="dropdown-content" id="nav-ReachUs">
+      <div class="nav-items dropdown " onclick="toggleHome()">
+        <a href="index.html" class="nav-item home" id='link-home'>Home </a>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleAbout()">
+        <a href="#" class=" nav-item " id='link-about'>About</a>
+        <div class="dropdown-content" id="nav-About">
+          <a href="about/churchServices.html">Church Services</a>
+          <a href="about/choirs.html">The Choirs</a>
+          <a href="about/wfcs.html">WFCS</a>
+          <a href="about/cyf.html">CYF</a>
+          <a href="about/sundaySchool.html">Sunday School</a>
+        </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleOutreach()">
+        <a href="#" class="nav-item" id='link-outreach'>Outreach</a>
+        <div class="dropdown-content" id="nav-Outreach">
+          <a href="outreach/evangelicalOutreach.html">Evangelical Outreach</a>
+          <a href="outreach/communityOutreach.html">Community Outreach</a>
+          <a href="outreach/cathedralNursery.html">Cathedral Nursery</a>
+        </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleEvents()">
+        <a href="#" class="nav-item" id='link-events'>Events</a>
+        <div class="dropdown-content" id="nav-Events">
+          <a href="events/annualGardenFete.html">Annual Garden Fete</a>
+          <a href="events/sundaySchool.html">Sunday School</a>
+          <a href="events/youth.html">Youth</a>
+          <a href="events/wfcs.html">WFCS </a>
+          <a href="events/church.html">Church</a>
+          <a href="events/christmas.html">Carol Services</a>
+          <a href="events/outreach.html">Outreach</a>
+        </div>
+      </div>
+      <div class="nav-items dropdown" onclick="togglePeople()">
+        <a href="#" class="nav-item" id='link-people'>People</a>
+        <div class="dropdown-content" id="nav-People">
+          <a href="people/presbyters.html">Presbyters</a>
+          <a href="people/pastorateCommittee.html">Pastorate Committee</a>
+          <a href="people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
+          <a href="people/wfcsleaders.html">WFCS Leaders</a>
+          <a href="people/cyfleaders.html">CYF Leaders</a>
+          <a href="people/layleaders.html">Lay Leaders</a>
+          <a href="people/officestaff.html">Office Staff</a>
+          <a href="people/sewadars.html">Sewadars</a>
+        </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleMore()">
+        <a href="#" class="nav-item " id='link-more'>More</a>
+        <div class="dropdown-content" id="nav-More">
+          <a href="more/churchHistory.html">Church History</a>
+          <a href="more/architecture.html">Architecture</a>
+          <a href="more/paintings.html">Paintings</a>
+          <a href="more/parishHall.html">Parish Hall</a>
+          <a href="more/churchOrgan.html">Church Organ</a>
+          <a href="more/notices.html">Notices</a>
+          <a href="more/media.html">Forms and Media</a>
+        </div>
+      </div>
+      <div class="nav-items dropdown">
+        <a href="reachus.html" class="nav-item active" id='link-reachus'>Contact Us</a>
+        <div class="dropdown-content" id="nav-ReachUs">
 
-                    </div>
-                </div>
-            </div>
         </div>
-        <!-- <div class="row"> -->
-        <div class="row " style="margin-top: 60px">
-            <div class="col-2"></div>
-            <div class="col-8 content-block">
-                <h4 class="content-heading">
-                    Location
-                </h4>
-                <div class="row">
-                    <div class="col-12 content-text center-text">
-                        <p class="center-text">
-                            The Cathedral Church of the Redemption <br>
-                            1, Church Road, North Avenue <br>
-                            New Delhi- 110001 <br>
-                            India <br>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8 map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.393254476521!2d77.1998283150823!3d28.617973682423546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2ac43f5bda1%3A0xb45d11931a51b513!2sCathedral+Church+of+The+Redemption!5e0!3m2!1sen!2sin!4v1562410046287!5m2!1sen!2sin"
-                    width="720" height="600" frameborder="0"
-                    style="border:0; left:50%; position: relative; transform: translateX(-50%)"
-                    allowfullscreen></iframe>
-
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row ">
-            <div class="col-2"></div>
-            <div class="col-8 content-block">
-                <h4 class="content-heading">Nearest Metro Station</h4>
-                <p class="content-text center-text">
-                    Patel Chowk , Yellow Line
-                </p>
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8 map">
-                
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3502.241323884928!2d77.21173785228211!3d28.622528565975276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d28.6226459!2d77.214117!4m5!1s0x390ce2ac43f5bda1%3A0xb45d11931a51b513!2sCathedral+Church+of+The+Redemption%2C+Church+Road%2C+1%2C+North+Ave%2C+New+Delhi%2C+Delhi+110001!3m2!1d28.6179737!2d77.202017!5e0!3m2!1sen!2sin!4v1564607138410!5m2!1sen!2sin"
-
-                    width="720" height="600" frameborder="0"
-                    style="border:0; left:50%; position: relative; transform: translateX(-50%)"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row ">
-            <div class="col-2"></div>
-            <div class="col-8 content-block">
-                <h4 class="content-heading">Email</h4>
-                <p class="content-text center-text">
-                    cathedraldelhi@gmail.com
-                </p>
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row ">
-            <div class="col-2"></div>
-            <div class="col-12 content-block">
-                <h4 class="content-heading">
-                    Contact Numbers
-                </h4>
-<p class="center-text">
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text">Church Office : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 11 230 94229 / +91 11 230 93325 </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text">Church Administrator/Assistant : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 9911604440</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text"> Rev. Mohit Heinz Hitter (Presbyter-in-charge) : </div> 
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 11 230 94229 / +91 98 107 50016</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text">  Rev. Ratnaraj : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 88003 44699</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text"> Rev. Abhay Benson : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 98969 21386</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text"> Mr. Ashok Fenn (Secretary) : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 98100 61729</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text"> Mr. Vimal Das (Treasurer) : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 99106 06572</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text">Mr. Rajasingh (ASG Chairman) : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 98110 53899</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text"> Mrs. Rebecca Vijay (WFCS President) : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 99716 87059</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text">Mr. Alvin D. Singh (CYF President) : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 98719 59682</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text"> Ms. Anita Morris (LPCEF Cordinator) : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 99112 21548</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text">Mr. Prabhu Raj : </div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;+91 98711 90266</div>
-            </div>
-          </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row"> -->
+  <div class="row " style="margin-top: 60px">
+    <div class="col-2"></div>
+    <div class="col-8 content-block">
+      <h4 class="content-heading">
+        Location
+      </h4>
+      <div class="row">
+        <div class="col-12 content-text center-text">
+          <p class="center-text">
+            The Cathedral Church of the Redemption <br>
+            1, Church Road, North Avenue <br>
+            New Delhi- 110001 <br>
+            India <br>
           </p>
 
-            </div>
-            <div class="col-2"></div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="footer">
-                    <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br>
-                            North Avenue<br> New Delhi - 110001</span></div>
-                    <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230
-                            93325 </span></div>
-                    <div class="content"> <span class="text"> <a
-                                href="https://www.facebook.com/RedemptionChurchNewDelhi" target="_blank"><i
-                                    class="fab fa-facebook-square"></i>Facebook</a></span></div>
-                </div>
-            </div>
-        </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8 map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.393254476521!2d77.1998283150823!3d28.617973682423546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2ac43f5bda1%3A0xb45d11931a51b513!2sCathedral+Church+of+The+Redemption!5e0!3m2!1sen!2sin!4v1562410046287!5m2!1sen!2sin"
+        width="720" height="600" frameborder="0"
+        style="border:0; left:50%; position: relative; transform: translateX(-50%)" allowfullscreen></iframe>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
-        </script>
-        <script src="./scripts/scripts.js"></script>
-        <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-        <script defer src="/__/firebase/init.js"></script>
-        </script>
-    </body>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row ">
+    <div class="col-2"></div>
+    <div class="col-8 content-block">
+      <h4 class="content-heading">Nearest Metro Station</h4>
+      <p class="content-text center-text">
+        Patel Chowk , Yellow Line
+      </p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8 map">
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3502.241323884928!2d77.21173785228211!3d28.622528565975276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d28.6226459!2d77.214117!4m5!1s0x390ce2ac43f5bda1%3A0xb45d11931a51b513!2sCathedral+Church+of+The+Redemption%2C+Church+Road%2C+1%2C+North+Ave%2C+New+Delhi%2C+Delhi+110001!3m2!1d28.6179737!2d77.202017!5e0!3m2!1sen!2sin!4v1564607138410!5m2!1sen!2sin"
+        width="720" height="600" frameborder="0"
+        style="border:0; left:50%; position: relative; transform: translateX(-50%)" allowfullscreen></iframe>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row ">
+    <div class="col-2"></div>
+    <div class="col-8 content-block">
+      <h4 class="content-heading">Email</h4>
+      <p class="content-text center-text">
+        cathedraldelhi@gmail.com
+      </p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row ">
+    <div class="col-2"></div>
+    <div class="col-12 content-block">
+      <h4 class="content-heading">
+        Contact Numbers
+      </h4>
+      <p class="center-text">
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text">Church Office : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 11 230 94229 / +91 11 230 93325 </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text">Church Administrator/Assistant : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 9911604440</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text"> Rev. Mohit Heinz Hitter (Presbyter-in-charge) : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 11 230 94229 / +91 98 107 50016</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text"> Rev. Ratnaraj : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 88003 44699</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text"> Rev. Abhay Benson : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 98969 21386</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text"> Mr. Ashok Fenn (Secretary) : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 98100 61729</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text"> Mr. Vimal Das (Treasurer) : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 99106 06572</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text">Mr. Rajasingh (ASG Chairman) : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 98110 53899</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text"> Mrs. Rebecca Vijay (WFCS President) : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 99716 87059</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text">Mr. Alvin D. Singh (CYF President) : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 98719 59682</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text"> Ms. Anita Morris (LPCEF Cordinator) : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 99112 21548</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text">Mr. Prabhu Raj : </div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;+91 98711 90266</div>
+        </div>
+      </div>
+      </p>
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="footer">
+        <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br>
+            North Avenue<br> New Delhi - 110001</span></div>
+        <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230
+            93325 </span></div>
+        <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi"
+              target="_blank"><i class="fab fa-facebook-square"></i>Facebook</a></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <script src="./scripts/scripts.js"></script>
+  <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+  </script>
+</body>
 
 </html>

@@ -1,228 +1,260 @@
-
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Catherdral Church Of Redemption</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!-- update the version number as needed -->
-    <!-- include only the Firebase features as you need -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <script>
-      $(document).ready(function () {
-        $.ajax({
-          url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
-          dataType: 'JSONP',
-          success: function (json) {
-            $(".dailyVersesWrapper").prepend(json.html);
-          }
-        });
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Catherdral Church Of Redemption</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="icon" type="image/png" href="/public/images/icon.png" />
+  <!-- update the version number as needed -->
+  <!-- include only the Firebase features as you need -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
+        dataType: 'JSONP',
+        success: function (json) {
+          $(".dailyVersesWrapper").prepend(json.html);
+        }
       });
-    </script>
-  </head>
+    });
+  </script>
+</head>
 
-  <body>
+<body>
 
 
-    <div class="row">
-      <div class="header header-scrolled col-12">
+  <div class="row">
+    <div class="header header-scrolled col-12">
       <div class="hamburger" id="hamburger" onclick="toggleHeader()">
         <span class="hamline"></span>
         <span class="hamline"></span>
         <span class="hamline"></span>
       </div>
-        <div class="nav-items dropdown " onclick="toggleHome()">
-          <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
-        </div>
-        <div class="nav-items dropdown" onclick="toggleAbout()">
-          <a href="#" class=" nav-item " id='link-about'>About</a>
-          <div class="dropdown-content" id="nav-About">
-            <a href="../about/churchServices.html">Church Services</a>
-            <a href="../about/choirs.html">The Choirs</a>
-            <a href="../about/wfcs.html">WFCS</a>
-            <a href="../about/cyf.html">CYF</a>
-            <a href="../about/sundaySchool.html">Sunday School</a>
-          </div>
-        </div>
-        <div class="nav-items dropdown" onclick="toggleOutreach()">
-          <a href="#" class="nav-item " id='link-outreach'>Outreach</a>
-          <div class="dropdown-content" id="nav-Outreach">
-            <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
-            <a href="../outreach/communityOutreach.html">Community Outreach</a>
-            <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
-          </div>
-        </div>
-        <div class="nav-items dropdown" onclick="toggleEvents()">
-          <a href="#" class="nav-item active" id='link-events'>Events</a>
-          <div class="dropdown-content" id="nav-Events">
-            <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
-            <a href="../events/sundaySchool.html">Sunday School</a>
-            <a href="../events/youth.html">Youth</a>
-            <a href="../events/wfcs.html">WFCS </a>
-            <a href="../events/church.html">Church</a>
-            <a href="../events/christmas.html">Carol Services</a>
-            <a href="../events/outreach.html">Outreach</a>
-          </div>
-        </div>
-        <div class="nav-items dropdown" onclick="togglePeople()">
-          <a href="#" class="nav-item " id='link-people'>People</a>
-          <div class="dropdown-content" id="nav-People">
-            <a href="../people/presbyters.html">Presbyters</a>
-            <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
-            <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
-            <a href="../people/wfcsleaders.html">WFCS Leaders</a>
-            <a href="../people/cyfleaders.html">CYF Leaders</a>
-            <a href="../people/layleaders.html">Lay Leaders</a>
-            <a href="../people/officestaff.html">Office Staff</a>
-            <a href="../people/sewadars.html">Sewadars</a>
-          </div>
-        </div>
-<div class="nav-items dropdown" onclick="toggleMore()">
-          <a href="#" class="nav-item" id='link-more'>More</a>
-          <div class="dropdown-content" id="nav-More">
-            <a href="../more/churchHistory.html">Church History</a>
-            <a href="../more/architecture.html">Architecture</a>
-            <a href="../more/paintings.html">Paintings</a>
-            <a href="../more/parishHall.html">Parish Hall</a>
-            <a href="../more/churchOrgan.html">Church Organ</a>
-            <a href="../more/notices.html">Notices</a>
-            <a href="../more/media.html">Forms and Media</a>
-          </div>
-        </div>
-       
-        <div class="nav-items dropdown">
-          <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
-          <div class="dropdown-content" id="nav-ReachUs">
-
-          </div>
+      <div class="nav-items dropdown " onclick="toggleHome()">
+        <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleAbout()">
+        <a href="#" class=" nav-item " id='link-about'>About</a>
+        <div class="dropdown-content" id="nav-About">
+          <a href="../about/churchServices.html">Church Services</a>
+          <a href="../about/choirs.html">The Choirs</a>
+          <a href="../about/wfcs.html">WFCS</a>
+          <a href="../about/cyf.html">CYF</a>
+          <a href="../about/sundaySchool.html">Sunday School</a>
         </div>
       </div>
-    </div>
-    <div class="row content-main img-blk" id="youthSunday">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Youth Sunday</h4>
+      <div class="nav-items dropdown" onclick="toggleOutreach()">
+        <a href="#" class="nav-item " id='link-outreach'>Outreach</a>
+        <div class="dropdown-content" id="nav-Outreach">
+          <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
+          <a href="../outreach/communityOutreach.html">Community Outreach</a>
+          <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
+        </div>
       </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>In an attempt to integrate the Youth in the main worship service, every alternate 5th Sunday is given to the Youth. They are required to lead worship in all 3 services, do the various Bible readings, give the sermon in all 3 services and lead the intercessory prayer. The is a great exercise aimed at acquainting the youth of the church with various traditions of the church.</p>
-        
+      <div class="nav-items dropdown" onclick="toggleEvents()">
+        <a href="#" class="nav-item active" id='link-events'>Events</a>
+        <div class="dropdown-content" id="nav-Events">
+          <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
+          <a href="../events/sundaySchool.html">Sunday School</a>
+          <a href="../events/youth.html">Youth</a>
+          <a href="../events/wfcs.html">WFCS </a>
+          <a href="../events/church.html">Church</a>
+          <a href="../events/christmas.html">Carol Services</a>
+          <a href="../events/outreach.html">Outreach</a>
+        </div>
+      </div>
+      <div class="nav-items dropdown" onclick="togglePeople()">
+        <a href="#" class="nav-item " id='link-people'>People</a>
+        <div class="dropdown-content" id="nav-People">
+          <a href="../people/presbyters.html">Presbyters</a>
+          <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
+          <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
+          <a href="../people/wfcsleaders.html">WFCS Leaders</a>
+          <a href="../people/cyfleaders.html">CYF Leaders</a>
+          <a href="../people/layleaders.html">Lay Leaders</a>
+          <a href="../people/officestaff.html">Office Staff</a>
+          <a href="../people/sewadars.html">Sewadars</a>
+        </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleMore()">
+        <a href="#" class="nav-item" id='link-more'>More</a>
+        <div class="dropdown-content" id="nav-More">
+          <a href="../more/churchHistory.html">Church History</a>
+          <a href="../more/architecture.html">Architecture</a>
+          <a href="../more/paintings.html">Paintings</a>
+          <a href="../more/parishHall.html">Parish Hall</a>
+          <a href="../more/churchOrgan.html">Church Organ</a>
+          <a href="../more/notices.html">Notices</a>
+          <a href="../more/media.html">Forms and Media</a>
+        </div>
+      </div>
 
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk-alt" id="youthBakeSale">
-      <div class="col-12 content-block">
-        <h4 class="content-heading "> Bake Sale</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>In an attempt to raise funds for the various activities that the Youth undertakes, an initiative was introduced which came to be known as the Bake Sale. The Youth bring home-made baked good like cakes, cookies, muffins, donuts, brownies etc and sell them to the church members to raise funds for various youth activities such as the inter-church event UNITY, old-age home and orphanage visits, retreats, and various other events.</p>
-        
+      <div class="nav-items dropdown">
+        <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
+        <div class="dropdown-content" id="nav-ReachUs">
 
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="youthRetreat">
-      <div class="col-12 content-block">
-        <h4 class="content-heading "> Retreat</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>The Youth retreat is an annual event wherein the youth of the church get away from the heat and tensions of city life and plan an escape to the hills. This usually takes place in the 2nd week of August. The aim however is not to simply spend some leisure time but also use that time as an opportunity to grow more in Christ and spend some time in introspection. The Youth is therefore accompanied each year by the mentors (Mrs. & Mr. Selwyn) as well as a resource person who takes various sessions for the participants. The worship team also accompanies the youth with all the equipment and together they have a wonderful time of worship and meditation. This year the speaker for the retreat is Rev. C.A. Benjamin, the Director of FEBA (Far East Broadcasting Association). He is one of the best speakers for youngsters in India and has previously accompanied our church youth to a wonderful retreat in 2017. Listening to him and learning from him is a lifetime opportunity. There are limited seats, do sign up today!</p>
-        
-
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk-alt" id="unity">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Unity</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>This is a flagship event of the CYF. Started in 2017, the aim of the event is simple - to cut across the boundaries of denomination and provide a platform for the church to be united as one. As part of this event, youngsters from all denominations (CNI, CSI, Pentecostal, AG, Marthoma, Roman Catholic, Independent) are invited to spend a day together in worship, meditation and prayer, with an aim to drive home the point that we all serve One God, and that there is ultimately just One Church. Last year the event had more than 100 youngsters from 19 churches under various denominations. </p>
-        
-
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="youthMusical">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Christmas Musical</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>The CYF presents a Mega-Musical right before Christmas which has gained some popularity over the past few years. The first such Musical by the CYF was ‘A Christmas Carol’ by Charles Dickens done in 2014. This event is a full package, with action, drama, lights, sound-effects, show-stopping numbers and even a smoke machine!! Over the years, the CYF has presented ‘Annie- The Musical’ (2015), ‘Oliver Twist’ (2016) and ‘Christmas in Comfort’ (2018). The show is held in the Parish Hall of the church, directed by members of youth themselves, with no professional help whatsoever, and is truly a sight to behold. Do check it out this year!</p>
-        
-
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="youthOutreach">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Outreach Programmes</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>The CYF regularly visit orphanages and old-age homes in Delhi. Usually on a Sunday, the entire Youth group goes together with gifts and spends the whole morning with the children (in Orphanages) or the older people (in Old-Age Homes). They also carry food for the people and enjoy a fellowship lunch with them. The CYF also initiated a drive in the winters called ‘Secret Santa’ wherein they go about in the nearby areas and distribute warm clothes and blankets to the people who live on the streets in the bitter cold. </p>
-        
-
-      </div>
-      <div class="col-2"></div>
-    </div>
-
-    <div class="row">
-      <div class="col-12">
-        <div class="footer">
-          <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br> New Delhi - 110001</span></div>
-          <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325 </span></div>
-          <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi"><i class="fab fa-facebook-square"></i>Facebook</a></span></div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="row content-main img-blk" id="youthSunday">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Youth Sunday</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>In an attempt to integrate the Youth in the main worship service, every alternate 5th Sunday is given to the
+        Youth. They are required to lead worship in all 3 services, do the various Bible readings, give the sermon in
+        all 3 services and lead the intercessory prayer. The is a great exercise aimed at acquainting the youth of the
+        church with various traditions of the church.</p>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
-    <script src="../scripts/scripts.js"></script>
-    <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-    <script defer src="/__/firebase/init.js"></script>
-    </script>
-  </body>
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk-alt" id="youthBakeSale">
+    <div class="col-12 content-block">
+      <h4 class="content-heading "> Bake Sale</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>In an attempt to raise funds for the various activities that the Youth undertakes, an initiative was introduced
+        which came to be known as the Bake Sale. The Youth bring home-made baked good like cakes, cookies, muffins,
+        donuts, brownies etc and sell them to the church members to raise funds for various youth activities such as the
+        inter-church event UNITY, old-age home and orphanage visits, retreats, and various other events.</p>
+
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="youthRetreat">
+    <div class="col-12 content-block">
+      <h4 class="content-heading "> Retreat</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>The Youth retreat is an annual event wherein the youth of the church get away from the heat and tensions of
+        city life and plan an escape to the hills. This usually takes place in the 2nd week of August. The aim however
+        is not to simply spend some leisure time but also use that time as an opportunity to grow more in Christ and
+        spend some time in introspection. The Youth is therefore accompanied each year by the mentors (Mrs. & Mr.
+        Selwyn) as well as a resource person who takes various sessions for the participants. The worship team also
+        accompanies the youth with all the equipment and together they have a wonderful time of worship and meditation.
+        This year the speaker for the retreat is Rev. C.A. Benjamin, the Director of FEBA (Far East Broadcasting
+        Association). He is one of the best speakers for youngsters in India and has previously accompanied our church
+        youth to a wonderful retreat in 2017. Listening to him and learning from him is a lifetime opportunity. There
+        are limited seats, do sign up today!</p>
+
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk-alt" id="unity">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Unity</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>This is a flagship event of the CYF. Started in 2017, the aim of the event is simple - to cut across the
+        boundaries of denomination and provide a platform for the church to be united as one. As part of this event,
+        youngsters from all denominations (CNI, CSI, Pentecostal, AG, Marthoma, Roman Catholic, Independent) are invited
+        to spend a day together in worship, meditation and prayer, with an aim to drive home the point that we all serve
+        One God, and that there is ultimately just One Church. Last year the event had more than 100 youngsters from 19
+        churches under various denominations. </p>
+
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="youthMusical">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Christmas Musical</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>The CYF presents a Mega-Musical right before Christmas which has gained some popularity over the past few
+        years. The first such Musical by the CYF was ‘A Christmas Carol’ by Charles Dickens done in 2014. This event is
+        a full package, with action, drama, lights, sound-effects, show-stopping numbers and even a smoke machine!! Over
+        the years, the CYF has presented ‘Annie- The Musical’ (2015), ‘Oliver Twist’ (2016) and ‘Christmas in Comfort’
+        (2018). The show is held in the Parish Hall of the church, directed by members of youth themselves, with no
+        professional help whatsoever, and is truly a sight to behold. Do check it out this year!</p>
+
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="youthOutreach">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Outreach Programmes</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>The CYF regularly visit orphanages and old-age homes in Delhi. Usually on a Sunday, the entire Youth group goes
+        together with gifts and spends the whole morning with the children (in Orphanages) or the older people (in
+        Old-Age Homes). They also carry food for the people and enjoy a fellowship lunch with them. The CYF also
+        initiated a drive in the winters called ‘Secret Santa’ wherein they go about in the nearby areas and distribute
+        warm clothes and blankets to the people who live on the streets in the bitter cold. </p>
+
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="footer">
+        <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br>
+            New Delhi - 110001</span></div>
+        <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325
+          </span></div>
+        <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi"><i
+                class="fab fa-facebook-square"></i>Facebook</a></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <script src="../scripts/scripts.js"></script>
+  <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+  </script>
+</body>
 
 </html>

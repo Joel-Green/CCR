@@ -1,225 +1,257 @@
-
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Catherdral Church Of Redemption</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!-- update the version number as needed -->
-    <!-- include only the Firebase features as you need -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <script>
-      $(document).ready(function () {
-        $.ajax({
-          url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
-          dataType: 'JSONP',
-          success: function (json) {
-            $(".dailyVersesWrapper").prepend(json.html);
-          }
-        });
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Catherdral Church Of Redemption</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="icon" type="image/png" href="/public/images/icon.png" />
+  <link rel="icon" type="image/png" href="/public/images/icon.png" />
+  <!-- update the version number as needed -->
+  <!-- include only the Firebase features as you need -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
+        dataType: 'JSONP',
+        success: function (json) {
+          $(".dailyVersesWrapper").prepend(json.html);
+        }
       });
-    </script>
-  </head>
+    });
+  </script>
+</head>
 
-  <body>
+<body>
 
 
-    <div class="row">
-      <div class="header header-scrolled col-12">
+  <div class="row">
+    <div class="header header-scrolled col-12">
       <div class="hamburger" id="hamburger" onclick="toggleHeader()">
         <span class="hamline"></span>
         <span class="hamline"></span>
         <span class="hamline"></span>
       </div>
-        <div class="nav-items dropdown " onclick="toggleHome()">
-          <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
-        </div>
-        <div class="nav-items dropdown" onclick="toggleAbout()">
-          <a href="#" class=" nav-item active" id='link-about'>About</a>
-          <div class="dropdown-content" id="nav-About">
-            <a href="../about/churchServices.html">Church Services</a>
-            <a href="../about/choirs.html">The Choirs</a>
-            <a href="../about/wfcs.html">WFCS</a>
-            <a href="../about/cyf.html">CYF</a>
-            <a href="../about/sundaySchool.html">Sunday School</a>
-          </div>
-        </div>
-        <div class="nav-items dropdown" onclick="toggleOutreach()">
-          <a href="#" class="nav-item" id='link-outreach'>Outreach</a>
-          <div class="dropdown-content" id="nav-Outreach">
-            <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
-            <a href="../outreach/communityOutreach.html">Community Outreach</a>
-            <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
-          </div>
-        </div>
-        <div class="nav-items dropdown" onclick="toggleEvents()">
-          <a href="#" class="nav-item " id='link-events'>Events</a>
-          <div class="dropdown-content" id="nav-Events">
-            <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
-            <a href="../events/sundaySchool.html">Sunday School</a>
-            <a href="../events/youth.html">Youth</a>
-            <a href="../events/wfcs.html">WFCS </a>
-            <a href="../events/church.html">Church</a>
-            <a href="../events/christmas.html">Carol Services</a>
-            <a href="../events/outreach.html">Outreach</a>
-          </div>
-        </div>
-        <div class="nav-items dropdown" onclick="togglePeople()">
-          <a href="#" class="nav-item " id='link-people'>People</a>
-          <div class="dropdown-content" id="nav-People">
-            <a href="../people/presbyters.html">Presbyters</a>
-            <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
-            <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
-            <a href="../people/wfcsleaders.html">WFCS Leaders</a>
-            <a href="../people/cyfleaders.html">CYF Leaders</a>
-            <a href="../people/layleaders.html">Lay Leaders</a>
-            <a href="../people/officestaff.html">Office Staff</a>
-            <a href="../people/sewadars.html">Sewadars</a>
-          </div>
-        </div>
-<div class="nav-items dropdown" onclick="toggleMore()">
-          <a href="#" class="nav-item" id='link-more'>More</a>
-          <div class="dropdown-content" id="nav-More">
-            <a href="../more/churchHistory.html">Church History</a>
-            <a href="../more/architecture.html">Architecture</a>
-            <a href="../more/paintings.html">Paintings</a>
-            <a href="../more/parishHall.html">Parish Hall</a>
-            <a href="../more/churchOrgan.html">Church Organ</a>
-            <a href="../more/notices.html">Notices</a>
-            <a href="../more/media.html">Forms and Media</a>
-          </div>
-        </div>
- 
-        <div class="nav-items dropdown">
-          <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
-          <div class="dropdown-content" id="nav-ReachUs">
-
-          </div>
+      <div class="nav-items dropdown " onclick="toggleHome()">
+        <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleAbout()">
+        <a href="#" class=" nav-item active" id='link-about'>About</a>
+        <div class="dropdown-content" id="nav-About">
+          <a href="../about/churchServices.html">Church Services</a>
+          <a href="../about/choirs.html">The Choirs</a>
+          <a href="../about/wfcs.html">WFCS</a>
+          <a href="../about/cyf.html">CYF</a>
+          <a href="../about/sundaySchool.html">Sunday School</a>
         </div>
       </div>
-    </div>
-    <div class="row content-main img-blk" id="englishService">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">English Service</h4>
+      <div class="nav-items dropdown" onclick="toggleOutreach()">
+        <a href="#" class="nav-item" id='link-outreach'>Outreach</a>
+        <div class="dropdown-content" id="nav-Outreach">
+          <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
+          <a href="../outreach/communityOutreach.html">Community Outreach</a>
+          <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
+        </div>
       </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>The first mass on Sunday begins at 8am in summers and 8.30am in winters. It is a traditional Sung Eucharist service, with the prayers chanted in beautiful melodies that fill the Cathedral. The service is interspersed with classic English hymns. The sermon acts as the median between the first part of the service consisting of reading and meditating on the Word of God, and the the second part which is the preparation and participation in the Holy Communion. The service is followed by fellowship and refreshments.</p>
-        <br>
+      <div class="nav-items dropdown" onclick="toggleEvents()">
+        <a href="#" class="nav-item " id='link-events'>Events</a>
+        <div class="dropdown-content" id="nav-Events">
+          <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
+          <a href="../events/sundaySchool.html">Sunday School</a>
+          <a href="../events/youth.html">Youth</a>
+          <a href="../events/wfcs.html">WFCS </a>
+          <a href="../events/church.html">Church</a>
+          <a href="../events/christmas.html">Carol Services</a>
+          <a href="../events/outreach.html">Outreach</a>
+        </div>
+      </div>
+      <div class="nav-items dropdown" onclick="togglePeople()">
+        <a href="#" class="nav-item " id='link-people'>People</a>
+        <div class="dropdown-content" id="nav-People">
+          <a href="../people/presbyters.html">Presbyters</a>
+          <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
+          <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
+          <a href="../people/wfcsleaders.html">WFCS Leaders</a>
+          <a href="../people/cyfleaders.html">CYF Leaders</a>
+          <a href="../people/layleaders.html">Lay Leaders</a>
+          <a href="../people/officestaff.html">Office Staff</a>
+          <a href="../people/sewadars.html">Sewadars</a>
+        </div>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleMore()">
+        <a href="#" class="nav-item" id='link-more'>More</a>
+        <div class="dropdown-content" id="nav-More">
+          <a href="../more/churchHistory.html">Church History</a>
+          <a href="../more/architecture.html">Architecture</a>
+          <a href="../more/paintings.html">Paintings</a>
+          <a href="../more/parishHall.html">Parish Hall</a>
+          <a href="../more/churchOrgan.html">Church Organ</a>
+          <a href="../more/notices.html">Notices</a>
+          <a href="../more/media.html">Forms and Media</a>
+        </div>
+      </div>
 
-        <p class="center-text">Presbyters : Rev. Mohit H. Hitter(+91 98107 50016)</p>
-      </div>
+      <div class="nav-items dropdown">
+        <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
+        <div class="dropdown-content" id="nav-ReachUs">
 
-
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="tamilService">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Tamil Service</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>The second mass on Sunday begins at 9.30am in summers and 10am in winters. It is a Tamil Sung Eucharist service. The service is interspersed with classic Tamil ‘Pamalai’ and a offertory song which is usually a ‘Keerthanai’. The sermon acts as the median between the first part of the service consisting of reading and meditating on the Word of God, and the the second part which is the preparation and participation in the Holy Communion. The service ends with a dismissal chorus, known as ‘Mangala Kavi’. The service is followed by fellowship and refreshments.</p>
-
-        <br>
-
-        <p class="center-text">Presbyters : Rev. Ratnaraj(+91 88003 44699)</p>
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="hindiService">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Hindi Service</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>The third mass on Sunday begins at 11.15am in summers and 11.45am in winters. It is a service lead in Hindi language. Very recently, the leaders in Hindi service initiated a Sung Eucharist too by creating melodies for the prayers. The service is interspersed with classic Hindi ‘Bhajans’ and contemporary worship songs in Hindi. The sermon acts as the median between the first part of the service consisting of reading and meditating on the Word of God, and the the second part which is the preparation and participation in the Holy Communion. The service is followed by fellowship and refreshments.</p>
-
-        <br>
-
-        <p class="center-text">Presbyters : Rev. Abhay Benson (+91 98969 21386)</p>
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="youthSundayService">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Youth Fellowship</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        
-        <p>The Fellowship begins at 10 PM in summers and 10.30 PM in winters. The timing is chosen in such a way that youngsters from all 3 congregations (English, Tamil & Hindi) can attend it. Beginning with a few songs of worship and praise, the youth are led into a time of intercessory prayer. The prayer sessions include all relevant topics such as world problems, prayers for the nation, for examinees, for the church, its members and activities and lastly for themselves too. These prayers are conducted in various forms including two by two, small groups, as well as corporate prayers. The prayer session is followed by meditation on the Word for a brief period of time and ends with offering. In a recent effort to inculcate the habit of proclaiming the Word, one CYF member is encouraged every 2-3 months to bring the message on one of the Sundays.</p>
-        <p>We also have a Bible Quiz every 2 months to encourage in-depth study of the Word.</p>
-        <p>In an effort to integrate the Youth with the main worship service, everyone is requested to attend their respective worship services inside the church on the last Sunday of every month. </p>
-        <br>
-
-        <p class="center-text">Mrs. Hepzibah (+91 96505 66005), Mr. Alvin D. Singh (+91 98719 59682)</p>
-
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="eveningService">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Evening Service</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>The fourth mass on Sunday begins at 6pm in summers and 5.30pm in winters. It is a bi-lingual service, mixed in English and Hindi. This is the youngest service of the lot, initiated recently in September 2016. The service begins with half an hour of worship lead by the church youth, mainly consisting of modern worship songs in English and Hindi. This is followed by half an hour of meditating on the word of God by preachers from different churches in Delhi every week. The theme for each week is different. This helps in getting greater perspective on God’s Word. The service is followed by fellowship and refreshments.</p>
-        <br>
-        <p class="center-text">Service Leaders : Angelin Jennifer (+91 99681 42573), Alvin D. Singh (+91 98719 59682)</p>
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="footer">
-          <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br> New Delhi - 110001</span></div>
-          <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325 </span></div>
-          <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi"><i class="fab fa-facebook-square"></i>Facebook</a></span></div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="row content-main img-blk" id="englishService">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">English Service</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>The first mass on Sunday begins at 8am in summers and 8.30am in winters. It is a traditional Sung Eucharist
+        service, with the prayers chanted in beautiful melodies that fill the Cathedral. The service is interspersed
+        with classic English hymns. The sermon acts as the median between the first part of the service consisting of
+        reading and meditating on the Word of God, and the the second part which is the preparation and participation in
+        the Holy Communion. The service is followed by fellowship and refreshments.</p>
+      <br>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
-    <script src="../scripts/scripts.js"></script>
-    <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-    <script defer src="/__/firebase/init.js"></script>
-    </script>
-  </body>
+      <p class="center-text">Presbyters : Rev. Mohit H. Hitter(+91 98107 50016)</p>
+    </div>
+
+
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="tamilService">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Tamil Service</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>The second mass on Sunday begins at 9.30am in summers and 10am in winters. It is a Tamil Sung Eucharist
+        service. The service is interspersed with classic Tamil ‘Pamalai’ and a offertory song which is usually a
+        ‘Keerthanai’. The sermon acts as the median between the first part of the service consisting of reading and
+        meditating on the Word of God, and the the second part which is the preparation and participation in the Holy
+        Communion. The service ends with a dismissal chorus, known as ‘Mangala Kavi’. The service is followed by
+        fellowship and refreshments.</p>
+
+      <br>
+
+      <p class="center-text">Presbyters : Rev. Ratnaraj(+91 88003 44699)</p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="hindiService">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Hindi Service</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>The third mass on Sunday begins at 11.15am in summers and 11.45am in winters. It is a service lead in Hindi
+        language. Very recently, the leaders in Hindi service initiated a Sung Eucharist too by creating melodies for
+        the prayers. The service is interspersed with classic Hindi ‘Bhajans’ and contemporary worship songs in Hindi.
+        The sermon acts as the median between the first part of the service consisting of reading and meditating on the
+        Word of God, and the the second part which is the preparation and participation in the Holy Communion. The
+        service is followed by fellowship and refreshments.</p>
+
+      <br>
+
+      <p class="center-text">Presbyters : Rev. Abhay Benson (+91 98969 21386)</p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="youthSundayService">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Youth Fellowship</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+
+      <p>The Fellowship begins at 10 PM in summers and 10.30 PM in winters. The timing is chosen in such a way that
+        youngsters from all 3 congregations (English, Tamil & Hindi) can attend it. Beginning with a few songs of
+        worship and praise, the youth are led into a time of intercessory prayer. The prayer sessions include all
+        relevant topics such as world problems, prayers for the nation, for examinees, for the church, its members and
+        activities and lastly for themselves too. These prayers are conducted in various forms including two by two,
+        small groups, as well as corporate prayers. The prayer session is followed by meditation on the Word for a brief
+        period of time and ends with offering. In a recent effort to inculcate the habit of proclaiming the Word, one
+        CYF member is encouraged every 2-3 months to bring the message on one of the Sundays.</p>
+      <p>We also have a Bible Quiz every 2 months to encourage in-depth study of the Word.</p>
+      <p>In an effort to integrate the Youth with the main worship service, everyone is requested to attend their
+        respective worship services inside the church on the last Sunday of every month. </p>
+      <br>
+
+      <p class="center-text">Mrs. Hepzibah (+91 96505 66005), Mr. Jonathan Jefferson (+91 96434 64894)</p>
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="eveningService">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Evening Service</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>The fourth mass on Sunday begins at 6pm in summers and 5.30pm in winters. It is a bi-lingual service, mixed in
+        English and Hindi. This is the youngest service of the lot, initiated recently in September 2016. The service
+        begins with half an hour of worship lead by the church youth, mainly consisting of modern worship songs in
+        English and Hindi. This is followed by half an hour of meditating on the word of God by preachers from different
+        churches in Delhi every week. The theme for each week is different. This helps in getting greater perspective on
+        God’s Word. The service is followed by fellowship and refreshments.</p>
+      <br>
+      <p class="center-text">Service Leaders : Mr. Jonathan Jefferson (+91 96434 64894), Mr. Sudeep George (+91 98689
+        33195)</p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="footer">
+        <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br>
+            New Delhi - 110001</span></div>
+        <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325
+          </span></div>
+        <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi"><i
+                class="fab fa-facebook-square"></i>Facebook</a></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <script src="../scripts/scripts.js"></script>
+  <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+  </script>
+</body>
 
 </html>

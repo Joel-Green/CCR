@@ -1,274 +1,287 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Catherdral Church Of Redemption</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!-- update the version number as needed -->
-    <!-- include only the Firebase features as you need -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
-    <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-    <script>
-      $(document).ready(function () {
-        $.ajax({
-          url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
-          dataType: 'JSONP',
-          success: function (json) {
-            $(".dailyVersesWrapper").prepend(json.html);
-          }
-        });
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Catherdral Church Of Redemption</title>
+  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="icon" type="image/png" href="/public/images/icon.png" />
+  <!-- update the version number as needed -->
+  <!-- include only the Firebase features as you need -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
+  <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
+        dataType: 'JSONP',
+        success: function (json) {
+          $(".dailyVersesWrapper").prepend(json.html);
+        }
       });
-    </script>
-  </head>
+    });
+  </script>
+</head>
 
-  <body>
+<body>
 
 
 
-    <div class="row">
-      <div class="header header-scrolled col-12">
+  <div class="row">
+    <div class="header header-scrolled col-12">
       <div class="hamburger" id="hamburger" onclick="toggleHeader()">
         <span class="hamline"></span>
         <span class="hamline"></span>
         <span class="hamline"></span>
       </div>
-        <div class="nav-items dropdown " onclick="toggleHome()">
-          <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
-        </div>
-        <div class="nav-items dropdown" onclick="toggleAbout()">
-          <a href="#" class=" nav-item " id='link-about'>About</a>
-          <div class="dropdown-content" id="nav-About">
-            <a href="../about/churchServices.html">Church Services</a>
-            <a href="../about/choirs.html">The Choirs</a>
-            <a href="../about/wfcs.html">WFCS</a>
-            <a href="../about/cyf.html">CYF</a>
-            <a href="../about/sundaySchool.html">Sunday School</a>
-          </div>
-        </div>
-        <div class="nav-items dropdown" onclick="toggleOutreach()">
-          <a href="#" class="nav-item " id='link-outreach'>Outreach</a>
-          <div class="dropdown-content" id="nav-Outreach">
-            <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
-            <a href="../outreach/communityOutreach.html">Community Outreach</a>
-            <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
-          </div>
-        </div>
-        <div class="nav-items dropdown" onclick="toggleEvents()">
-          <a href="#" class="nav-item " id='link-events'>Events</a>
-          <div class="dropdown-content" id="nav-Events">
-            <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
-            <a href="../events/sundaySchool.html">Sunday School</a>
-            <a href="../events/youth.html">Youth</a>
-            <a href="../events/wfcs.html">WFCS </a>
-            <a href="../events/church.html">Church</a>
-            <a href="../events/christmas.html">Carol Services</a>
-            <a href="../events/outreach.html">Outreach</a>
-          </div>
-        </div>
-        <div class="nav-items dropdown" onclick="togglePeople()">
-          <a href="#" class="nav-item active" id='link-people'>People</a>
-          <div class="dropdown-content" id="nav-People">
-            <a href="../people/presbyters.html">Presbyters</a>
-            <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
-            <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
-            <a href="../people/wfcsleaders.html">WFCS Leaders</a>
-            <a href="../people/cyfleaders.html">CYF Leaders</a>
-            <a href="../people/layleaders.html">Lay Leaders</a>
-            <a href="../people/officestaff.html">Office Staff</a>
-            <a href="../people/sewadars.html">Sewadars</a>
-          </div>
-        </div>
-
-        <div class="nav-items dropdown" onclick="toggleMore()">
- <a href="#" class="nav-item " id='link-more'>More</a>
-          <div class="dropdown-content" id="nav-More">
-            <a href="../more/churchHistory.html">Church History</a>
-            <a href="../more/architecture.html">Architecture</a>
-            <a href="../more/paintings.html">Paintings</a>
-            <a href="../more/parishHall.html">Parish Hall</a>
-            <a href="../more/churchOrgan.html">Church Organ</a>
-            <a href="../more/notices.html">Notices</a>
-            <a href="../more/media.html">Forms and Media</a>
-          </div>
-        </div>
-        
-        <div class="nav-items dropdown">
-          <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
-          <div class="dropdown-content" id="nav-ReachUs">
-
-          </div>
+      <div class="nav-items dropdown " onclick="toggleHome()">
+        <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
+      </div>
+      <div class="nav-items dropdown" onclick="toggleAbout()">
+        <a href="#" class=" nav-item " id='link-about'>About</a>
+        <div class="dropdown-content" id="nav-About">
+          <a href="../about/churchServices.html">Church Services</a>
+          <a href="../about/choirs.html">The Choirs</a>
+          <a href="../about/wfcs.html">WFCS</a>
+          <a href="../about/cyf.html">CYF</a>
+          <a href="../about/sundaySchool.html">Sunday School</a>
         </div>
       </div>
-    </div>
-    <div class="row content-main img-blk" id="choirMasters">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Choir Masters</h4>
+      <div class="nav-items dropdown" onclick="toggleOutreach()">
+        <a href="#" class="nav-item " id='link-outreach'>Outreach</a>
+        <div class="dropdown-content" id="nav-Outreach">
+          <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
+          <a href="../outreach/communityOutreach.html">Community Outreach</a>
+          <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
+        </div>
       </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>All 3 congregations have their respective choirs and all 3 choirs are led by their ‘Choir masters’. These choir masters, with their vast experience and expertise in music, dedicate their time to teach and flourish the choir members in the art of music. All three choirs have their performances as part of their respective carol services. </p>
-        <br>
-        <p class="center-text">
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text">Choir Master (English) -</div>
-            </div>
-            <div class="col-6">
-              <div class="left-text">&nbsp;Mr. B. Varghesea</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text">Choir Master (Tamil) -</div>
-            </div>
-            <div class="col-6">
-              <div class="left-text"> &nbsp;Mr. P. Raja</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="right-text">Choir Master (Hindi) -</div>
-            </div>
-            <div class="col-6">
-              <div class="left-text"> &nbsp;Mr. Thomas Dawson</div>
-            </div>
-          </div> 
-</p>
+      <div class="nav-items dropdown" onclick="toggleEvents()">
+        <a href="#" class="nav-item " id='link-events'>Events</a>
+        <div class="dropdown-content" id="nav-Events">
+          <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
+          <a href="../events/sundaySchool.html">Sunday School</a>
+          <a href="../events/youth.html">Youth</a>
+          <a href="../events/wfcs.html">WFCS </a>
+          <a href="../events/church.html">Church</a>
+          <a href="../events/christmas.html">Carol Services</a>
+          <a href="../events/outreach.html">Outreach</a>
+        </div>
+      </div>
+      <div class="nav-items dropdown" onclick="togglePeople()">
+        <a href="#" class="nav-item active" id='link-people'>People</a>
+        <div class="dropdown-content" id="nav-People">
+          <a href="../people/presbyters.html">Presbyters</a>
+          <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
+          <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
+          <a href="../people/wfcsleaders.html">WFCS Leaders</a>
+          <a href="../people/cyfleaders.html">CYF Leaders</a>
+          <a href="../people/layleaders.html">Lay Leaders</a>
+          <a href="../people/officestaff.html">Office Staff</a>
+          <a href="../people/sewadars.html">Sewadars</a>
+        </div>
+      </div>
 
+      <div class="nav-items dropdown" onclick="toggleMore()">
+        <a href="#" class="nav-item " id='link-more'>More</a>
+        <div class="dropdown-content" id="nav-More">
+          <a href="../more/churchHistory.html">Church History</a>
+          <a href="../more/architecture.html">Architecture</a>
+          <a href="../more/paintings.html">Paintings</a>
+          <a href="../more/parishHall.html">Parish Hall</a>
+          <a href="../more/churchOrgan.html">Church Organ</a>
+          <a href="../more/notices.html">Notices</a>
+          <a href="../more/media.html">Forms and Media</a>
+        </div>
       </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk-alt" id="musicians">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Musicians</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>The Church in all its services requires various musicians. The dynamics of the Cathedral is such that the range of instruments goes from classic pipe organs and trumpets to modern electric guitars and synthesisers. Following are the instrumentalists of the Cathedral:</p>
-        <br>
-        <p class="center-text">
-         <div class="row">
-           <div class="col-4">
-             <div class="right-text"> Pipe Organ :</div>
-           </div>
-           <div class="col-8">
-             <div class="left-text">&nbsp;Ms. Lydia Thomas, Ms. Sheila Samuel, Ms. Catherine Justin and Dr. Kathleen Holloway </div>
-           </div>
-         </div> 
-         <div class="row">
-           <div class="col-4">
-             <div class="right-text"> Keyboard :</div>
-           </div>
-           <div class="col-8">
-             <div class="left-text">&nbsp;Mr. Thomas Dawson, Mr. Alvin D. Singh and Mr. P. Angels </div>
-           </div>
-         </div> 
-         <div class="row">
-           <div class="col-4">
-             <div class="right-text">Acoustic Guitar :</div>
-           </div>
-           <div class="col-8">
-             <div class="left-text"> &nbsp;Mr. Jonathan Jefferson & Mr. Joel Green</div>
-           </div>
-         </div> 
-         <div class="row">
-           <div class="col-4">
-             <div class="right-text">Electric Guitar :</div>
-           </div>
-           <div class="col-8">
-             <div class="left-text"> &nbsp;Mr. Andrews Clapton & Mr. Akshay Kachhap</div>
-           </div>
-         </div>
-         <div class="row">
-           <div class="col-4">
-             <div class="right-text">Drums :</div>
-           </div>
-           <div class="col-8">
-             <div class="left-text"> &nbsp;Mr. L. Surya</div>
-           </div>
-         </div>
-         <div class="row">
-           <div class="col-4">
-             <div class="right-text">Synthesiser :</div>
-           </div>
-           <div class="col-8">
-             <div class="left-text"> &nbsp;Mr. James Ashish </div>
-           </div>
-         </div>
-         <div class="row">
-           <div class="col-4">
-             <div class="right-text">Electric Bass :</div>
-           </div>
-           <div class="col-8">
-             <div class="left-text"> &nbsp;Mr. Sudeep George & Mr. Aldrin Matthew</div>
-           </div>
-         </div>
-       
 
-      </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="row content-main img-blk" id="soundEngineer">
-      <div class="col-12 content-block">
-        <h4 class="content-heading ">Sound Engineers</h4>
-      </div>
-    </div>
-    <div class="row content-slab">
-      <div class="col-2"></div>
-      <div class="col-8 content-text ">
-        <p>The Cathedral is an architectural marvel. But the gigantic structure with all its reverberations makes handling sound all the more difficult. Therefore, the Cathedral has a dynamic group of experienced sound engineers that works tirelessly to ensure good sound. All of the equipment at the Cathedral is the best suited for its needs set up under the guidance of Mr. Raja and Mr. Angels.
-        </p>
-        
-        
+      <div class="nav-items dropdown">
+        <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
+        <div class="dropdown-content" id="nav-ReachUs">
 
-      </div>
-      <div class="col-2"></div>
-    </div>
-
-
-    <div class="row">
-      <div class="col-12">
-        <div class="footer">
-          <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br> New Delhi - 110001</span></div>
-          <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325 </span></div>
-          <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi" target="_blank"><i class="fab fa-facebook-square"></i>Facebook</a></span></div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="row content-main img-blk" id="choirMasters">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Choir Masters</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>All 3 congregations have their respective choirs and all 3 choirs are led by their ‘Choir masters’. These choir
+        masters, with their vast experience and expertise in music, dedicate their time to teach and flourish the choir
+        members in the art of music. All three choirs have their performances as part of their respective carol
+        services. </p>
+      <br>
+      <p class="center-text">
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text">Choir Master (English) -</div>
+        </div>
+        <div class="col-6">
+          <div class="left-text">&nbsp;Mr. B. Varghesea</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text">Choir Master (Tamil) -</div>
+        </div>
+        <div class="col-6">
+          <div class="left-text"> &nbsp;Mr. P. Raja</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="right-text">Choir Master (Hindi) -</div>
+        </div>
+        <div class="col-6">
+          <div class="left-text"> &nbsp;Mr. Thomas Dawson</div>
+        </div>
+      </div>
+      </p>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-    <script>
-      var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    </script>
-    <script src="../scripts/scripts.js"></script>
-    <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-    <script defer src="/__/firebase/init.js"></script>
-    </script>
-  </body>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk-alt" id="musicians">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Musicians</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>The Church in all its services requires various musicians. The dynamics of the Cathedral is such that the range
+        of instruments goes from classic pipe organs and trumpets to modern electric guitars and synthesisers. Following
+        are the instrumentalists of the Cathedral:</p>
+      <br>
+      <p class="center-text">
+      <div class="row">
+        <div class="col-4">
+          <div class="right-text"> Pipe Organ :</div>
+        </div>
+        <div class="col-8">
+          <div class="left-text">&nbsp;Ms. Lydia Thomas, Ms. Sheila Samuel, Ms. Catherine Justin and Dr. Kathleen
+            Holloway </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="right-text"> Keyboard :</div>
+        </div>
+        <div class="col-8">
+          <div class="left-text">&nbsp;Mr. Thomas Dawson, Mr. Alvin D. Singh and Mr. P. Angels </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="right-text">Acoustic Guitar :</div>
+        </div>
+        <div class="col-8">
+          <div class="left-text"> &nbsp;Mr. Jonathan Jefferson & Mr. Joel Green</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="right-text">Electric Guitar :</div>
+        </div>
+        <div class="col-8">
+          <div class="left-text"> &nbsp;Mr. Andrews Clapton & Mr. Akshay Kachhap</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="right-text">Drums :</div>
+        </div>
+        <div class="col-8">
+          <div class="left-text"> &nbsp;Mr. L. Surya</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="right-text">Synthesiser :</div>
+        </div>
+        <div class="col-8">
+          <div class="left-text"> &nbsp;Mr. James Ashish </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <div class="right-text">Electric Bass :</div>
+        </div>
+        <div class="col-8">
+          <div class="left-text"> &nbsp;Mr. Sudeep George & Mr. Aldrin Matthew</div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row content-main img-blk" id="soundEngineer">
+    <div class="col-12 content-block">
+      <h4 class="content-heading ">Sound Engineers</h4>
+    </div>
+  </div>
+  <div class="row content-slab">
+    <div class="col-2"></div>
+    <div class="col-8 content-text ">
+      <p>The Cathedral is an architectural marvel. But the gigantic structure with all its reverberations makes handling
+        sound all the more difficult. Therefore, the Cathedral has a dynamic group of experienced sound engineers that
+        works tirelessly to ensure good sound. All of the equipment at the Cathedral is the best suited for its needs
+        set up under the guidance of Mr. Raja and Mr. Angels.
+      </p>
+
+
+
+    </div>
+    <div class="col-2"></div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12">
+      <div class="footer">
+        <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br> North Avenue<br>
+            New Delhi - 110001</span></div>
+        <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011 230 93325
+          </span></div>
+        <div class="content"> <span class="text"> <a href="https://www.facebook.com/RedemptionChurchNewDelhi"
+              target="_blank"><i class="fab fa-facebook-square"></i>Facebook</a></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  <script src="../scripts/scripts.js"></script>
+  <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+  </script>
+</body>
 
 </html>

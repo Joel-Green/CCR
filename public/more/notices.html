@@ -1,226 +1,269 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>The Catherdral Church Of Redemption</title>
-        <link rel="stylesheet" href="../styles/styles.css">
-        <!-- update the version number as needed -->
-        <!-- include only the Firebase features as you need -->
-        <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
-        <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
-        <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
-        <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
-        <!-- initialize the SDK after all desired features are loaded -->
-        <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-        <script>
-            $(document).ready(function () {
-                $.ajax({
-                    url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
-                    dataType: 'JSONP',
-                    success: function (json) {
-                        $(".dailyVersesWrapper").prepend(json.html);
-                    }
-                });
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Catherdral Church Of Redemption</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" type="image/png" href="/public/images/icon.png" />
+    <!-- update the version number as needed -->
+    <!-- include only the Firebase features as you need -->
+    <!-- <script defer src="/__/firebase/6.2.4/firebase-auth.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.2.4/firebase-database.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script> -->
+    <!-- <script defer src="/__/firebase/6.2.4/firebase-storage.js"></script> -->
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script src="https://kit.fontawesome.com/2d0e33915a.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>!window.jQuery && document.write("<script src='../scripts/jquery-3.4.1.min.js'><\/script>")</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: 'https://dailyverses.net/getdailyverse.ashx?language=niv&isdirect=1&url=' + window.location.hostname,
+                dataType: 'JSONP',
+                success: function (json) {
+                    $(".dailyVersesWrapper").prepend(json.html);
+                }
             });
-        </script>
-    </head>
+        });
+    </script>
+</head>
 
-    <body>
+<body>
 
 
 
-        <div class="row">
-            <div class="header header-scrolled col-12">
-      <div class="hamburger" id="hamburger" onclick="toggleHeader()">
-        <span class="hamline"></span>
-        <span class="hamline"></span>
-        <span class="hamline"></span>
-      </div>
-                <div class="nav-items dropdown " onclick="toggleHome()">
-                    <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
+    <div class="row">
+        <div class="header header-scrolled col-12">
+            <div class="hamburger" id="hamburger" onclick="toggleHeader()">
+                <span class="hamline"></span>
+                <span class="hamline"></span>
+                <span class="hamline"></span>
+            </div>
+            <div class="nav-items dropdown " onclick="toggleHome()">
+                <a href="../index.html" class="nav-item home" id='link-home'>Home </a>
+            </div>
+            <div class="nav-items dropdown" onclick="toggleAbout()">
+                <a href="#" class=" nav-item " id='link-about'>About</a>
+                <div class="dropdown-content" id="nav-About">
+                    <a href="../about/churchServices.html">Church Services</a>
+                    <a href="../about/choirs.html">The Choirs</a>
+                    <a href="../about/wfcs.html">WFCS</a>
+                    <a href="../about/cyf.html">CYF</a>
+                    <a href="../about/sundaySchool.html">Sunday School</a>
                 </div>
-                <div class="nav-items dropdown" onclick="toggleAbout()">
-                    <a href="#" class=" nav-item " id='link-about'>About</a>
-                    <div class="dropdown-content" id="nav-About">
-                        <a href="../about/churchServices.html">Church Services</a>
-                        <a href="../about/choirs.html">The Choirs</a>
-                        <a href="../about/wfcs.html">WFCS</a>
-                        <a href="../about/cyf.html">CYF</a>
-                        <a href="../about/sundaySchool.html">Sunday School</a>
-                    </div>
+            </div>
+            <div class="nav-items dropdown" onclick="toggleOutreach()">
+                <a href="#" class="nav-item " id='link-outreach'>Outreach</a>
+                <div class="dropdown-content" id="nav-Outreach">
+                    <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
+                    <a href="../outreach/communityOutreach.html">Community Outreach</a>
+                    <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
                 </div>
-                <div class="nav-items dropdown" onclick="toggleOutreach()">
-                    <a href="#" class="nav-item " id='link-outreach'>Outreach</a>
-                    <div class="dropdown-content" id="nav-Outreach">
-                        <a href="../outreach/evangelicalOutreach.html">Evangelical Outreach</a>
-                        <a href="../outreach/communityOutreach.html">Community Outreach</a>
-                        <a href="../outreach/cathedralNursery.html">Cathedral Nursery</a>
-                    </div>
+            </div>
+            <div class="nav-items dropdown" onclick="toggleEvents()">
+                <a href="#" class="nav-item " id='link-events'>Events</a>
+                <div class="dropdown-content" id="nav-Events">
+                    <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
+                    <a href="../events/sundaySchool.html">Sunday School</a>
+                    <a href="../events/youth.html">Youth</a>
+                    <a href="../events/wfcs.html">WFCS </a>
+                    <a href="../events/church.html">Church</a>
+                    <a href="../events/christmas.html">Carol Services</a>
+                    <a href="../events/outreach.html">Outreach</a>
                 </div>
-                <div class="nav-items dropdown" onclick="toggleEvents()">
-                    <a href="#" class="nav-item " id='link-events'>Events</a>
-                    <div class="dropdown-content" id="nav-Events">
-                        <a href="../events/annualGardenFete.html">Annual Garden Fete</a>
-                        <a href="../events/sundaySchool.html">Sunday School</a>
-                        <a href="../events/youth.html">Youth</a>
-                        <a href="../events/wfcs.html">WFCS </a>
-                        <a href="../events/church.html">Church</a>
-                        <a href="../events/christmas.html">Carol Services</a>
-                        <a href="../events/outreach.html">Outreach</a>
-                    </div>
+            </div>
+            <div class="nav-items dropdown" onclick="togglePeople()">
+                <a href="#" class="nav-item " id='link-people'>People</a>
+                <div class="dropdown-content" id="nav-People">
+                    <a href="../people/presbyters.html">Presbyters</a>
+                    <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
+                    <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
+                    <a href="../people/wfcsleaders.html">WFCS Leaders</a>
+                    <a href="../people/cyfleaders.html">CYF Leaders</a>
+                    <a href="../people/layleaders.html">Lay Leaders</a>
+                    <a href="../people/officestaff.html">Office Staff</a>
+                    <a href="../people/sewadars.html">Sewadars</a>
                 </div>
-                <div class="nav-items dropdown" onclick="togglePeople()">
-                    <a href="#" class="nav-item " id='link-people'>People</a>
-                    <div class="dropdown-content" id="nav-People">
-                        <a href="../people/presbyters.html">Presbyters</a>
-                        <a href="../people/pastorateCommittee.html">Pastorate Committee</a>
-                        <a href="../people/soundsofthecathedral.html">Sounds Of The Cathedral</a>
-                        <a href="../people/wfcsleaders.html">WFCS Leaders</a>
-                        <a href="../people/cyfleaders.html">CYF Leaders</a>
-                        <a href="../people/layleaders.html">Lay Leaders</a>
-                        <a href="../people/officestaff.html">Office Staff</a>
-                        <a href="../people/sewadars.html">Sewadars</a>
-                    </div>
+            </div>
+            <div class="nav-items dropdown" onclick="toggleMore()">
+                <a href="#" class="nav-item active" id='link-more'>More</a>
+                <div class="dropdown-content" id="nav-More">
+                    <a href="../more/churchHistory.html">Church History</a>
+                    <a href="../more/architecture.html">Architecture</a>
+                    <a href="../more/paintings.html">Paintings</a>
+                    <a href="../more/parishHall.html">Parish Hall</a>
+                    <a href="../more/churchOrgan.html">Church Organ</a>
+                    <a href="../more/notices.html">Notices</a>
+                    <a href="../more/media.html">Forms and Media</a>
                 </div>
-                <div class="nav-items dropdown" onclick="toggleMore()">
-                    <a href="#" class="nav-item active" id='link-more'>More</a>
-                    <div class="dropdown-content" id="nav-More">
-                        <a href="../more/churchHistory.html">Church History</a>
-                        <a href="../more/architecture.html">Architecture</a>
-                        <a href="../more/paintings.html">Paintings</a>
-                        <a href="../more/parishHall.html">Parish Hall</a>
-                        <a href="../more/churchOrgan.html">Church Organ</a>
-                        <a href="../more/notices.html">Notices</a>
-                        <a href="../more/media.html">Forms and Media</a>
-                    </div>
-                </div>
-                <div class="nav-items dropdown">
-                    <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
-                    <div class="dropdown-content" id="nav-ReachUs">
+            </div>
+            <div class="nav-items dropdown">
+                <a href="../reachus.html" class="nav-item" id='link-reachus'>Contact Us</a>
+                <div class="dropdown-content" id="nav-ReachUs">
 
-                    </div>
                 </div>
             </div>
         </div>
-        <div style=" margin-top: 50px">
-            <div class="row ">
-                <div class="col-2"></div>
-                <div class="col-8 content-block">
-                    <h4 class="content-heading">Prayer Requests</h4>
-                    <div class="row">
-                        <div class="col-12 content-text center-text">
-                            <p class="center-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
-                                eos nulla reiciendis eveniet blanditiis est ad hic expedita vero aspernatur! Similique
-                                molestiae fuga amet cupiditate tempora quisquam quasi illo doloremque?</p>
+    </div>
+    <div style=" margin-top: 50px">
+        <div class="row ">
+            <div class="col-2"></div>
+            <div class="col-8 content-block">
+                <h4 class="content-heading">Prayer Requests</h4>
+                <div class="row">
+                    <div class="col-12 content-text center-text">
+                        <p class="center-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
+                            eos nulla reiciendis eveniet blanditiis est ad hic expedita vero aspernatur! Similique
+                            molestiae fuga amet cupiditate tempora quisquam quasi illo doloremque?</p>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2"></div>
-            </div>
-
-            <div class="row ">
-                <div class="col-2"></div>
-                <div class="col-8 content-block">
-                    <h4 class="content-heading">Obituaries</h4>
-                    <div class="row">
-                        <div class="col-12 content-text center-text">
-                            <p class="center-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
-                                eos nulla reiciendis eveniet blanditiis est ad hic expedita vero aspernatur! Similique
-                                molestiae fuga amet cupiditate tempora quisquam quasi illo doloremque?</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2"></div>
-            </div>
-            <div class="row ">
-                <div class="col-2"></div>
-                <div class="col-8 content-block">
-                    <h4 class="content-heading">Brithdays and Wedding Anniversaries</h4>
-                    <div class="row">
-                        <div class="col-12 content-text center-text">
-                            <p class="center-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
-                                eos nulla reiciendis eveniet blanditiis est ad hic expedita vero aspernatur! Similique
-                                molestiae fuga amet cupiditate tempora quisquam quasi illo doloremque?</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2"></div>
-            </div>
-            <div class="row ">
-                <div class="col-2"></div>
-                <div class="col-8 content-block">
-                    <h4 class="content-heading">Wedding Bands</h4>
-                    <div class="row">
-                        <div class="col-12 content-text center-text">
-                            <p class="center-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
-                                eos nulla reiciendis eveniet blanditiis est ad hic expedita vero aspernatur! Similique
-                                molestiae fuga amet cupiditate tempora quisquam quasi illo doloremque?</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2"></div>
-            </div>
-            <div class="row ">
-                <div class="col-2"></div>
-                <div class="col-8 content-block">
-                    <h4 class="content-heading">Miscellaneous</h4>
-                    <div class="row">
-                        <div class="col-12 content-text center-text">
-                            <p class="center-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
-                                eos nulla reiciendis eveniet blanditiis est ad hic expedita vero aspernatur! Similique
-                                molestiae fuga amet cupiditate tempora quisquam quasi illo doloremque?</p>
-                                <p class="center-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, atque assumenda! Voluptatem ratione quisquam accusantium at alias adipisci repellendus expedita? Et ab fuga in necessitatibus id eveniet veniam accusamus, dolorum eius excepturi saepe aut iusto officiis? Officiis adipisci laboriosam voluptas dolorem atque facilis possimus deleniti at fugiat vel. Quisquam natus modi amet aspernatur minus ab voluptatem rem. Quidem natus, exercitationem quasi earum accusantium eum. Consequuntur, deserunt nostrum? Quisquam, qui quasi, voluptate consectetur exercitationem ex ea dignissimos beatae dolores earum iusto quia deleniti aspernatur assumenda? Sint rem incidunt cum architecto doloremque magni dolores consequatur, officia quia quis suscipit dolorum provident ipsam beatae odit maxime reprehenderit sit totam! Dolorum corrupti esse obcaecati illo quae iusto veniam officia exercitationem maiores minima, quasi aperiam dolorem animi vero architecto expedita similique a quidem consequatur aliquam alias sapiente. Ab, in! Culpa beatae praesentium, aliquid molestiae at eaque, obcaecati corporis voluptatibus distinctio adipisci cupiditate vitae ratione repellat omnis voluptate dolorum qui dicta! Iste voluptatum facere sunt quidem reiciendis non, laboriosam est quibusdam veritatis tenetur, officia nihil suscipit magni enim quaerat alias accusantium esse, ad ab quod sed doloremque. Possimus veritatis eius suscipit ipsa nihil nobis cupiditate illo enim autem recusandae dolorem aliquid impedit ex numquam commodi libero, ut laudantium officiis. Ea, fuga tempore nihil totam, voluptas quidem doloremque ducimus beatae, voluptatum ex quis doloribus! Deserunt vel ullam odit molestiae? Molestias saepe, blanditiis dolore, quod molestiae veniam in amet obcaecati provident eius sint? Unde odio debitis reprehenderit, dolor fugit labore, ratione inventore, quidem recusandae quis reiciendis molestiae ipsa culpa in dignissimos necessitatibus maiores odit numquam magnam temporibus officia. Dolor quasi quas officia laudantium delectus error, vitae ipsum, corrupti facilis magni fugiat ea, rerum harum ab architecto. Facere magnam quaerat obcaecati itaque perferendis voluptate neque ex non eligendi dolor quas veritatis, iusto quod cumque ab deserunt rerum perspiciatis numquam qui quo. Rem, iste beatae consectetur architecto quis incidunt eos sequi minus dicta! Cum aperiam maiores saepe reiciendis, aut natus facere odio nulla libero commodi eos dolorum veniam repudiandae deleniti corrupti provident, esse quasi dolorem. Voluptatem molestiae deserunt sequi officia. Eaque vero beatae nisi tenetur obcaecati nemo impedit ipsum fugiat similique iste deserunt porro voluptatum, suscipit laboriosam incidunt facilis perspiciatis odit aliquid cum iusto qui saepe dignissimos. Soluta temporibus voluptate doloremque illo consequatur, modi obcaecati. In dolorem, molestiae facilis reiciendis veritatis nam amet atque vitae eligendi, commodi, odio labore adipisci quaerat? Harum et expedita, corrupti aliquid nobis neque quaerat excepturi, asperiores fugiat blanditiis sed impedit illum modi deserunt perferendis esse quisquam itaque dolore ad exercitationem? Dolorum quasi, accusamus quidem et nihil deserunt dolorem itaque recusandae facilis, repudiandae, qui architecto ipsam similique ab sed molestiae eum ex minus ullam? Illum veritatis dignissimos repellendus cum vel dolores possimus saepe tenetur, id beatae, asperiores doloribus impedit iusto aspernatur temporibus ipsum exercitationem quas quidem dolorum, quo dicta sapiente eaque quam. Fugit magni cupiditate iure asperiores sit cum praesentium eius magnam. Aperiam neque, explicabo eligendi ipsa voluptatem, quam tenetur dolore voluptate saepe eius consectetur autem voluptatum blanditiis dolorem, laboriosam atque eaque distinctio vero officia omnis.
-                                </p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2"></div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="footer">
-                        <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br>
-                                North Avenue<br> New Delhi - 110001</span></div>
-                        <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011
-                                230 93325 </span></div>
-                        <div class="content"> <span class="text"> <a
-                                    href="https://www.facebook.com/RedemptionChurchNewDelhi" target="_blank"><i
-                                        class="fab fa-facebook-square"></i>Facebook</a></span></div>
                     </div>
                 </div>
             </div>
+            <div class="col-2"></div>
+        </div>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-            <script>
-                var swiper = new Swiper('.swiper-container', {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                    loop: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
-            </script>
-            <script src="../scripts/scripts.js"></script>
-            <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-            <script defer src="/__/firebase/init.js"></script>
-            </script>
-    </body>
+        <div class="row ">
+            <div class="col-2"></div>
+            <div class="col-8 content-block">
+                <h4 class="content-heading">Obituaries</h4>
+                <div class="row">
+                    <div class="col-12 content-text center-text">
+                        <p class="center-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
+                            eos nulla reiciendis eveniet blanditiis est ad hic expedita vero aspernatur! Similique
+                            molestiae fuga amet cupiditate tempora quisquam quasi illo doloremque?</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row ">
+            <div class="col-2"></div>
+            <div class="col-8 content-block">
+                <h4 class="content-heading">Brithdays and Wedding Anniversaries</h4>
+                <div class="row">
+                    <div class="col-12 content-text center-text">
+                        <p class="center-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
+                            eos nulla reiciendis eveniet blanditiis est ad hic expedita vero aspernatur! Similique
+                            molestiae fuga amet cupiditate tempora quisquam quasi illo doloremque?</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row ">
+            <div class="col-2"></div>
+            <div class="col-8 content-block">
+                <h4 class="content-heading">Wedding Bands</h4>
+                <div class="row">
+                    <div class="col-12 content-text center-text">
+                        <p class="center-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
+                            eos nulla reiciendis eveniet blanditiis est ad hic expedita vero aspernatur! Similique
+                            molestiae fuga amet cupiditate tempora quisquam quasi illo doloremque?</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row ">
+            <div class="col-2"></div>
+            <div class="col-8 content-block">
+                <h4 class="content-heading">Miscellaneous</h4>
+                <div class="row">
+                    <div class="col-12 content-text center-text">
+                        <p class="center-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio,
+                            eos nulla reiciendis eveniet blanditiis est ad hic expedita vero aspernatur! Similique
+                            molestiae fuga amet cupiditate tempora quisquam quasi illo doloremque?</p>
+                        <p class="center-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, atque assumenda!
+                            Voluptatem ratione quisquam accusantium at alias adipisci repellendus expedita? Et ab fuga
+                            in necessitatibus id eveniet veniam accusamus, dolorum eius excepturi saepe aut iusto
+                            officiis? Officiis adipisci laboriosam voluptas dolorem atque facilis possimus deleniti at
+                            fugiat vel. Quisquam natus modi amet aspernatur minus ab voluptatem rem. Quidem natus,
+                            exercitationem quasi earum accusantium eum. Consequuntur, deserunt nostrum? Quisquam, qui
+                            quasi, voluptate consectetur exercitationem ex ea dignissimos beatae dolores earum iusto
+                            quia deleniti aspernatur assumenda? Sint rem incidunt cum architecto doloremque magni
+                            dolores consequatur, officia quia quis suscipit dolorum provident ipsam beatae odit maxime
+                            reprehenderit sit totam! Dolorum corrupti esse obcaecati illo quae iusto veniam officia
+                            exercitationem maiores minima, quasi aperiam dolorem animi vero architecto expedita
+                            similique a quidem consequatur aliquam alias sapiente. Ab, in! Culpa beatae praesentium,
+                            aliquid molestiae at eaque, obcaecati corporis voluptatibus distinctio adipisci cupiditate
+                            vitae ratione repellat omnis voluptate dolorum qui dicta! Iste voluptatum facere sunt quidem
+                            reiciendis non, laboriosam est quibusdam veritatis tenetur, officia nihil suscipit magni
+                            enim quaerat alias accusantium esse, ad ab quod sed doloremque. Possimus veritatis eius
+                            suscipit ipsa nihil nobis cupiditate illo enim autem recusandae dolorem aliquid impedit ex
+                            numquam commodi libero, ut laudantium officiis. Ea, fuga tempore nihil totam, voluptas
+                            quidem doloremque ducimus beatae, voluptatum ex quis doloribus! Deserunt vel ullam odit
+                            molestiae? Molestias saepe, blanditiis dolore, quod molestiae veniam in amet obcaecati
+                            provident eius sint? Unde odio debitis reprehenderit, dolor fugit labore, ratione inventore,
+                            quidem recusandae quis reiciendis molestiae ipsa culpa in dignissimos necessitatibus maiores
+                            odit numquam magnam temporibus officia. Dolor quasi quas officia laudantium delectus error,
+                            vitae ipsum, corrupti facilis magni fugiat ea, rerum harum ab architecto. Facere magnam
+                            quaerat obcaecati itaque perferendis voluptate neque ex non eligendi dolor quas veritatis,
+                            iusto quod cumque ab deserunt rerum perspiciatis numquam qui quo. Rem, iste beatae
+                            consectetur architecto quis incidunt eos sequi minus dicta! Cum aperiam maiores saepe
+                            reiciendis, aut natus facere odio nulla libero commodi eos dolorum veniam repudiandae
+                            deleniti corrupti provident, esse quasi dolorem. Voluptatem molestiae deserunt sequi
+                            officia. Eaque vero beatae nisi tenetur obcaecati nemo impedit ipsum fugiat similique iste
+                            deserunt porro voluptatum, suscipit laboriosam incidunt facilis perspiciatis odit aliquid
+                            cum iusto qui saepe dignissimos. Soluta temporibus voluptate doloremque illo consequatur,
+                            modi obcaecati. In dolorem, molestiae facilis reiciendis veritatis nam amet atque vitae
+                            eligendi, commodi, odio labore adipisci quaerat? Harum et expedita, corrupti aliquid nobis
+                            neque quaerat excepturi, asperiores fugiat blanditiis sed impedit illum modi deserunt
+                            perferendis esse quisquam itaque dolore ad exercitationem? Dolorum quasi, accusamus quidem
+                            et nihil deserunt dolorem itaque recusandae facilis, repudiandae, qui architecto ipsam
+                            similique ab sed molestiae eum ex minus ullam? Illum veritatis dignissimos repellendus cum
+                            vel dolores possimus saepe tenetur, id beatae, asperiores doloribus impedit iusto aspernatur
+                            temporibus ipsum exercitationem quas quidem dolorum, quo dicta sapiente eaque quam. Fugit
+                            magni cupiditate iure asperiores sit cum praesentium eius magnam. Aperiam neque, explicabo
+                            eligendi ipsa voluptatem, quam tenetur dolore voluptate saepe eius consectetur autem
+                            voluptatum blanditiis dolorem, laboriosam atque eaque distinctio vero officia omnis.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="footer">
+                    <div class="content"><i class="fas fa-map-marker-alt"></i><span class="text">1 church road <br>
+                            North Avenue<br> New Delhi - 110001</span></div>
+                    <div class="content"><i class="fas fa-phone-alt"></i><span class="text">011 230 94229/ <br> 011
+                            230 93325 </span></div>
+                    <div class="content"> <span class="text"> <a
+                                href="https://www.facebook.com/RedemptionChurchNewDelhi" target="_blank"><i
+                                    class="fab fa-facebook-square"></i>Facebook</a></span></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+        <script src="../scripts/scripts.js"></script>
+        <script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+        <script defer src="/__/firebase/init.js"></script>
+        </script>
+</body>
 
 </html>
