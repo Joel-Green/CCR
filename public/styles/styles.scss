@@ -11,21 +11,25 @@ $dropdowncolor: rgba(black, 0.75);
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
 @import url("https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap");
+
 @font-face {
   font-family: "Bodoni";
   src: url("../fonts/BodoniFLF-Roman.ttf");
 }
+
 @font-face {
   font-family: "Bodoni";
   src: url("../fonts/BodoniFLF-Bold.ttf");
   font-weight: bold;
 }
+
 @font-face {
   font-family: "Bodoni";
   src: url("../fonts/BodoniFLF-BoldItalic.ttf");
   font-weight: bold;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Bodoni";
   src: url("../fonts/BodoniFLF-Italic.ttf");
@@ -56,6 +60,7 @@ html {
   max-width: 100%;
   overflow-x: hidden;
 }
+
 body {
   // padding-top: 30px;
   // background-image: url("../images/ccr.jpg");
@@ -67,6 +72,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
 * {
   color: rgba(0, 0, 0, 0.9);
   text-decoration: none;
@@ -90,48 +96,63 @@ body {
   //   // }
   // }
 }
+
 .col-1 {
   flex: 0 0 calc(100% * 1 / 12);
 }
+
 .col-2 {
   flex: 0 0 calc(100% * 2 / 12);
 }
+
 .col-3 {
   flex: 0 0 calc(100% * 3 / 12);
 }
+
 .col-4 {
   flex: 0 0 calc(100% * 4 / 12);
 }
+
 .col-5 {
   flex: 0 0 calc(100% * 5 / 12);
 }
+
 .col-6 {
   flex: 0 0 calc(100% * 6 / 12);
 }
+
 .col-7 {
   flex: 0 0 calc(100% * 7 / 12);
 }
+
 .col-8 {
   flex: 0 0 calc(100% * 8 / 12);
 }
+
 .col-9 {
   flex: 0 0 calc(100% * 9 / 12);
 }
+
 .col-10 {
   flex: 0 0 calc(100% * 10 / 12);
 }
+
 .col-11 {
   flex: 0 0 calc(100% * 11 / 12);
 }
+
 .col-12 {
   flex: 0 0 calc(100% * 12 / 12);
 }
+
 .col-4-5 {
   flex: 0 0 calc(100% * (4.5 / 12));
 }
+
 .col-8-5 {
   flex: 0 0 calc(100% * (8.5 / 12));
 }
+
 // a.nav-item {
 //   z-index: 1000000;
 // }
@@ -149,13 +170,16 @@ body {
 .box {
   margin: 10px;
   box-sizing: border-box;
+
   .serviceName {
     text-align: center;
     font-weight: bold;
     font-size: 18px;
   }
+
   .serviceIframe {
     max-width: calc(100vw - 20px);
+
     iframe {
       width: 560px;
       height: 315px;
@@ -171,6 +195,7 @@ body {
 
 .hamburger {
   display: none;
+
   @media (max-width: 991.98px) {
     text-align: center;
     color: white;
@@ -194,6 +219,7 @@ body {
 
   .hamline {
     display: flex;
+
     @media (max-width: 991.98px) {
       display: flex;
       background: white;
@@ -202,6 +228,7 @@ body {
     }
   }
 }
+
 .header {
   position: fixed;
   width: 100vw;
@@ -217,6 +244,7 @@ body {
   flex-direction: row;
   transition: all 0.3s ease-in-out;
   background: rgba($color: #000000, $alpha: 0);
+
   @media (max-width: 991.98px) {
     display: flex;
     justify-content: space-around !important;
@@ -225,6 +253,7 @@ body {
     padding: 7px 15px 7px 15px;
     width: 100% !important;
   }
+
   .nav-items {
     position: relative;
     // z-index: 3000 !important;
@@ -234,6 +263,7 @@ body {
       display: none;
       flex-direction: column !important;
     }
+
     .nav-item {
       font-family: var(--bodyFont);
       text-transform: uppercase;
@@ -242,22 +272,27 @@ body {
       // z-index: 3000 !important;
     }
   }
+
   .dropdown-content {
     z-index: -3000;
     // display: none;
   }
+
   // @media (max-width: 991.8px) {
   //   flex-direction: column;
   // }
 }
+
 .nav-items {
   display: flex;
+
   @media (max-width: 991.98px) {
     display: block;
     text-align: right;
     flex-direction: column !important;
   }
 }
+
 .nav-item {
   text-decoration: none;
   // background-color: #3c272b;
@@ -271,6 +306,7 @@ body {
   transition-duration: 0.6s;
   transition-delay: 0s;
   transition-timing-function: ease-in-out;
+
   &::before {
     content: "";
     position: absolute;
@@ -281,18 +317,22 @@ body {
     height: 3px;
     background: white;
     transition: all 0.3s ease-in-out;
+
     @media (max-width: 991.9px) {
       opacity: 0;
     }
   }
+
   &:hover {
     // color: rgba(0, 0, 0, 1);
     color: rgba(255, 255, 255, 1);
   }
+
   // + .dropdown-content {
   //   display: flex;
   // }
 }
+
 .dropdown {
   position: relative;
   // background: red;
@@ -300,6 +340,7 @@ body {
   // text-align: center;
   // justify-self: center;
   justify-content: center;
+
   .nav-item {
     .dropdown-arrow {
       color: rgba(255, 255, 255, 0.7);
@@ -312,9 +353,11 @@ body {
     }
   }
 }
+
 .rotate-180 {
   transform: rotate(180deg);
 }
+
 .dropdown-content {
   min-width: 250px;
   padding: 10px 15px 15px 15px;
@@ -336,6 +379,7 @@ body {
   transform: translateX(-50%);
   visibility: hidden;
   display: none;
+
   @media (max-width: 991.9px) {
     position: static;
     align-items: flex-end;
@@ -346,6 +390,7 @@ body {
     transform: translateX(0%);
     text-align: right !important;
   }
+
   a {
     padding: 5px 3px;
     transition-duration: 0.6s;
@@ -354,7 +399,7 @@ body {
     text-align: center;
     transition-timing-function: ease-in-out;
     &:hover {
-      color: rgba(0, 0, 0, 1);
+      color: rgba(255, 255, 255, 0.7);
     }
   }
 }
@@ -364,6 +409,7 @@ body {
   display: flex;
   z-index: 200 !important;
   visibility: visible;
+
   a {
     opacity: 1;
     z-index: 200;
@@ -371,6 +417,7 @@ body {
     text-align: center;
     // display: block;
   }
+
   @media (max-width: 991.98px) {
     position: static;
     display: flex !important;
@@ -379,15 +426,19 @@ body {
     // background: red !important;
     a {
       text-align: right;
+      color: rgba(255, 255, 255, 0.9) !important;
     }
   }
 }
+
 .header-scrolled {
   background-color: $newHeaderColor;
+
   .nav-items {
     .nav-item {
       &:hover {
         color: rgba(255, 255, 255, 1);
+
         &::before {
           content: "";
           position: absolute;
@@ -400,24 +451,31 @@ body {
         }
       }
     }
+
     .dropdown-content {
       z-index: -2;
       background-color: $dropdowncolor;
+
       a {
         color: rgba(255, 255, 255, 0.5);
+
         &:hover {
           color: rgba(255, 255, 255, 1);
         }
       }
     }
   }
+
   .nav-item {
     color: rgba(255, 255, 255, 0.7);
+
     &.active {
       color: white;
+
       &::hover {
         color: white;
       }
+
       &::before {
         content: "";
         position: absolute;
@@ -427,6 +485,7 @@ body {
         top: calc(0px - var(--paddingVerticalHeader));
         height: 3px;
         background: white;
+
         @media (max-width: 991.98px) {
           height: 100%;
           width: 3px;
@@ -435,6 +494,7 @@ body {
         }
       }
     }
+
     &:hover {
       color: rgba(255, 255, 255, 1);
     }
@@ -450,6 +510,7 @@ body {
   // margin-right: auto;
   // background: red;
 }
+
 .swiper-slide {
   text-align: center;
 
@@ -469,6 +530,7 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
+
 .content-main {
   min-height: 100vh;
   position: relative;
@@ -477,24 +539,29 @@ body {
   justify-content: center;
   transition: all 0.6s ease-out;
   opacity: 1;
+
   // border: solid 1px black;
   &.reduce-min-height {
     min-height: 0px !important;
   }
 }
+
 .content-block {
   display: flex;
   padding: 30px;
   flex-direction: column;
+
   .content-heading {
     font-size: 28px;
     margin-bottom: 10px;
     text-align: center;
   }
+
   .content-text {
     font-family: "Lato", sans-serif;
     font-size: 18px;
     text-align: center;
+
     p {
       font-family: "Lato", sans-serif;
       padding: 5px;
@@ -502,6 +569,7 @@ body {
       text-align: center !important;
     }
   }
+
   .image {
     align-items: center;
     justify-content: center;
@@ -513,6 +581,7 @@ body {
     border-radius: 2px;
   }
 }
+
 .content-sub-heading {
   text-align: center;
   font-size: 22px;
@@ -527,19 +596,24 @@ body {
     }
   }
 }
+
 .map {
   align-items: center;
   justify-content: center;
 }
+
 .center-text {
   text-align: center;
 }
+
 .right-text {
   text-align: right;
 }
+
 .left-text {
   text-align: left;
 }
+
 .content-body {
   p {
     margin: 35px 0px;
@@ -557,6 +631,7 @@ body {
   font-size: 45px !important;
   color: white;
   transition: all 0.3s ease-out;
+
   &.scroll-trigger {
     // transform: translateX(-15%);
     top: 35%;
@@ -569,9 +644,11 @@ body {
   transform: translateY(100%);
   transition: all 0.3s ease-out;
   opacity: 0;
+
   p {
     color: rgba($color: #fff, $alpha: 0.7);
   }
+
   &.scroll-trigger {
     transform: translateY(0%);
     opacity: 1;
@@ -592,12 +669,14 @@ body {
   background-attachment: fixed !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+
   div {
     .row {
       background: rgba($color: #000000, $alpha: 0) !important;
     }
   }
 }
+
 .img-blk {
   // min-height: 135vh;
   background-image: url("../images/ccr.jpg");
@@ -605,17 +684,20 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
+
   .content-heading {
     color: #fff;
     font-size: 45px;
   }
 }
+
 .img-blk-alt {
   background-image: url("../images/ashwednesday.jpg") !important;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
+
   .content-heading {
     color: #fff;
     font-size: 45px;
@@ -637,14 +719,17 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
+
   .content-heading {
     // font-size: 45px !important;
     color: white;
   }
+
   .content-text {
     .content-sub-heading {
       color: white;
     }
+
     p {
       color: rgba($color: #fff, $alpha: 0.8);
     }
@@ -665,6 +750,7 @@ body {
   // background: opacity($color: #000000)
   // background: rgba($color: $alpha: 1.0)!important;
 }
+
 .content-slab-alternate {
   min-height: 40vh;
   display: flex;
@@ -680,22 +766,27 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
+
   .content-heading {
     color: white;
     font-size: 45px;
   }
 }
+
 .transp {
   background: $mainbackgroundcolor !important;
 }
+
 #intro {
   pointer-events: none;
+
   // font-size: 67;
   .heading {
     color: var(--introheading);
     font-size: 89px;
     line-height: 77px;
     font-family: "Bodoni";
+
     // font-weight: bold;
     @media (max-width: 991.98px) {
       font-size: 48px;
@@ -703,18 +794,21 @@ body {
       margin-top: -48px;
     }
   }
+
   .text {
     color: var(--introheading);
     font-size: 21px;
     padding-right: 50%;
     padding-top: 30px;
   }
+
   // display: flex;
   padding: 120px 30px 0px 30px;
   box-sizing: border-box;
   position: fixed;
   z-index: 7000 !important;
-  & + div {
+
+  &+div {
     height: 100vh;
     width: 100vw;
     background-image: url("../images/newfrontpage.png");
@@ -778,6 +872,7 @@ body {
 
     .content {
       padding: 1px 20px;
+
       @media (max-width: 991.98px) {
         padding: 2px;
         line-height: 12px;
@@ -787,19 +882,23 @@ body {
         padding-left: 5px;
         padding-right: 5px;
       }
+
       .lang {
         text-transform: uppercase;
         color: white;
         font-weight: bold;
+
         // font-size: 16px;
         @media (max-width: 991.98px) {
           margin: auto;
           font-size: 13px;
         }
       }
+
       .time {
         text-transform: uppercase;
         color: rgba(255, 255, 255, 0.8);
+
         @media (max-width: 991.98px) {
           font-size: 13px;
           margin-top: 5px;
@@ -817,21 +916,25 @@ body {
   justify-content: center;
   flex-direction: column;
   background: var(--newLighterBackground);
+
   .dailyVerses {
     margin: 10px 0px;
     width: 100%;
   }
+
   .dailyVerses:nth-child(1) {
     color: black;
     font-size: 21px;
     text-align: center;
     font-weight: bold;
   }
+
   .dailyVerses:nth-child(2) {
     // color: rgb(136, 121, 121) !important;
     font-size: 16px;
     text-align: center;
     font-weight: bold;
+
     a {
       background: #a36f4b;
       padding: 0.25em 0.5em;
@@ -841,6 +944,7 @@ body {
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     }
   }
+
   .dailyVerses:nth-child(3) {
     a {
       text-align: center;
@@ -852,6 +956,7 @@ body {
     }
   }
 }
+
 .footer {
   background: black;
   color: white;
@@ -859,16 +964,19 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+
   .content {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   i {
     font-size: 39px;
     color: rgba($color: #fff, $alpha: 0.9);
     margin-right: 10px;
   }
+
   .text {
     color: rgba($color: #fff, $alpha: 0.9);
     font-size: 12px;
@@ -882,18 +990,21 @@ body {
       font-size: 13.5px;
       // display:  flex;
     }
+
     a {
       // display: flex;
       color: rgba($color: #fff, $alpha: 0.9);
       font-size: 12px;
       // text-transform: uppercase;
     }
+
     &:nth-child(2) {
       line-height: 25px;
       // margin :5px 0px;
     }
   }
 }
+
 // #dailyVerse{
 //   // height: 100vh;
 //   width:100%;
@@ -905,21 +1016,26 @@ body {
 #churchHistory {
   background-image: url("../images/Architecture.JPG") !important;
 }
+
 #architecture {
   background-image: url("../images/Architecture1.JPG") !important;
   // .content-heading{
   // color: #fce7e7;
   // }
 }
+
 #paintings {
   background-image: url("../images/Painting.JPG") !important;
 }
+
 #goodFriday {
   background-image: url("../images/GoodFriday.JPG") !important;
 }
+
 #communityOutreach {
   background-image: url("../images/LPCEFCommunityOutreach.JPG") !important;
 }
+
 .z-intro {
   z-index: 30000;
 }
@@ -927,12 +1043,15 @@ body {
 #youthSunday {
   background-image: url("../images/Youth-Sunday.jpg");
 }
+
 #unity {
   background-image: url("../images/CYF-Unity.jpg") !important;
 }
+
 #youthRetreat {
   background-image: url("../images/youthRetreat2022.JPG") !important;
 }
+
 #annualGardenFete {
   background-image: url("../images/annualGardenFete.jpg") !important;
 }
@@ -944,35 +1063,43 @@ body {
 #englishChoir {
   background-image: url("../images/English\ Choir\ Final.jpeg") !important;
 }
+
 #tamilChoir {
   background-image: url("../images/Tamil-Choir.jpg") !important;
 }
+
 #hindiChoir {
   background-image: url("../images/Hindi\ Choir\ Final.jpeg") !important;
 }
 
-#aboutWfcs{
+#aboutWfcs {
   background-image: url("../images/WFCS\ final.png") !important;
 }
 
 #youthWorshipTeam {
   background-image: url("../images/Worship-Team.JPG") !important;
 }
+
 #LPCEPPicnic {
   background-image: url("../images/LPCEF-PICNIC.jpg");
 }
+
 #eveningService {
   background-image: url("../images/EVENING-WORSHIP.jpg");
 }
+
 #summerSeekersCamp {
   background-image: url("../images/Summer-Seekers-Camp.jpg");
 }
+
 #youthOutreach {
   background-image: url("../images/CYF-Outreach.jpg");
 }
+
 #youthMusical {
   background-image: url("../images/Christmas-Musical.JPG");
 }
+
 .cni-logo {
   position: absolute;
   right: 30px;
@@ -987,72 +1114,95 @@ body {
     width: 50px;
   }
 }
+
 .content-text {
   text-align: center !important;
+
   p {
     text-align: center;
   }
 }
+
 p {
   text-align: center !important;
 }
+
 #youthSundayService {
   background-image: url("../images/youth-service.jpg");
 }
+
 #youthBakeSale {
   background-image: url("../images/Bake-Sale.jpg") !important;
 }
+
 #churchOrgan {
   background-image: url("../images/Church-Organ.JPG");
 }
+
 #aboutSundaySchool {
   background-image: url("../images/Sunday-School.jpg") !important;
 }
+
 #aboutTamilSundaySchool {
   background-image: url("../images/TamilSundaySchool.jpeg") !important;
 }
+
 #soundEngineer {
   background-image: url("../images/Sound-Engineer.jpg");
 }
+
 #tuesdayPrayer {
   background-image: url("../images/Tuesday-Prayer.jpg") !important;
 }
+
 #musicians {
   background-image: url("../images/musicians1.jpg") !important;
 }
+
 #parishHall {
   background-image: url("../images/Parish-Hall.jpg");
 }
+
 #carolService {
   background-image: url("../images/Carol-Service.jpg");
 }
+
 #fastingPrayer {
   background-image: url("../images/Fasting-prayer.jpg") !important;
 }
+
 #sundaySchoolEvents {
   background-image: url("../images/Events-Sunday-School.jpg") !important;
 }
+
 #choirMasters {
   background-image: url("../images/Choirs.jpg");
 }
+
 #lpcefPicnic {
   background-image: url("../images/LPCEF-PICNIC.jpg") !important;
 }
+
 #tamilService {
   background-image: url("../images/Tamil-Service.JPG") !important;
 }
+
 #hindiService {
   background-image: url("../images/Hindi-Service.JPG") !important;
 }
+
 #confirmation {
   background-image: url("../images/confirmation-sunday.png") !important;
 }
+
 #cathedralNurseryOutreach {
   background-image: url("../images/Cathedral-Nursery.JPG") !important;
 }
+
 #englishService {
   background-image: url("../images/English-Service.JPG") !important;
 }
+
 #layleaders {
   background-image: url("../images/Lay-Leaders.JPG") !important;
 }
@@ -1069,7 +1219,7 @@ p {
   }
 }
 
-.slider-inner{
+.slider-inner {
   width: 100vw;
   padding: 10px;
 }

@@ -338,7 +338,7 @@ body {
   transition-timing-function: ease-in-out;
 }
 .dropdown-content a:hover {
-  color: rgb(0, 0, 0);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .show-dropdown {
@@ -362,6 +362,7 @@ body {
   }
   .show-dropdown a {
     text-align: right;
+    color: rgba(255, 255, 255, 0.9) !important;
   }
 }
 
