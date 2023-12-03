@@ -9,7 +9,7 @@
                 fontSize = parseInt(ourText.css("fontSize"), 10),
                 multiplier = maxWidth / ourText.width(),
                 newSize = (fontSize * (multiplier - 0.1));
-            console.log(ourText);
+            // console.log(ourText);
             ourText.css(
                 "fontSize",
                 (maxFontSize > 0 && newSize > maxFontSize) ?
@@ -34,19 +34,19 @@
 function toggleHeader ()
 {
     $(".nav-items").toggleClass('show-header');
-    console.log("asdf");
+    // console.log("asdf");
 }
 
 $(document).ready(function () {
-    console.log("ready!");
+    // console.log("ready!");
     setTimeout(function () {
         $('#verseSize').textfill({ maxFontSize: 28 });
 
     }, 5000)
 });
-console.log("Scripts are runnings");
+// console.log("Scripts are runnings");
 let w = window.innerWidth;
-console.log(w, "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww");
+// console.log(w, "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww");
 $('#link-home').hover(function () {
     if (w > 992) {
         $('#nav-Home').addClass('show-dropdown')
@@ -214,7 +214,7 @@ function toggleHome() {
     $('#nav-More').removeClass('show-dropdown')
 }
 function toggleAbout() {
-    console.log('testings')
+    // console.log('testings')
     $('#nav-About').toggleClass('show-dropdown')
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-Outreach').removeClass('show-dropdown')
@@ -223,7 +223,7 @@ function toggleAbout() {
     $('#nav-More').removeClass('show-dropdown')
 }
 function toggleOutreach() {
-    console.log('testings')
+    // console.log('testings')
     $('#nav-Outreach').toggleClass('show-dropdown')
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
@@ -232,7 +232,7 @@ function toggleOutreach() {
     $('#nav-More').removeClass('show-dropdown')
 }
 function toggleEvents() {
-    console.log('testings')
+    // console.log('testings')
     $('#nav-Events').toggleClass('show-dropdown')
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
@@ -241,7 +241,7 @@ function toggleEvents() {
     $('#nav-More').removeClass('show-dropdown')
 }
 function togglePeople() {
-    console.log('testings')
+    // console.log('testings')
     $('#nav-People').toggleClass('show-dropdown')
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
@@ -250,7 +250,7 @@ function togglePeople() {
     $('#nav-More').removeClass('show-dropdown')
 }
 function toggleMore() {
-    console.log('testings')
+    // console.log('testings')
     $('#nav-More').toggleClass('show-dropdown')
     $('#nav-Home').removeClass('show-dropdown')
     $('#nav-About').removeClass('show-dropdown')
@@ -264,7 +264,7 @@ const thresholdArray = steps => Array(steps + 1)
 
 
 for (size = 9; size < 100 && size >= 9; size = size * 4 / 3) {
-    console.log(size);
+    // console.log(size);
 }
 
 
@@ -489,7 +489,7 @@ window.onclick = function (event) {
 let homeHeader = document.querySelectorAll(".homeHeaderTrigger");
 let introHeader = document.querySelectorAll('.home-header');
 let introContent = document.getElementById('intro');
-console.log(homeHeader);
+// console.log(homeHeader);
 
 optionsHomeHeader = {
     root: null,
@@ -500,7 +500,7 @@ const observeHomeHeader = new IntersectionObserver(function (entry, observeHomeH
     // console.log(entry[0].intersectionRatio);
     introHeader[0].style.opacity = 3 * entry[0].intersectionRatio - 1.64;
     introContent.style.opacity = 3 * entry[0].intersectionRatio - 1.64;
-    console.log(3 * entry[0].intersectionRatio - 1.94);
+    // console.log(3 * entry[0].intersectionRatio - 1.94);
 }, optionsHomeHeader);
 
 observeHomeHeader.observe(homeHeader[0]);
